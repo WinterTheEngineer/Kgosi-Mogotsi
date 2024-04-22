@@ -1,0 +1,7 @@
+.idea/
+WinterMogotsi/__pycache__/
+virtual/
+db.sqlite3
+WinterMogotsi/Scripts/__pycache__/
+WinterMogotsi/migrations/__pycache__/
+WinterMogotsi/migrations

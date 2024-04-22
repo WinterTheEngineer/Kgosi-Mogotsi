@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CDNs -->
+    <script src="https://kit.fontawesome.com/f8dced6eec.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'WinterMogotsi/index.css' %}">
+    <title>Rhulani Mogotsi - Full-Stack Developer</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid header-container">
+            <nav>
+                <ul class="nav-list p-0 m-0">
+                    <li class="nav-item m-0 py-3">
+                        <a href="#experience" class="nav-link">
+                            Me:/Experience<span id="cursor">_</span>
+                        </a>
+                    </li>
+                    <li class="nav-item m-0 py-3">
+                        <a href="#projects" class="nav-link">
+                            Me:/My Work<span id="cursor">_</span>
+                        </a>
+                    </li>
+                    <li class="nav-item m-0 py-3">
+                        <a href="#contact" class="nav-link">
+                            Me:/Contact<span id="cursor">_</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <div class="header-img">
+                    <img src="{% static 'WinterMogotsi/images/winter-placeholder.png' %}" alt="Winter Mogotsi, Full-Stack Developer">
+                </div>
+                <div class="header-text me-3">
+                    <h1 class="header-title m-0">
+                        Rhulani Mogotsi
+                    </h1>
+                    <h1 class="header-tagline">
+                        <span id="typewriter"></span>
+                        <span id="typewriter-cursor">|</span>
+                    </h1>
+                </div>
+            </div>
+            <a href="#" class="magneto">
+                <span class="text">My Work</span>
+            </a>
+            <div class="social-bar">
+                <a href="https://github.com/CodeMasterWinter" target="_blank" class="social-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://twitter.com/RKMogotsi" target="_blank" class="social-link">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" class="social-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="introduction">
+        
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="{% static 'WinterMogotsi/index.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
