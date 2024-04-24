@@ -58,7 +58,7 @@
                     </h1>
                 </div>
             </div>
-            <a href="#" class="magneto">
+            <a href="#introduction" class="magneto">
                 <span class="text">My Work</span>
             </a>
             <div class="social-bar">
@@ -75,13 +75,190 @@
         </div>
     </header>
     <section id="introduction">
-        
+        <div class="container-fluid introduction-container">
+            <p class="introduction-tag">
+                I am <span id="name">Rhulani Mogotsi</span>, a highly-skilled Web  
+                Developer and Software Engineer with a passion for realizing dreams 
+                using code nd a talent for producing cutting-edge technology
+            </p>
+        </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="{% static 'WinterMogotsi/index.js' %}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+    </script>
+    <script>
+        const magneto = document.querySelector('.magneto')
+        const magnetoText = document.querySelector('.magneto .text')
+
+        const activateMagneto = (event) => {
+            let boundBox = magneto.getBoundingClientRect()
+            const magnetoStrength = 40
+            const magnetoTextStrength = 80
+            const newX = ((event.clientX - boundBox.left)/magneto.offsetWidth) - 0.5
+            const newY = ((event.clientY - boundBox.top)/magneto.offsetHeight) - 0.5
+
+            // Move button to new position
+            gsap.to(magneto, {
+                duration: 1,
+                x: newX * magnetoStrength,
+                y: newY * magnetoStrength,
+                ease: Power4.easeOut
+            })
+
+            gsap.to(magnetoText, {
+                duration: 1,
+                x: newX * magnetoTextStrength,
+                y: newY * magnetoTextStrength,
+                ease: Power4.easeOut
+            })
+        }
+
+        const resetMagneto = (event) => {
+            // Move button to initial position
+            gsap.to(magneto, {
+                duration: 1,
+                x: 0,
+                y:0, 
+                ease: Elastic.easeOut
+            })
+
+            gsap.to(magnetoText, {
+                duration: 1,
+                x: 0,
+                y:0, 
+                ease: Elastic.easeOut
+            })
+        }
+
+        magneto.addEventListener('mousemove', activateMagneto)
+        magneto.addEventListener('mouseleave', resetMagneto)
+
+        const words = ['Full-Stack Developer', 'Software Engineer', 'Web Developer']
+
+        let mainTimeline = gsap.timeline({
+            repeat: -1
+        })
+
+        words.forEach(word => {
+            let textTimeline = gsap.timeline({
+                repeat: 1,
+                yoyo: true,
+                repeatDelay: 8
+            })
+            
+            textTimeline.to('#typewriter', {
+                text: word,
+                duration: 1.5,
+                onUpdate: () => {
+                    cursorTimeline.restart()
+                    cursorTimeline.pause()
+                },
+                onComplete: () => {
+                    cursorTimeline.play()
+                },
+            })
+
+            mainTimeline.add(textTimeline)
+        });
+
+        //Blinking Cursor
+        let cursorTimeline = gsap.timeline({
+            repeat: -1,
+            repeatDelay: .8
+        })
+
+        cursorTimeline.to('#typewriter-cursor', {
+            opacity: 1,
+            duration: 0
+        }).to('#typewriter-cursor', {
+            opacity: 0,
+            duration: 0,
+            delay: .8
+        })
+    </script>
+    <script>
+        let headerTitle = document.querySelector('.header-title')
+        let headShot = document.querySelector('.header-img')
+        let headerTagline = document.querySelector('.header-tagline')
+        let header = document.querySelector('#header')
+
+        
+        let intro = document.querySelector('#introduction')
+        let introTag = document.querySelector('.introduction-tag')
+
+        gsap.set(headerTitle, {
+            xPercent: 0,
+            opacity: 1
+        })
+
+        gsap.set(introTag, {
+            xPercent: -20,
+            opacity: 0
+        })
+
+        gsap.to(headShot, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            yPercent: 20,
+            scale: .8,
+            opacity: 0
+        })
+
+        gsap.to(headerTitle, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            xPercent: 40,
+            opacity: 0
+        })
+
+        gsap.to(headerTagline, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            xPercent: -20,
+            opacity: 0
+        })
+
+        gsap.to(introTag, {
+            scrollTrigger: {
+                trigger: intro,
+                start: 'top 20%',
+            },
+            duration: 3,
+            xPercent: 0,
+            opacity: 1
+        })
+
+    </script>
 </body>
 </html>
