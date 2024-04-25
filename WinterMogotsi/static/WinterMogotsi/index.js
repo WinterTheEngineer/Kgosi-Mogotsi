@@ -18,3 +18,12 @@ function addAnimation() {
         });
     });
 }
+
+let introText = new SplitText('.intro-text', { lines: true });
+
+gsap.to(introText, {
+    y: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: 'Power2.out'
+});

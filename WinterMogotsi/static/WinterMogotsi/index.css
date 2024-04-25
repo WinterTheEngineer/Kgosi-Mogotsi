@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Zen Dots';
 }
 
 html {
@@ -13,24 +14,36 @@ html::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and others */
 }
 
+body {
+    animation: bodyscroll 6s forwards;
+}
+
 #splash {
     top: 0;
     left: 0;
     z-index: 3;
     width: 100%;
     height: 100%;
-    display: flex;
-    position: absolute;
+    position: fixed;
+    display: none;
     background: #000000;
-    align-items: center;
-    justify-content: right;
     animation: splash 1s forwards 5s;
+}
+
+#splash-logo {
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 3.5rem;
+    stroke-width: 3;
+    position: fixed;
+    animation: 6s logo-stroke ease forwards;
 }
 
 header {
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to top, #00051a, #2636c5);
+    background: #bebebe;
 }
 
 .header-container{
@@ -38,28 +51,25 @@ header {
     position: relative;
 }
 
-nav {
+nav {   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-list {
     top: 3rem;
-    left: 50%;
     width: 36rem;
     display: flex;
+    list-style: none;
     position: absolute;
     align-items: center;
     border-radius: 4rem;
     backdrop-filter: blur(5px);
-    transform: translateX(-50%);
     justify-content: space-evenly;
     -webkit-backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.nav-list {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .nav-link {
@@ -75,6 +85,17 @@ nav {
     transform: translate3d(-.3rem, 0, 0);
 }
 
+#menu {
+    border: none;
+    display: none;
+    background: none;
+}
+
+#menu .icon {
+    font-size: 1.2;
+    color: #ffffff;
+}
+
 #cursor {
     visibility: hidden;
 }
@@ -82,6 +103,23 @@ nav {
 .nav-link:hover #cursor {
     visibility: visible;
     animation: 1s infinite steps(1) blink;
+}
+
+#header-logo {
+    top: 0;
+    left: 0;
+    margin: 3.5rem;
+    position: absolute;
+}
+
+#splash-logo {
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 3.5rem;
+    stroke-width: 3;
+    position: fixed;
+    animation: 6s logo-stroke ease forwards;
 }
 
 .header-content {
@@ -109,22 +147,20 @@ nav {
 .header-text {
     z-index: 2;
 }
- 
+
 .header-title {
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: 800;
-    color: transparent;
-    font-family: 'Urbanist';
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #ffffff;
+    color: #ffffff;
+    
 }
 
 .header-tagline {
     font-size: 4rem;
-    color: #d525f8;
+    stroke-width: 2;
     font-weight: 900;
-    font-family: 'Urbanist';
-    text-shadow: 0px 0px 10px #8f1e8f;
+    color: #272727;
+    font-family: 'Zen Dots';
 }
 
 .header-title,
@@ -134,8 +170,9 @@ nav {
 
 .magneto {
     left: 50%;
-    bottom: 0rem;
+    bottom: -2rem;
     width: 10rem;
+    filter: none;
     height: 10rem;
     display: flex;
     cursor: pointer;
@@ -148,13 +185,15 @@ nav {
     justify-content: center;
     font-family: 'Source Code Pro';
     transform: translate(-50%, -50%);
-    animation: pulsate 15s infinite;
+    animation: pulsate 10s infinite;
     transition: border 1s ease, filter 1s ease;
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .magneto:hover {
-    animation: hoverPulsate 4s infinite;
+    animation: none;
+    border: 2px solid #ffffff;
+    filter: drop-shadow(0 0 .2rem #ffffff);
 }
 
 .social-bar {
@@ -187,11 +226,45 @@ nav {
 }
 
 #introduction {
-    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
-.introduction-tag {
-    font-family: 'Source Code Pro';
+.introduction-container {
+    height: 100%;
+    display: flex;
+    margin-block: 10rem;
+    margin-inline: 16rem;
+    justify-content: space-between;
+}
+
+.intro-tags,
+.intro-text {
+    width: 50%;
+    overflow: hidden;
+}
+
+.intro-tags {
+    background: #d9d9d9;
+}
+
+.intro-tag {
+    color: #ffffff;
+    font-size: 2.6rem;
+}
+
+.intro-text {
+    display: flex;
+    color: #272727;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text span {
+    display: block;
 }
 
 /* Lenis CSS */
@@ -218,12 +291,174 @@ html.lenis, html.lenis body {
 
 @media (max-width: 1680px) {
     .header-title{
-        font-size: 8rem;
+        font-size: 5.8rem;
+    }
+
+    .header-tagline{
+        font-size: 3rem;
+    }
+
+    .header-img {
+        height: 80%;
     }
 
     .magneto {
         width: 8rem;
         height: 8rem;
+    }
+
+    
+    .introduction-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-inline: 5rem;
+        justify-content: space-between;
+    }
+    
+    .intro-tags,
+    .intro-text {
+        width: 50%;
+        overflow: hidden;
+    }
+    
+    .intro-tags {
+        background: #d9d9d9;
+    }
+    
+    .intro-tag {
+        color: #ffffff;
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        display: flex;
+        color: #272727;
+        font-size: 1.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    #splash {
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #splash-logo {
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    nav {
+        height: 4rem;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    #menu {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu .icon{
+        font-size: 1.8rem;
+    }
+
+    header {
+        height: 100dvh;
+    }
+
+    #header-logo {
+        margin: 0;
+        height: 1.4rem;
+        position: static;
+        display: inline-flex;
+    }
+
+    .header-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .social-bar {
+        display: none;
+    }
+
+    .header-img {
+        width: 100%;
+    }
+
+    .header-img img{
+        bottom: 0;
+        height: 90%;
+        z-index: 3;
+        position: absolute;
+    }
+
+    .header-text {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-title {
+        margin: 0;
+        font-size: 2rem;
+        padding-block: 1rem;
+    }
+    
+    .header-tagline {
+        font-size: 1.6rem;
+    }
+
+    #typewriter-cursor {
+        display: none;
+    }
+
+    .magneto {
+        z-index: 4;
+    }
+
+    .introduction-container {
+        height: 100%;
+        flex-direction: column;
+        margin-block: 0;
+        margin-inline: 0;
+    }
+
+    .intro-tags,
+    .intro-text {
+        width: 100%;
+        min-height: 15rem;
+        text-align: center;
+    }
+
+    .intro-tags {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    .intro-tag {
+        font-size: 1.4rem;
     }
 }
 
@@ -239,6 +474,16 @@ html.lenis, html.lenis body {
     }
 }
 
+@keyframes bodyscroll {
+    0% {
+        overflow-y: hidden;
+    }
+
+    100% {
+        overflow-y: auto;
+    }
+}
+
 @keyframes blink {
     0%, 100% {
         opacity: 0;
@@ -250,25 +495,11 @@ html.lenis, html.lenis body {
 }
 
 @keyframes pulsate {
-    0%, 90%{
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    95% {
-        border-color: #ffffff;
-    }
-
-    100% {
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-}
-
-@keyframes hoverPulsate {
     0%{
         border-color: rgba(255, 255, 255, 0.3);
     }
 
-    50% {
+    80% {
         filter: drop-shadow(0 0 .2rem #ffffff);
         border: 2px solid #ffffff;
     }
@@ -283,7 +514,7 @@ html.lenis, html.lenis body {
     0% {
         fill: transparent;
         stroke: #ffffff;
-        stroke-width: 1;
+        stroke-width: 3;
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 32%;
     }
@@ -291,20 +522,19 @@ html.lenis, html.lenis body {
     50% {
         fill: transparent;
         stroke: #ffffff;
-        stroke-width: 2;
+        stroke-width: 3;
     }
 
-    80% {
+    80%{
         fill: transparent;
         stroke: #ffffff;
-        stroke-width: 1;
+        stroke-width: 3;
         stroke-dashoffset: -25%;
         stroke-dasharray: 32% 0;
     }
 
     100% {
         fill: transparent;
-        stroke: #ffffff;
-        stroke-width: 1;
+        stroke: none;
     }
 }
