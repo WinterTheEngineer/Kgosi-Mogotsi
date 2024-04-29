@@ -108,6 +108,7 @@ nav {
 #header-logo {
     top: 0;
     left: 0;
+    width: 5rem;
     margin: 3.5rem;
     position: absolute;
 }
@@ -230,6 +231,8 @@ nav {
     position: relative;
     align-items: center;
     justify-content: center;
+    background: url(images/intro-backdrop.jpg) fixed no-repeat;
+    background-size: cover;
 }
 
 .introduction-container {
@@ -261,6 +264,7 @@ nav {
     font-size: 1.6rem;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
 }
 
 .intro-text span {
@@ -459,6 +463,10 @@ html.lenis, html.lenis body {
 
     .intro-tag {
         font-size: 1.4rem;
+    }
+
+    .intro-text {
+        background-color: #ffffff00;
     }
 }
 
