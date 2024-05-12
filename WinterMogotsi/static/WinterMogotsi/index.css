@@ -16,6 +16,7 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
+    display: none;
     background: #000000;
     animation: splash 1s forwards 5s;
 }
@@ -24,16 +25,17 @@ body {
     top: 0;
     left: 0;
     z-index: 5;
-    margin: 3.5rem;
+    height: 2rem;
+    margin: 2rem;
     stroke-width: 3;
     position: fixed;
-    animation: 6s logo-stroke ease forwards;
+    animation: fade-in 2s forwards, 6s logo-stroke forwards;
 }
 
 header {
     height: 100vh;
     overflow: hidden;
-    background: #bebebe;
+    background: #a3a3a3;
 }
 
 .header-container{
@@ -48,31 +50,39 @@ nav {
 }
 
 .nav-list {
-    top: 3rem;
-    width: 36rem;
+    top: 1rem;
+    right: 2rem;
     display: flex;
     list-style: none;
     position: absolute;
     align-items: center;
-    border-radius: 4rem;
-    backdrop-filter: blur(5px);
     justify-content: space-evenly;
-    -webkit-backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-link {
-    opacity: .5;
     color: #ffffff;
-    font-family: 'Source Code Pro';
-    transition: opacity .2s ease, transform .2s ease;
+    position: relative;
+    transition: opacity .2s ease, transform .5s ease-in-out;
 }
 
 .nav-link:hover {
-    opacity: 1;
     color: #ffffff;
     transform: translate3d(-.3rem, 0, 0);
+}
+
+.nav-link::after {
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 3px;
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    transition: width .5s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 #menu {
@@ -89,27 +99,12 @@ nav {
 #cursor {
     visibility: hidden;
 }
-
-.nav-link:hover #cursor {
-    visibility: visible;
-    animation: 1s infinite steps(1) blink;
-}
-
 #header-logo {
     top: 0;
     left: 0;
-    margin: 3.5rem;
+    height: 2rem;
+    margin: 2rem;
     position: absolute;
-}
-
-#splash-logo {
-    top: 0;
-    left: 0;
-    z-index: 5;
-    margin: 3.5rem;
-    stroke-width: 3;
-    position: fixed;
-    animation: 6s logo-stroke ease forwards;
 }
 
 .header-content {
@@ -139,14 +134,14 @@ nav {
 }
 
 .header-title {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 800;
     color: #ffffff;
     
 }
 
 .header-tagline {
-    font-size: 4rem;
+    font-size: 3.5rem;
     stroke-width: 2;
     font-weight: 900;
     color: #272727;
@@ -196,11 +191,14 @@ nav {
     border-radius: 4rem;
     align-items: center;
     flex-direction: column;
-    backdrop-filter: blur(5px);
     justify-content: space-evenly;
-    -webkit-backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border 1s ease, filter 1s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-bar:hover {
+    border: 2px solid #ffffff;
+    filter: drop-shadow(0 0 .2rem #ffffff);
 }
 
 .social-link {
@@ -290,7 +288,7 @@ html.lenis, html.lenis body {
 
 @media (max-width: 1680px) {
     .header-title{
-        font-size: 5.8rem;
+        font-size: 5.5rem;
     }
 
     .header-tagline{
@@ -302,10 +300,13 @@ html.lenis, html.lenis body {
     }
 
     .magneto {
-        width: 8rem;
-        height: 8rem;
+        width: 8.5rem;
+        height: 8.5rem;
     }
 
+    .social-bar {
+        height: 10rem;
+    }
     
     .introduction-container {
         width: 100%;
@@ -462,83 +463,5 @@ html.lenis, html.lenis body {
 
     .intro-text {
         background-color: #ffffff00;
-    }
-}
-
-@keyframes splash {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes bodyscroll {
-    0% {
-        overflow-y: hidden;
-    }
-
-    100% {
-        overflow-y: auto;
-    }
-}
-
-@keyframes blink {
-    0%, 100% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-@keyframes pulsate {
-    0%{
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    80% {
-        filter: drop-shadow(0 0 .2rem #ffffff);
-        border: 2px solid #ffffff;
-    }
-
-    100% {
-        filter: none;
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-}
-
-@keyframes logo-stroke {
-    0% {
-        fill: transparent;
-        stroke: #ffffff;
-        stroke-width: 3;
-        stroke-dashoffset: 25%;
-        stroke-dasharray: 0 32%;
-    }
-
-    50% {
-        fill: transparent;
-        stroke: #ffffff;
-        stroke-width: 3;
-    }
-
-    80%{
-        fill: transparent;
-        stroke: #ffffff;
-        stroke-width: 3;
-        stroke-dashoffset: -25%;
-        stroke-dasharray: 32% 0;
-    }
-
-    100% {
-        stroke: transparent;
-        fill: transparent;
-        stroke-width: 0;
     }
 }
