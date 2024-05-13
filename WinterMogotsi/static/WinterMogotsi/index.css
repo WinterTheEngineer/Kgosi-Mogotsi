@@ -12,11 +12,10 @@ body {
 #splash {
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 9;
     width: 100%;
     height: 100%;
     position: fixed;
-    display: none;
     background: #000000;
     animation: splash 1s forwards 5s;
 }
@@ -24,7 +23,8 @@ body {
 #splash-logo {
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 9;
+    width: 5rem;
     height: 2rem;
     margin: 2rem;
     stroke-width: 3;
@@ -62,7 +62,7 @@ nav {
 .nav-link {
     color: #ffffff;
     position: relative;
-    transition: opacity .2s ease, transform .5s ease-in-out;
+    transition: opacity .2s ease, transform .3s ease-in-out;
 }
 
 .nav-link:hover {
@@ -73,35 +73,43 @@ nav {
 .nav-link::after {
     left: 0;
     width: 0;
-    bottom: 0;
+    bottom: -2px;
     height: 3px;
     content: '';
     position: absolute;
     background-color: #ffffff;
-    transition: width .5s ease-in-out;
+    transition: width .3s ease-in-out;
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
 
-#menu {
+#menu-toggle {
+    top: 3rem;
+    z-index: 5;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
     border: none;
-    display: none;
-    background: none;
+    position: fixed;
+    border-radius: 50%;
+    background: #272727;
 }
 
-#menu .icon {
-    font-size: 1.2;
+#menu-toggle .icon {
+    font-size: 2rem;
     color: #ffffff;
 }
 
 #cursor {
     visibility: hidden;
 }
+
 #header-logo {
     top: 0;
     left: 0;
+    width: 5rem;
     height: 2rem;
     margin: 2rem;
     position: absolute;
@@ -264,6 +272,95 @@ nav {
     display: block;
 }
 
+#offcanvas-nav {
+    z-index: 7;
+    background-color: #272727;
+}
+
+.offcanvas-backdrop {
+    z-index: 6;
+}
+
+.offcanvas-header {
+    display: flex;
+    min-height: 4rem;
+    position: relative;
+}
+
+.nav-sep {
+    width: 100%;
+    height: 1px;
+    color: #ffffff;
+    margin-inline: auto;
+}
+
+#offcanvas-nav-logo {
+    left: 0;
+    top: 2rem;
+    width: 5rem;
+    height: 2rem;
+    position: absolute;
+}
+
+.btn-close {
+    right: 0;
+    top: 2.5rem;
+    fill: #ffffff;
+    position: absolute;
+}
+
+.offcanvas-nav-item {
+    display: flex;
+    min-height: 4rem;
+    align-items: center;
+}
+
+.offcanvas-nav-link {
+    position: relative;
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform .3s ease;
+}
+
+.offcanvas-nav-link:hover {
+    transform: translateX(1.5rem);
+}
+
+.offcanvas-nav-link::after {
+    top: 50%;
+    width: 0;
+    height: 0;
+    content: '';
+    left: -1.2rem;
+    position: absolute;
+    border-top: 10px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.offcanvas-nav-link:hover::after {
+    animation: rotate 2s linear infinite;
+}
+
+.nav-social-bar {
+    left: 50%;
+    bottom: 1rem;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    border-radius: 4rem;
+    align-items: center;
+    transform: translateX(-50%);
+    justify-content: space-evenly;
+}
+
+.social-bar:hover {
+    border: 2px solid #ffffff;
+    filter: drop-shadow(0 0 .2rem #ffffff);
+}
+
 /* Lenis CSS */
 
 html.lenis, html.lenis body {
@@ -306,6 +403,11 @@ html.lenis, html.lenis body {
 
     .social-bar {
         height: 10rem;
+        transition: height .5s ease;
+    }
+
+    .social-bar:hover {
+        height: 12rem;
     }
     
     .introduction-container {

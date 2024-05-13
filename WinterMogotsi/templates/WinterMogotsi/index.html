@@ -29,7 +29,7 @@
             <path d="M0.57375 46V0.239998H38.9098C43.6458 0.239998 47.3151 1.43466 49.9178 3.824C52.5631 6.21333 53.8858 9.84 53.8858 14.704C53.8858 18.8427 52.9258 22.0853 51.0058 24.432C49.0858 26.7787 46.3551 28.2507 42.8138 28.848L53.3738 46H41.7258L31.9338 29.168H10.8138V46H0.57375ZM37.6938 8.56H10.8138V20.784L37.6938 20.848C39.5711 20.848 41.0004 20.3787 41.9818 19.44C43.0058 18.5013 43.5178 16.9227 43.5178 14.704C43.5178 12.4427 43.0058 10.864 41.9818 9.968C41.0004 9.02933 39.5711 8.56 37.6938 8.56ZM61.5738 46V0.239998H70.1498L91.3338 15.088H91.6538L112.838 0.239998H121.414V46H111.174V13.04L96.6458 22.768V46H86.4058V22.768L71.8138 13.04V46H61.5738Z" fill="white"/>
         </svg>
     </div>
-    <header>
+    <header id="header">
         <div class="container-fluid header-container">
             <nav>
                 <a href="/" class="logo-link">
@@ -38,6 +38,11 @@
                     </svg>
                 </a>
                 <ul class="nav-list p-0 m-0">
+                    <li class="nav-item m-0 p-3">
+                        <a href="#about" class="nav-link">
+                            About
+                        </a>
+                    </li>
                     <li class="nav-item m-0 p-3">
                         <a href="#experience" class="nav-link">
                             Experience
@@ -54,9 +59,10 @@
                         </a>
                     </li>
                 </ul>
-                <button id="menu" class="mx-3">
+                <button id="menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav" aria-controls="offcanvas-nav">
                     <i class="fa-solid fa-bars icon"></i>
                 </button>
+                  
             </nav>
             <div class="header-content">
                 <div class="header-img">
@@ -103,6 +109,62 @@
             </div>
         </div>
     </section>
+
+    <!-- off-screen nav -->
+    {% block nav %}
+    <div class="offcanvas offcanvas-end px-4" tabindex="-1" id="offcanvas-nav" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header p-0">
+            <svg id="offcanvas-nav-logo" width="122" height="46" viewBox="0 0 122 46" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.57375 46V0.239998H38.9098C43.6458 0.239998 47.3151 1.43466 49.9178 3.824C52.5631 6.21333 53.8858 9.84 53.8858 14.704C53.8858 18.8427 52.9258 22.0853 51.0058 24.432C49.0858 26.7787 46.3551 28.2507 42.8138 28.848L53.3738 46H41.7258L31.9338 29.168H10.8138V46H0.57375ZM37.6938 8.56H10.8138V20.784L37.6938 20.848C39.5711 20.848 41.0004 20.3787 41.9818 19.44C43.0058 18.5013 43.5178 16.9227 43.5178 14.704C43.5178 12.4427 43.0058 10.864 41.9818 9.968C41.0004 9.02933 39.5711 8.56 37.6938 8.56ZM61.5738 46V0.239998H70.1498L91.3338 15.088H91.6538L112.838 0.239998H121.414V46H111.174V13.04L96.6458 22.768V46H86.4058V22.768L71.8138 13.04V46H61.5738Z" fill="white"/>
+            </svg>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr class="nav-sep my-5">
+        <div class="offcanvas-body p-0">
+            <ul class="offcanvas-nav-list p-0">
+                <li class="offcanvas-nav-item">
+                    <a href="#header" class="offcanvas-nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="offcanvas-nav-item">
+                    <a href="#about" class="offcanvas-nav-link">
+                        About
+                    </a>
+                </li>
+                <li class="offcanvas-nav-item">
+                    <a href="#experience" class="offcanvas-nav-link">
+                        Experience
+                    </a>
+                </li>
+                <li class="offcanvas-nav-item">
+                    <a href="#projects" class="offcanvas-nav-link">
+                        My Work
+                    </a>
+                </li>
+                <li class="offcanvas-nav-item">
+                    <a href="#contact" class="offcanvas-nav-link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas-footer p-0">
+            <p class="social-bar-header">Socials</p>
+            <div class="nav-social-bar">
+                <a href="https://github.com/CodeMasterWinter" target="_blank" class="social-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://twitter.com/WinterMogotsi" target="_blank" class="social-link">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" class="social-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endblock nav %}
 
     <script src="{% static 'WinterMogotsi/index.js' %}"></script>
 
@@ -174,6 +236,55 @@
 
         magneto.addEventListener('mousemove', activateMagneto)
         magneto.addEventListener('mouseleave', resetMagneto)
+        
+        // menu magnetism
+
+        const menu = document.querySelector('#menu-toggle')
+        const menuText = document.querySelector('#menu-toggle .icon')
+        
+        const activateMenu = (event) => {
+            let boundBox = menu.getBoundingClientRect()
+            const menuStrength = 40
+            const menuTextStrength = 30
+            const newX = ((event.clientX - boundBox.left)/menu.offsetWidth) - 0.5
+            const newY = ((event.clientY - boundBox.top)/menu.offsetHeight) - 0.5
+
+            // Move button to new position
+            gsap.to(menu, {
+                duration: 1,
+                x: newX * menuStrength,
+                y: newY * menuStrength,
+                ease: Power4.easeOut
+            })
+
+            gsap.to(menuText, {
+                duration: 1,
+                x: newX * menuTextStrength,
+                y: newY * menuTextStrength,
+                ease: Power4.easeOut
+            })
+        }
+
+        const resetMenu = (event) => {
+            // Move button to initial position
+            gsap.to(menu, {
+                duration: 1,
+                x: 0,
+                y:0, 
+                ease: Elastic.easeOut
+            })
+
+            gsap.to(menuText, {
+                duration: 1,
+                x: 0,
+                y:0, 
+                ease: Elastic.easeOut
+            })
+        }
+
+        menu.addEventListener('mousemove', activateMenu)
+        menu.addEventListener('mouseleave', resetMenu)
+
     </script>
     <script>
         let headerTitle = document.querySelector('.header-title')
@@ -189,6 +300,11 @@
         gsap.set(headerTitle, {
             xPercent: 0,
             opacity: 1
+        })
+
+        gsap.set(menu, {
+            scale: 0.5,
+            opacity: 0
         })
 
         gsap.to(headShot, {
@@ -219,6 +335,16 @@
             },
             scale: 1.5,
             opacity: 0
+        })
+
+        gsap.to(menu, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true,
+            },
+            scale: 1,
+            opacity: 1
         })
 
         gsap.to(headerTitle, {
