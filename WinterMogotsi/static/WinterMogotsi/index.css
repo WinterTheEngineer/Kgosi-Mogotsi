@@ -302,11 +302,17 @@ nav {
     position: absolute;
 }
 
-.btn-close {
+.offcanvas-nav-close {
     right: 0;
-    top: 2.5rem;
-    fill: #ffffff;
+    top: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    color: #272727;
+    font-size: 1.5rem;
     position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
 }
 
 .offcanvas-nav-item {
@@ -442,7 +448,7 @@ html.lenis, html.lenis body {
     }
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
 
     #splash {
         display: none;
@@ -466,16 +472,15 @@ html.lenis, html.lenis body {
         display: none;
     }
 
-    #menu {
-        width: 2rem;
-        height: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    #menu-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
     }
 
-    #menu .icon{
-        font-size: 1.8rem;
+    #menu-toggle .icon{
+        font-size: 1.2rem
     }
 
     header {
