@@ -59,7 +59,7 @@ nav {
     justify-content: space-evenly;
 }
 
-.nav-link {
+.nav-link, .nav-link:visited {
     color: #ffffff;
     position: relative;
     transition: opacity .2s ease, transform .3s ease-in-out;
@@ -98,8 +98,29 @@ nav {
 }
 
 #menu-toggle .icon {
+    z-index: 6;
     font-size: 2rem;
     color: #ffffff;
+    position: relative;
+}
+
+.menu-backdrop {
+    top: 50%;
+    width: 0;
+    height: 0;
+    left: 50%;
+    z-index: 5;
+    display: flex;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ca00d8;
+    transform: translate(-50%, -50%);
+    transition: width .3s ease-in-out, height .3s ease-in-out;
+}
+
+#menu-toggle:hover .menu-backdrop {
+    width: 100%;
+    height: 100%;
 }
 
 #cursor {
@@ -245,7 +266,7 @@ nav {
 }
 
 .intro-tags {
-    background: #d9d9d9;
+    background: #a3a3a3;
 }
 
 .intro-tag {
