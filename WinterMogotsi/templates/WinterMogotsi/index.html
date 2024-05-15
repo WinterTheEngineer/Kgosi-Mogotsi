@@ -95,20 +95,32 @@
         </div>
     </header>
     <section id="about">
-        <div class="container-fluid about-container px-5">
-            <a href="#about"><h1 class="about-title py-4">About Me</h1></a>
-            <div class="about-tags">
-                <div class="about-box">
-                    <p class="about-tag">Boundless Tenacity</p>
-                    <p class="about-tag">Boundless Tenacity</p>
-                </div>
-                <div class="about-box">
-                    <p class="about-tag">Effortless Efficiency</p>
-                    <p class="about-tag">Effortless Efficiency</p>
-                </div>
-                <div class="about-box">
-                    <p class="about-tag">Peerless Proficiency</p>
-                    <p class="about-tag">Peerless Proficiency</p>
+        <div class="container-fluid about-container p-5">
+            <a href="#about"><h1 class="about-title">About Me</h1></a>
+            <div class="about-content">
+                <div class="about-text-content">
+                    <div class="about-tags">
+                        <div class="about-box">
+                            <p class="about-tag">Boundless Tenacity</p>
+                            <p class="about-tag">Boundless Tenacity</p>
+                        </div>
+                        <div class="about-box">
+                            <p class="about-tag">Effortless Efficiency</p>
+                            <p class="about-tag">Effortless Efficiency</p>
+                        </div>
+                        <div class="about-box">
+                            <p class="about-tag">Peerless Proficiency</p>
+                            <p class="about-tag">Peerless Proficiency</p>
+                        </div>
+                    </div>
+                    <hr class="about-sep my-5">
+                    <p class="about-text">
+                        My boundless passion for coding, paired 
+                        with my unrivaled proficiency in all related
+                        fields, enables me to create solutions that 
+                        set a new and  unrivaled standard for any 
+                        organization.
+                    </p>
                 </div>
             </div>
         </div>
@@ -204,7 +216,8 @@
                 e.preventDefault();
         
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'smooth',
+                    duration: 10000,
                 });
             });
         });

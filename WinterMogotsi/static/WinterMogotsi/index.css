@@ -253,6 +253,14 @@ nav {
     position: relative;
 }
 
+.about-content {
+    display: flex;
+}
+
+.about-text-content {
+    width: 50%;
+}
+
 .about-title {
     color: #ffffff;
 }
@@ -282,6 +290,18 @@ nav {
 
 .about-box:hover .about-tag {
     transform: translateY(-7rem) !important;
+}
+
+.about-sep {
+    width: 80%;
+    height: 2px;
+    background-color: #a3a3a3;
+}
+
+.about-text {
+    width: 80%;
+    color: #ffffff;
+    font-size: 1.8rem;
 }
 
 #offcanvas-nav {
