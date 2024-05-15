@@ -94,6 +94,25 @@
             </div>
         </div>
     </header>
+    <section id="about">
+        <div class="container-fluid about-container px-5">
+            <a href="#about"><h1 class="about-title py-4">About Me</h1></a>
+            <div class="about-tags">
+                <div class="about-box">
+                    <p class="about-tag">Boundless Tenacity</p>
+                    <p class="about-tag">Boundless Tenacity</p>
+                </div>
+                <div class="about-box">
+                    <p class="about-tag">Effortless Efficiency</p>
+                    <p class="about-tag">Effortless Efficiency</p>
+                </div>
+                <div class="about-box">
+                    <p class="about-tag">Peerless Proficiency</p>
+                    <p class="about-tag">Peerless Proficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="introduction">  
         <div class="container-fluid introduction-container p-0">
             <div class="intro-tags p-4">
@@ -178,6 +197,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     <script>
         const lenis = new Lenis()
 
@@ -345,8 +376,8 @@
         let header = document.querySelector('#header')
 
         
-        let intro = document.querySelector('#introduction')
-        let introTags = document.querySelectorAll('.intro-tag')
+        let about = document.querySelector('#about')
+        let aboutTags = document.querySelectorAll('.about-tag')
 
         gsap.set(headerTitle, {
             xPercent: 0,
@@ -418,18 +449,18 @@
             opacity: 0
         })
 
-        introTags.forEach((introTag, index) => {
-            gsap.set(introTag, {
+        aboutTags.forEach((aboutTag, index) => {
+            gsap.set(aboutTag, {
                 xPercent: -20,
                 opacity: 0
         });
 
-            gsap.to(introTag, {
+            gsap.to(aboutTag, {
                 scrollTrigger: {
-                    trigger: intro,
+                    trigger: about,
                     start: 'top 50%',
                 },
-                delay: index * 1,
+                delay: index * .5,
                 xPercent: 0,
                 opacity: 1
         })
