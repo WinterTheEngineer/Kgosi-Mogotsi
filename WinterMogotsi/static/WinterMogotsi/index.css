@@ -244,7 +244,6 @@ nav {
 }
 
 #about {
-    height: 100dvh;
     background-color: #272727;
 }
 
@@ -254,14 +253,12 @@ nav {
 }
 
 .about-content {
+    height: 45%;
     display: flex;
 }
 
-.about-text-content {
-    width: 50%;
-}
-
 .about-title {
+    height: 10%;
     color: #ffffff;
 }
 
@@ -271,7 +268,7 @@ nav {
 
 .about-tags {
     display: flex;
-    margin-top: 6rem;
+    min-width: 60%;
     flex-direction: column;
 }
 
@@ -285,23 +282,49 @@ nav {
 .about-tag {
     font-size: 4rem;
     color: #ffffff;
-    transition: transform .5s ease;
-}
-
-.about-box:hover .about-tag {
-    transform: translateY(-7rem) !important;
-}
-
-.about-sep {
-    width: 80%;
-    height: 2px;
-    background-color: #a3a3a3;
 }
 
 .about-text {
     width: 80%;
+    display: flex;
     color: #ffffff;
     font-size: 1.8rem;
+    align-items: center;
+}
+
+#accolades {
+    height: 100vh;
+    background-color: #272727;
+}
+
+.accolades-container {
+    height: 100%;
+}
+
+.accolades-header {
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.accolades-row {
+    display: flex;
+}
+
+.accolade-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.accolade-icon {
+    width: 100%;
+    font-size: 10rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.accolade-block:not(:last-child) {
+    border-right: .2rem solid #ffffff;
 }
 
 #offcanvas-nav {
