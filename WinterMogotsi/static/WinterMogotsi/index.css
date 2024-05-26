@@ -293,20 +293,18 @@ nav {
 }
 
 #accolades {
-    height: 100vh;
+    height: 50vh;
     background-color: #272727;
 }
 
 .accolades-container {
     height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
-
-.accolades-header {
-    font-size: 4rem;
-    color: #ffffff;
-}
-
 .accolades-row {
+    height: 100%;
     display: flex;
 }
 
@@ -319,7 +317,7 @@ nav {
 .accolade-icon {
     width: 100%;
     font-size: 10rem;
-    color: #ffffff;
+    color: #ca00d8;
     text-align: center;
 }
 
