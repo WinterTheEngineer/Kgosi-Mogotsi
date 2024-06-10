@@ -316,9 +316,11 @@ nav {
 
 .accolade-title {
     height: 30%;
+    display: flex;
     color: #ffffff;
     font-size: 1.8rem;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .accolade-sep {
