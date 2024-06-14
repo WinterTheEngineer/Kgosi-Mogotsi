@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'WinterMogotsi/images/favicon.ico' %}" type="image/x-icon">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,23 +95,52 @@
             </div>
         </div>
     </header>
-    <section id="about">
-        <div class="container-fluid about-container p-5">
+    <!-- <section id="about">
+        <div class="container-fluid about-container px-5 py-4">
             <a href="#about"><h1 class="about-title">About Me</h1></a>
-            <div class="about-content py-5 mb-5">
+            <div class="about-content py-5">
                 <div class="about-tags">
                     <p class="about-tag"><span>Boundless</span> Tenacity</p>
                     <p class="about-tag"><span>Effortless</span> Efficiency</p>
                     <p class="about-tag"><span>Peerless</span> Proficiency</p>
                 </div>
-                <p class="about-text m-0 mt-4">
-                    My <span>boundless</span> passion for coding, paired 
+                <div class="about-desc m-0 mt-4">
+                    <p class="about-text">My <span>boundless</span> passion for coding, paired 
                     with my <span>unrivaled</span> proficiency in all related
                     fields, enables me to create solutions that 
                     set a new and  unrivaled standard for any 
-                    organization.
-                </p>
+                    organization.</p>
+                </div>
             </div>
+        </div>
+    </section> -->
+    <section id="about">
+        <div class="about-bg">
+            <p class="about-quote">
+                “Impossible simply means that you haven't found the solution yet.”<br>
+                <br><span>- Anonymous</span>
+            </p>
+        </div>
+        <div class="container-fluid about-container px-5 py-4">
+            <a href="#about"><h1 class="about-title">About Me</h1></a>
+            <div class="about-content">
+                <div class="about-tags">
+                    <p class="about-tag"><span>Boundless</span> Tenacity</p>
+                    <p class="about-tag"><span>Effortless</span> Efficiency</p>
+                    <p class="about-tag"><span>Peerless</span> Proficiency</p>
+                </div>
+                <div class="about-desc m-0 mt-4">
+                    <p class="about-text">My <span>boundless</span> passion for coding, paired 
+                    with my <span>unrivaled</span> proficiency in all related
+                    fields, enables me to create solutions that 
+                    set a new and  unrivaled standard for any 
+                    organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container-fluid education-container p-5">
             <div class="about-accolades pt-5">
                 <div class="accolade-column col-4 p-3">
                     <div class="accolade-title">HyperionDev Certified<br>Software Engineer</div>
@@ -128,6 +158,66 @@
 
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-bg p-5">
+            <h1 class="contact-title">Reach<br>Out</h1>
+        </div>
+        <div class="container-fluid contact-container p-5">
+            <form id="contact-form" action="{% url 'home' %}" method="post" class="row p5">
+                {% csrf_token %}
+                <div class="col-6 form-block p-3">
+                    <label for="id_full_name">Full name:</label>
+                    <input type="text" name="full_name" required="" id="id_full_name" placeholder="Type here">
+                </div>
+                <div class="col-6 form-block p-3">
+                    <label for="id_company">Company Name (Optional):</label>
+                    <input type="text" name="company" id="id_company" placeholder="Type here">
+                </div>
+                <div class="col-6 form-block p-3">
+                    <label for="id_email">Email:</label>
+                    <input type="email" name="email" maxlength="320" required="" id="id_email" placeholder="Type here">
+                </div>
+                <div class="col-6 form-block p-3">
+                    <label for="id_phone">Phone Number (Optional):</label>
+                    <input type="tel" name="phone" id="id_phone" placeholder="Type here">
+                </div>
+                <div class="col-6 form-block p-3">
+                    <label for="id_service">Service:</label>
+                    <select name="service" id="id_service">
+                        <option value="sell">I want to SELL...</option>
+                        <option value="buy">I want to BUY...</option>
+                        <option value="rent_out">Rent out (I'm an owner)</option>
+                        <option value="rent_in">I want to rent...</option>
+                    </select>
+                </div>
+                <div class="col-6 form-block p-3">
+                    <label for="id_property">Property:</label>
+                    <select name="property" id="id_property">
+                        <option value="apartment">an Apartment</option>
+                        <option value="house">a House</option>
+                        <option value="land">Land</option>
+                        <option value="commercial">a Commercial Property</option>
+                    </select>
+                </div>
+                <div class="col-8 form-block p-3">
+                    <label for="id_message">Message:</label>
+                    <textarea name="message" required="" id="id_message" placeholder="Type Here"></textarea>
+                </div>
+                <div class="col-4 form-block p-3">
+                    <button id="contact-submit" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        {% if messages %}
+            <ul class="messages p-3 m-0">
+                <i class="fa-solid fa-circle-check message-icon"></i>
+                {% for message in messages %}
+                <li class="message">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         </div>
     </section>
 
@@ -371,6 +461,8 @@
 
     </script>
     <script>
+        let navList = document.querySelector('.nav-list')
+
         let headerTitle = document.querySelector('.header-title')
         let headShot = document.querySelector('.header-img')
         let headerTagline = document.querySelector('.header-tagline')
@@ -379,15 +471,39 @@
 
         
         let about = document.querySelector('#about')
+        let aboutBG = document.querySelector('.about-bg')
         let aboutTags = document.querySelectorAll('.about-tag')
+        let aboutDesc = document.querySelector('.about-desc')
+        let aboutText = document.querySelector('.about-text')
+
+        let contact = document.querySelector('#contact')
+        let contactBG = document.querySelector('.contact-bg')
 
         gsap.set(headerTitle, {
             xPercent: 0,
             opacity: 1
         })
 
+        gsap.set(navList, {
+            xPercent: 50,
+            opacity: 0
+        })
+
         gsap.set(menu, {
             scale: 0.5,
+            opacity: 0,
+        })
+
+        gsap.set(aboutText, {
+            yPercent: 100,
+            opacity: 0
+        })
+
+        gsap.set(aboutBG, {
+            opacity: 0
+        })
+
+        gsap.set(contactBG, {
             opacity: 0
         })
 
@@ -451,6 +567,36 @@
             opacity: 0
         })
 
+        gsap.to(navList, {
+            scrollTrigger: {
+                trigger: navList,
+                toggleActions: "restart",
+            },
+            xPercent: 0,
+            opacity: 1,
+            duration: 1
+        })
+
+        gsap.to(aboutText, {
+            scrollTrigger: {
+                trigger: aboutText,
+                toggleActions: "restart",
+            },
+            opacity: 1,
+            yPercent: 0,
+            duration: 1
+        })
+
+        gsap.to(aboutBG, {
+            scrollTrigger: {
+                trigger: about,
+                toggleActions: 'restart'
+            },
+            delay: .5,
+            opacity: 1,
+            duration: 2
+        })
+
         aboutTags.forEach((aboutTag, index) => {
             gsap.set(aboutTag, {
                 xPercent: -20,
@@ -459,14 +605,25 @@
 
             gsap.to(aboutTag, {
                 scrollTrigger: {
-                    trigger: about,
-                    start: 'top 50%',
+                    trigger: aboutTag,
+                    toggleActions: "restart",
                 },
                 delay: index * 1,
                 xPercent: 0,
                 opacity: 1
         })
         })
+        
+        gsap.to(contactBG, {
+            scrollTrigger: {
+                trigger: contact,
+                toggleActions: 'restart'
+            },
+            delay: .5,
+            opacity: 1,
+            duration: 2
+        })
+
     </script>
 </body>
 </html>

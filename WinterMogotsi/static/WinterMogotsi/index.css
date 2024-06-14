@@ -6,6 +6,23 @@
 }
 
 body {
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #272727;
+}
+
+body {
     animation: bodyscroll 6s forwards;
 }
 
@@ -78,7 +95,8 @@ nav {
     height: 3px;
     content: '';
     position: absolute;
-    background-color: #ffffff;
+    border-radius: 3px;
+    background-color: #ca00d8;
     transition: width .3s ease-in-out;
 }
 
@@ -242,8 +260,9 @@ nav {
 .social-link:hover {
     opacity: 1;
 }
-
+/* 
 #about {
+    height: 100dvh;
     background-color: #272727;
 }
 
@@ -258,7 +277,6 @@ nav {
 }
 
 .about-title {
-    height: 10%;
     color: #ffffff;
     position: relative;
     display: inline-block;
@@ -293,8 +311,103 @@ nav {
     color: #ca00d8;
 }
 
-.about-text {
+.about-desc {
     width: 80%;
+}
+
+.about-text {
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.about-text span {
+    color: #ca00d8;
+} */
+
+#about {
+    height: 100dvh;
+    position: relative;
+    background-color: #272727;
+    
+}
+
+.about-bg {
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 40%;
+    height: 100%;
+    display: grid;
+    position: absolute;
+    background: url(images/about-bg.jpg) center no-repeat;
+    background-size: cover;
+    mask: linear-gradient(to right, transparent, #272727);
+}
+
+.about-quote {
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.about-container {
+    height: 100%;
+}
+
+.about-title {
+    height: 2.75rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+.about-title::after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    height: .2rem;
+    position: absolute;
+    background-color: #ffffff;
+}
+
+.about-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 2.75rem);
+    justify-content: space-evenly;
+}
+
+.about-tags {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-tag {
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.about-tag span{
+    color: #ca00d8;
+}
+
+.about-content hr {
+    width: 40%;
+    height: 3px;
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+.about-desc {
+    width: 70%;
+}
+
+.about-text {
     color: #ffffff;
     font-size: 1.8rem;
 }
@@ -435,6 +548,100 @@ nav {
     filter: drop-shadow(0 0 .2rem #ffffff);
 }
 
+#contact {
+    display: flex;
+    height: 100dvh;
+    background-color: #a3a3a3;
+}
+
+.contact-bg {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 40%;
+    height: 100%;
+    display: grid;
+    background: url(images/contact-bg.jpg) center no-repeat;
+    background-size: cover;
+    mask: linear-gradient(to left, transparent, #272727 90%);
+}
+
+.contact-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contact-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 6rem;
+}
+
+#contact-form {
+    height: 100%;
+}
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-block label {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.form-block input, .form-block textarea, .form-block select{
+    height: 3rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: transparent;
+    transition: border 1s ease, filter 1s ease;
+    border-left: 2px solid #27272742;
+    border-bottom: 2px solid #27272742;
+}
+
+.form-block textarea {
+    height: 90%;
+}
+
+.form-block:last-child {
+    display: grid;
+}
+
+#contact-submit {
+    border: none;
+    height: 3rem;
+    color: #ffffff;
+    position: relative;
+    align-self: flex-end;
+    background-color: #272727;
+}
+
+#contact-submit::after{
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 4px;
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    transition: width 10s ease;
+}
+
+#contact-submit:hover::after {
+    width: 100%;
+}
+
+#contact-submit:active::after {
+    background-color: #ca00d8;
+}
+
 /* Lenis CSS */
 
 html.lenis, html.lenis body {
@@ -484,8 +691,8 @@ html.lenis, html.lenis body {
         height: 12rem;
     }
 
-    .about-tag {
-        font-size: 3rem;
+    .about-tag, .about-title {
+        font-size: 2.6rem;
     }
     
     .about-text {
@@ -494,6 +701,15 @@ html.lenis, html.lenis body {
     
     .accolade-title {
         font-size: 1.4rem;
+    }
+
+    .contact-title {
+        font-size: 4rem;
+    }
+
+    .form-block label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
 }
 
