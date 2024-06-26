@@ -328,7 +328,6 @@ nav {
     height: 100dvh;
     position: relative;
     background-color: #272727;
-    
 }
 
 .about-bg {
@@ -356,21 +355,11 @@ nav {
     height: 100%;
 }
 
-.about-title {
+.section-header {
     height: 2.75rem;
     color: #ffffff;
     position: relative;
     display: inline-block;
-}
-
-.about-title::after {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    content: '';
-    height: .2rem;
-    position: absolute;
-    background-color: #ffffff;
 }
 
 .about-content {
@@ -416,24 +405,48 @@ nav {
     color: #ca00d8;
 }
 
-.about-accolades {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-evenly;
+#education {
+    height: 100dvh;
+    background-color: #a3a3a3;
+}
+
+.education-container {
+    height: 100%;
+}
+
+.accolades {
+    align-items: center;
+    height: calc(100% - 2.75rem);
 }
 
 .accolade-column {
-    height: 25rem;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    height: 36rem;
+}
+
+.accolade-header {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.accolade-icon {
+    display: flex;
+    font-size: 8rem;
+    color: #272727;
+    align-items: center;
+    justify-content: center;
+}
+
+.accolade-image {
+    height: 8rem;
 }
 
 .accolade-title {
-    height: 30%;
-    display: flex;
     color: #ffffff;
     font-size: 1.8rem;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .accolade-sep {
@@ -443,14 +456,17 @@ nav {
     color: #ffffff;
 }
 
-.accolade-icon {
-    width: 100%;
-    height: 70%;
+.accolade-body {
+    height: 50%;
     display: flex;
-    font-size: 10rem;
-    color: #ca00d8;
     align-items: center;
     justify-content: center;
+}
+
+.accolade-body p {
+    width: 75%;
+    color: #ffffff;
+    text-align: center;
 }
 
 #offcanvas-nav {
@@ -561,7 +577,7 @@ nav {
     width: 40%;
     height: 100%;
     display: grid;
-    background: url(images/contact-bg.jpg) center no-repeat;
+    background: url() center no-repeat;
     background-size: cover;
     mask: linear-gradient(to left, transparent, #272727 90%);
 }
@@ -647,24 +663,24 @@ nav {
 html.lenis, html.lenis body {
     height: auto;
 }
-  
+    
 .lenis.lenis-smooth {
     scroll-behavior: auto !important;
 }
-  
+    
 .lenis.lenis-smooth [data-lenis-prevent] {
     overscroll-behavior: contain;
 }
-  
+    
 .lenis.lenis-stopped {
     overflow: hidden;
 }
-  
+    
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
 }
 
-@media (max-width: 1680px) {
+@media (max-width: 1366px) {
     .header-title{
         font-size: 5.5rem;
     }
@@ -691,7 +707,11 @@ html.lenis, html.lenis body {
         height: 12rem;
     }
 
-    .about-tag, .about-title {
+    .section-header {
+        font-size: 2.6rem;
+    }
+
+    .about-tag {
         font-size: 2.6rem;
     }
     
@@ -699,8 +719,24 @@ html.lenis, html.lenis body {
         font-size: 1.3rem;
     }
     
+    .accolade-column {
+        height: 30rem;
+    }
+
     .accolade-title {
         font-size: 1.4rem;
+    }
+
+    .accolade-icon {
+        font-size: 6rem;
+    }
+
+    .accolade-image {
+        height: 6rem;
+    }
+
+    .accolade-body p {
+        width: 90%;
     }
 
     .contact-title {
@@ -710,6 +746,14 @@ html.lenis, html.lenis body {
     .form-block label {
         font-size: 1.2rem;
         margin-bottom: 1rem;
+    }
+
+    .offcanvas-nav-link {
+        font-size: 1.8rem;
+    }
+
+    .offcanvas-nav-item {
+        min-height: 3.6rem;
     }
 }
 

@@ -10,10 +10,6 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
     <!-- CDNs -->
@@ -42,6 +38,11 @@
                     <li class="nav-item m-0 p-3">
                         <a href="#about" class="nav-link">
                             About
+                        </a>
+                    </li>
+                    <li class="nav-item m-0 p-3">
+                        <a href="#education" class="nav-link">
+                            Education
                         </a>
                     </li>
                     <li class="nav-item m-0 p-3">
@@ -122,7 +123,7 @@
             </p>
         </div>
         <div class="container-fluid about-container px-5 py-4">
-            <a href="#about"><h1 class="about-title">About Me</h1></a>
+            <a href="#about"><h1 class="section-header about-header">About Me</h1></a>
             <div class="about-content">
                 <div class="about-tags">
                     <p class="about-tag"><span>Boundless</span> Tenacity</p>
@@ -140,22 +141,53 @@
         </div>
     </section>
     <section id="education">
-        <div class="container-fluid education-container p-5">
-            <div class="about-accolades pt-5">
+        <div class="container-fluid education-container px-5 py-4">
+            <a href="#education"><h1 class="section-header education-header">My Education</h1></a>
+            <div class="row accolades m-auto">
                 <div class="accolade-column col-4 p-3">
-                    <div class="accolade-title">HyperionDev Certified<br>Software Engineer</div>
+                    <div class="accolade-header">
+                        <img class="accolade-image" src="{% static 'WinterMogotsi/images/HyperionDev-dark.png' %}" alt="HyperionDev logo">
+                        <p class="accolade-title m-0">HyperionDev Certified<br>Software Engineer</p>
+                    </div>
                     <hr class="accolade-sep">
-                    <i class="fa-solid fa-h accolade-icon"></i>
+                    <div class="accolade-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Enim at doloremque excepturi nostrum cupiditate adipisci 
+                            maxime vero repudiandae quasi voluptatem velit quisquam 
+                            nobis qui reiciendis ratione odit, tenetur amet quas!
+                        </p>
+                    </div>
                 </div>
                 <div class="accolade-column col-4 p-3">
-                    <div class="accolade-title">Meta Certified<br>Web Developer</div>
+                    <div class="accolade-header">
+                        <i class="fa-brands fa-meta accolade-icon"></i>
+                        <p class="accolade-title m-0">Meta Certified<br>Web Developer</p>
+                    </div>
                     <hr class="accolade-sep">
-                    <i class="fa-brands fa-meta accolade-icon"></i>
+                    <div class="accolade-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Enim at doloremque excepturi nostrum cupiditate adipisci 
+                            maxime vero repudiandae quasi voluptatem velit quisquam 
+                            nobis qui reiciendis ratione odit, tenetur amet quas!
+                        </p>
+                    </div>
                 </div>
                 <div class="accolade-column col-4 p-3">
-                    <div class="accolade-title">Undetermined</div>
+                    <div class="accolade-header">
+                        <img class="accolade-image" src="{% static 'WinterMogotsi/images/WeThinkCode-dark.png' %}" alt="WeThinkCode_ logo">
+                        <p class="accolade-title m-0">WeThinkCode_<br>Student</p>
+                    </div>
                     <hr class="accolade-sep">
-
+                    <div class="accolade-body">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Enim at doloremque excepturi nostrum cupiditate adipisci 
+                            maxime vero repudiandae quasi voluptatem velit quisquam 
+                            nobis qui reiciendis ratione odit, tenetur amet quas!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,6 +275,11 @@
                 <li class="offcanvas-nav-item">
                     <a href="#about" class="offcanvas-nav-link">
                         About
+                    </a>
+                </li>
+                <li class="offcanvas-nav-item">
+                    <a href="#education" class="offcanvas-nav-link">
+                        Education
                     </a>
                 </li>
                 <li class="offcanvas-nav-item">
@@ -579,7 +616,8 @@
 
         gsap.to(aboutText, {
             scrollTrigger: {
-                trigger: aboutText,
+                trigger: about,
+                start: 'top 50%',
                 toggleActions: "restart",
             },
             opacity: 1,
