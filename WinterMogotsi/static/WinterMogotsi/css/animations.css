@@ -10,15 +10,6 @@
     }
 }
 
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes bodyscroll {
     0% {
         overflow-y: hidden;
@@ -78,10 +69,37 @@
         stroke-dasharray: 32% 0;
     }
 
-    100% {
+    100%{
+        fill: #ffffff;
         stroke: transparent;
-        fill: transparent;
-        stroke-width: 0;
+        stroke-width: 3;
+    }
+}
+
+@keyframes magneto-stroke {
+    0% {
+        filter: none;
+        stroke: #ffffff3f;
+    }
+
+    25% {
+        stroke: #ffffff;
+        filter: drop-shadow(0 0 .4rem #ffffff);
+    }
+
+    50% {
+        filter: none;
+        stroke: #ffffff3f;
+    }
+
+    75% {
+        stroke: #ffffff;
+        filter: drop-shadow(0 0 .4rem #ffffff);
+    }
+
+    100% {
+        filter: none;
+        stroke: #ffffff3f;
     }
 }
 

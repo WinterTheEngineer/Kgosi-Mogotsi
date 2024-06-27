@@ -12,26 +12,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
     <!-- CDNs -->
     <script src="https://kit.fontawesome.com/f8dced6eec.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{% static 'WinterMogotsi/index.css' %}">
-    <link rel="stylesheet" href="{% static 'WinterMogotsi/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'WinterMogotsi/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'WinterMogotsi/css/animations.css' %}">
     <title>Rhulani Mogotsi &#149 Full-Stack Developer</title>
 </head>
 <body>
     <div id="splash">
-        <svg id="splash-logo" width="122" height="46" viewBox="0 0 122 46" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.57375 46V0.239998H38.9098C43.6458 0.239998 47.3151 1.43466 49.9178 3.824C52.5631 6.21333 53.8858 9.84 53.8858 14.704C53.8858 18.8427 52.9258 22.0853 51.0058 24.432C49.0858 26.7787 46.3551 28.2507 42.8138 28.848L53.3738 46H41.7258L31.9338 29.168H10.8138V46H0.57375ZM37.6938 8.56H10.8138V20.784L37.6938 20.848C39.5711 20.848 41.0004 20.3787 41.9818 19.44C43.0058 18.5013 43.5178 16.9227 43.5178 14.704C43.5178 12.4427 43.0058 10.864 41.9818 9.968C41.0004 9.02933 39.5711 8.56 37.6938 8.56ZM61.5738 46V0.239998H70.1498L91.3338 15.088H91.6538L112.838 0.239998H121.414V46H111.174V13.04L96.6458 22.768V46H86.4058V22.768L71.8138 13.04V46H61.5738Z" fill="white"/>
-        </svg>
+        <div class="splash-loader">
+            <svg id="splash-logo" width="381" height="151" viewBox="0 0 381 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M190.033 146V148.5H192.533H223.893H226.393V146V49.7313L266.081 76.1899V146V148.5H268.581H299.94H302.44V146V76.1867L341.932 49.7427V146V148.5H344.432H375.793H378.293V146V5.85999V3.35999H375.793H349.529H348.74L348.094 3.81278L284.163 48.6225L220.231 3.81278L219.585 3.35999H218.797H192.533H190.033V5.85999V146Z" stroke="white" stroke-width="5"/>
+                <path d="M3.22 146V148.5H5.72H37.08H39.58V146V96.952H100.322L129.587 147.257L130.31 148.5H131.748H167.42H171.895L169.549 144.689L139.09 95.2166C148.729 92.9619 156.457 88.4318 162.103 81.5311C168.462 73.7587 171.488 63.1981 171.488 50.156C171.488 34.8253 167.311 22.9325 158.519 14.987C149.949 7.12436 138.032 3.35999 123.124 3.35999H5.72H3.22V5.85999V146ZM130.843 62.8171L130.823 62.835L130.804 62.8534C128.418 65.1359 124.756 66.4715 119.403 66.472C119.402 66.472 119.401 66.472 119.4 66.472L39.58 66.2819V33.84H119.4C124.755 33.84 128.417 35.1757 130.804 37.4586L130.844 37.4969L130.886 37.5334C133.209 39.5659 134.736 43.4903 134.736 50.156C134.736 56.6584 133.223 60.6352 130.843 62.8171Z" stroke="white" stroke-width="5"/>
+            </svg>
+        </div>
     </div>
     <header id="header">
-        <div class="container-fluid header-container">
+        <div class="container-fluid header-container p-4">
             <nav>
                 <a href="/" class="logo-link">
-                    <svg id="header-logo" width="122" height="46" viewBox="0 0 122 46" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.57375 46V0.239998H38.9098C43.6458 0.239998 47.3151 1.43466 49.9178 3.824C52.5631 6.21333 53.8858 9.84 53.8858 14.704C53.8858 18.8427 52.9258 22.0853 51.0058 24.432C49.0858 26.7787 46.3551 28.2507 42.8138 28.848L53.3738 46H41.7258L31.9338 29.168H10.8138V46H0.57375ZM37.6938 8.56H10.8138V20.784L37.6938 20.848C39.5711 20.848 41.0004 20.3787 41.9818 19.44C43.0058 18.5013 43.5178 16.9227 43.5178 14.704C43.5178 12.4427 43.0058 10.864 41.9818 9.968C41.0004 9.02933 39.5711 8.56 37.6938 8.56ZM61.5738 46V0.239998H70.1498L91.3338 15.088H91.6538L112.838 0.239998H121.414V46H111.174V13.04L96.6458 22.768V46H86.4058V22.768L71.8138 13.04V46H61.5738Z" fill="white"/>
+                    <svg id="header-logo" width="381" height="151" viewBox="0 0 381 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M190.033 146V148.5H192.533H223.893H226.393V146V49.7313L266.081 76.1899V146V148.5H268.581H299.94H302.44V146V76.1867L341.932 49.7427V146V148.5H344.432H375.793H378.293V146V5.85999V3.35999H375.793H349.529H348.74L348.094 3.81278L284.163 48.6225L220.231 3.81278L219.585 3.35999H218.797H192.533H190.033V5.85999V146Z" stroke="white" stroke-width="5"/>
+                        <path d="M3.22 146V148.5H5.72H37.08H39.58V146V96.952H100.322L129.587 147.257L130.31 148.5H131.748H167.42H171.895L169.549 144.689L139.09 95.2166C148.729 92.9619 156.457 88.4318 162.103 81.5311C168.462 73.7587 171.488 63.1981 171.488 50.156C171.488 34.8253 167.311 22.9325 158.519 14.987C149.949 7.12436 138.032 3.35999 123.124 3.35999H5.72H3.22V5.85999V146ZM130.843 62.8171L130.823 62.835L130.804 62.8534C128.418 65.1359 124.756 66.4715 119.403 66.472C119.402 66.472 119.401 66.472 119.4 66.472L39.58 66.2819V33.84H119.4C124.755 33.84 128.417 35.1757 130.804 37.4586L130.844 37.4969L130.886 37.5334C133.209 39.5659 134.736 43.4903 134.736 50.156C134.736 56.6584 133.223 60.6352 130.843 62.8171Z" stroke="white" stroke-width="5"/>
                     </svg>
                 </a>
                 <ul class="nav-list p-0 m-0">
@@ -73,10 +81,10 @@
                 </div>
                 <div class="header-text me-md-3">
                     <h1 class="header-title">
-                        Rhulani Mogotsi
+                        <span>Rhulani Mogotsi</span>
                     </h1>                          
                     <h1 class="header-tagline">
-                        Full Stack Developer
+                        <span>Full Stack Developer</span>
                     </h1>
                 </div>
             </div>
@@ -122,7 +130,7 @@
                 <br><span>- Anonymous</span>
             </p>
         </div>
-        <div class="container-fluid about-container px-5 py-4">
+        <div class="container-fluid about-container p-4">
             <a href="#about"><h1 class="section-header about-header">About Me</h1></a>
             <div class="about-content">
                 <div class="about-tags">
@@ -316,11 +324,12 @@
     </div>
     {% endblock nav %}
 
-    <script src="{% static 'WinterMogotsi/index.js' %}"></script>
+    <script src="{% static 'WinterMogotsi/js/index.js' %}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
@@ -337,6 +346,28 @@
                 });
             });
         });
+
+        // Something about Scrollers????
+        const scrollers = document.querySelectorAll(('.scroller'));
+
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation()
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute('data-animated', true);
+
+                const scrollerInner = scroller.querySelector('.scroller__inner')
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
     </script>
     <script>
         const lenis = new Lenis()
@@ -498,13 +529,6 @@
 
     </script>
     <script>
-        let navList = document.querySelector('.nav-list')
-
-        let headerTitle = document.querySelector('.header-title')
-        let headShot = document.querySelector('.header-img')
-        let headerTagline = document.querySelector('.header-tagline')
-        let socialBar = document.querySelector('.social-bar')
-        let header = document.querySelector('#header')
 
         
         let about = document.querySelector('#about')
@@ -516,21 +540,11 @@
         let contact = document.querySelector('#contact')
         let contactBG = document.querySelector('.contact-bg')
 
-        gsap.set(headerTitle, {
-            xPercent: 0,
-            opacity: 1
-        })
-
-        gsap.set(navList, {
-            xPercent: 50,
-            opacity: 0
-        })
-
         gsap.set(menu, {
             scale: 0.5,
             opacity: 0,
         })
-
+        
         gsap.set(aboutText, {
             yPercent: 100,
             opacity: 0
@@ -542,76 +556,6 @@
 
         gsap.set(contactBG, {
             opacity: 0
-        })
-
-        gsap.to(headShot, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top',
-                scrub: true
-            },
-            yPercent: 20,
-            scale: .8,
-            opacity: 0
-        })
-
-        gsap.to(socialBar, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top',
-                scrub: true
-            },
-            opacity: 0,
-        })
-
-        gsap.to(magneto, {
-            scrollTrigger: {
-                trigger: headerTitle,
-                start: 'top',
-                scrub: true,
-            },
-            scale: 1.5,
-            opacity: 0
-        })
-
-        gsap.to(menu, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top',
-                scrub: true,
-            },
-            scale: 1,
-            opacity: 1
-        })
-
-        gsap.to(headerTitle, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top',
-                scrub: true
-            },
-            yPercent: -100,
-            opacity: 0
-        })
-
-        gsap.to(headerTagline, {
-            scrollTrigger: {
-                trigger: header,
-                start: 'top',
-                scrub: true
-            },
-            yPercent: -100,
-            opacity: 0
-        })
-
-        gsap.to(navList, {
-            scrollTrigger: {
-                trigger: navList,
-                toggleActions: "restart",
-            },
-            xPercent: 0,
-            opacity: 1,
-            duration: 1
         })
 
         gsap.to(aboutText, {
@@ -662,6 +606,198 @@
             duration: 2
         })
 
+    </script>
+    <script>
+        // splash timeline
+        const splash = document.querySelector('#splash')
+        const splash_logo = document.querySelector('#splash-logo')
+
+        // Master Timeline
+        const master_timeline = gsap.timeline();
+        
+        const setSplashStates = () => {
+
+            gsap.set(splash_logo, {
+                yPercent: 0
+            });
+
+        }
+
+        const splashAnimation = () => {
+            const splash_timeline = gsap.timeline({
+                defaults: {
+                    ease: 'power2.inOut'
+                }
+            });
+
+            splash_timeline.to(splash_logo, {
+                yPercent: -100,
+                delay: 6
+            })
+
+            .to(splash, {
+                yPercent: -100,
+                duration: 1.5,
+                ease: 'power4.inOut'
+            }, '<')
+
+            return splash_timeline
+        }
+    </script>
+    <script>
+
+        // header animations and timeline
+        const navList = document.querySelector('.nav-list')
+        const headerTitle = document.querySelector('.header-title')
+        const headShot = document.querySelector('.header-img')
+        const headerTagline = document.querySelector('.header-tagline')
+        const socialBar = document.querySelector('.social-bar')
+        const header = document.querySelector('#header')
+        const titleSpan = document.querySelector('.header-title span')
+        const taglineSpan = document.querySelector('.header-tagline span')
+        
+        // Master Timeline
+
+        const setInitialStates = () => {
+            gsap.set(navList, {
+                xPercent: 50,
+                opacity: 0
+            });
+
+            gsap.set(socialBar, {
+                yPercent: 100,
+                opacity: 0
+            });
+
+            gsap.set(titleSpan, {
+                yPercent: 100
+            });
+
+            gsap.set(taglineSpan, {
+                yPercent: 100
+            });
+
+            gsap.set(headShot, {
+                yPercent: 20,
+                scale: .8,
+                opacity: 0
+            });
+
+            gsap.set(magneto, {
+                scale: .5,
+                opacity: 0
+            });
+        }
+
+        const headerAnimation = () => {
+            const header_timeline = gsap.timeline({
+                defaults: {
+                    ease: 'power2.inOut'
+                }
+            })
+
+            .to(headShot, {
+                yPercent: 0,
+                scale: 1,
+                opacity: 1
+            }, '<')
+
+            .to(titleSpan, {
+                yPercent: 0,
+                duration: 1
+            }, '<')
+
+            .to(taglineSpan, {
+                yPercent: 0,
+                duration: 1
+            }, '<')
+
+            .to(navList, {
+                xPercent: 0,
+                opacity: 1,
+                duration: 1
+            }, '<')
+            
+            .to(magneto, {
+                scale: 1,
+                opacity: 1,
+                duration: 1.2,
+                ease: 'elastic.inOut'
+            }, '<')
+
+            .to(socialBar, {
+                opacity: 1,
+                yPercent: 0,
+                duration: 1
+            }, '<');
+        
+            return header_timeline
+
+        }
+
+        gsap.to(socialBar, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            opacity: 0,
+        });
+
+        gsap.to(magneto, {
+            scrollTrigger: {
+                trigger: headerTitle,
+                start: 'top',
+                scrub: true,
+            },
+            scale: 1.5,
+            opacity: 0
+        });
+
+        gsap.to(headShot, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            yPercent: 20,
+            scale: .8,
+            opacity: 0
+        });
+
+        gsap.to(headerTitle, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            yPercent: -100,
+            opacity: 0
+        });
+
+        gsap.to(headerTagline, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true
+            },
+            yPercent: -100,
+            opacity: 0
+        });
+
+        gsap.to(menu, {
+            scrollTrigger: {
+                trigger: header,
+                start: 'top',
+                scrub: true,
+            },
+            scale: 1,
+            opacity: 1,
+        })
+
+        master_timeline.add(setInitialStates())
+        master_timeline.add(splashAnimation())
+        master_timeline.add(headerAnimation())
     </script>
 </body>
 </html>
