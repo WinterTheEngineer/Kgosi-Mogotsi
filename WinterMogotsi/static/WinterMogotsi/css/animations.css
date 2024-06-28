@@ -69,37 +69,39 @@
         stroke-dasharray: 32% 0;
     }
 
-    100%{
+    90%, 100%{
         fill: #ffffff;
         stroke: transparent;
-        stroke-width: 3;
     }
 }
 
-@keyframes magneto-stroke {
+@keyframes icon-stroke {
     0% {
-        filter: none;
-        stroke: #ffffff3f;
-    }
-
-    25% {
-        stroke: #ffffff;
-        filter: drop-shadow(0 0 .4rem #ffffff);
+        fill: transparent;
+        stroke: #272727;
+        stroke-width: 3;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 32%;
     }
 
     50% {
-        filter: none;
-        stroke: #ffffff3f;
+        fill: transparent;
+        stroke: #272727;
+        stroke-width: 3;
     }
 
-    75% {
-        stroke: #ffffff;
-        filter: drop-shadow(0 0 .4rem #ffffff);
+    80%{
+        fill: transparent;
+        stroke: #272727;
+        stroke-width: 3;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 32% 0;
     }
 
-    100% {
-        filter: none;
-        stroke: #ffffff3f;
+    100%{
+        fill: #272727;
+        stroke: transparent;
+        stroke-width: 3;
     }
 }
 

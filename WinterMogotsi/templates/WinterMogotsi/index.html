@@ -154,7 +154,18 @@
             <div class="row accolades m-auto">
                 <div class="accolade-column col-4 p-3">
                     <div class="accolade-header">
-                        <img class="accolade-image" src="{% static 'WinterMogotsi/images/HyperionDev-dark.png' %}" alt="HyperionDev logo">
+                        <svg class="hyperion-icon" width="335" height="344" viewBox="0 0 335 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 273.975L0 0L14 0L14 273.975C14 277.855 10.866 281 7 281C3.13401 281 0 277.855 0 273.975Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M334.381 70.0097L334 343.01L320 342.99L320.381 69.9902C320.386 66.1242 323.525 62.9946 327.391 63C331.257 63.0054 334.386 66.1437 334.381 70.0097Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M227 7.05645V125H213V7.05645C213 3.15928 216.134 9.53674e-07 220 9.53674e-07C223.866 9.53674e-07 227 3.15928 227 7.05645Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M103 336.99L103.168 216.99L117.168 217.01L117 337.01C116.995 340.876 113.856 344.005 109.99 344C106.124 343.995 102.995 340.856 103 336.99Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 14V0H103V14H14Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M320 329L320 343L227 343L227 329L320 329Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M117 125V111H213V125H117Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M214 217L214 231L117 231L117 217L214 217Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M103 0L117 0L117 125H103L103 0Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M226.997 342.967L212.997 342.948L213.173 216.99L227.173 217.01L226.997 342.967Z"/>
+                        </svg>    
                         <p class="accolade-title m-0">HyperionDev Certified<br>Software Engineer</p>
                     </div>
                     <hr class="accolade-sep">
@@ -621,25 +632,29 @@
                 yPercent: 0
             });
 
+            gsap.set(splash, {
+                yPercent: 0
+            });
+
         }
 
         const splashAnimation = () => {
             const splash_timeline = gsap.timeline({
                 defaults: {
-                    ease: 'power2.inOut'
+                    ease: 'power2.inOut',
                 }
             });
 
             splash_timeline.to(splash_logo, {
                 yPercent: -100,
-                delay: 6
+                delay: 5,
+                clearProps: 'none'
             })
 
             .to(splash, {
                 yPercent: -100,
-                duration: 1.5,
-                ease: 'power4.inOut'
-            }, '<')
+                clearProps: 'none'
+            })
 
             return splash_timeline
         }

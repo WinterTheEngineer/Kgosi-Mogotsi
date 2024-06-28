@@ -32,7 +32,6 @@ body {
     z-index: 9;
     width: 100%;
     height: 100%;
-    display: none;
     position: fixed;
     background: #000000;
 }
@@ -51,7 +50,7 @@ body {
     height: 5.5rem;
     display: block;
     stroke-width: 3;
-    animation: 6s logo-stroke forwards;
+    animation: 5s logo-stroke ease;
 }
 
 header {
@@ -349,7 +348,7 @@ nav {
     height: 100%;
     display: grid;
     position: absolute;
-    background: url(C:\Repositories\WinterMogotsi\WinterMogotsi\static\WinterMogotsi\images\about-bg.jpg) center no-repeat;
+    background: url(../images/about-bg.jpg) center no-repeat;
     background-size: cover;
     mask: linear-gradient(to right, transparent, #272727);
 }
@@ -450,7 +449,13 @@ nav {
     justify-content: center;
 }
 
-.accolade-image {
+.hyperion-icon {
+    font-size: 6rem;
+    stroke-width: 14;
+    animation: 6s icon-stroke forwards infinite;
+}
+
+.accolade-image, .hyperion-icon {
     height: 8rem;
 }
 
