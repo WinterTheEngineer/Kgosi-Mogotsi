@@ -5,27 +5,6 @@
     font-family: 'Zen Dots';
 }
 
-body {
-    overflow: overlay;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #272727;
-}
-
-body {
-    animation: bodyscroll 6s forwards;
-}
-
 #splash {
     top: 0;
     left: 0;
@@ -50,6 +29,7 @@ body {
     height: 5.5rem;
     display: block;
     stroke-width: 3;
+    fill: #ffffff;
     animation: 5s logo-stroke ease;
 }
 
@@ -425,6 +405,7 @@ nav {
 }
 
 .accolades {
+    display: flex;
     align-items: center;
     height: calc(100% - 2.75rem);
 }
@@ -442,21 +423,16 @@ nav {
 }
 
 .accolade-icon {
+    height: 8rem;
     display: flex;
-    font-size: 8rem;
     color: #272727;
     align-items: center;
     justify-content: center;
-}
-
-.hyperion-icon {
-    font-size: 6rem;
-    stroke-width: 14;
     animation: 6s icon-stroke forwards infinite;
 }
 
-.accolade-image, .hyperion-icon {
-    height: 8rem;
+.hyperion-icon {
+    stroke-width: 14;
 }
 
 .accolade-title {
@@ -696,7 +672,199 @@ html.lenis, html.lenis body {
     pointer-events: none;
 }
 
-@media (max-width: 1366px) {
+/* Mobile - Portrait */
+@media screen and (min-width: 240px) and (max-width: 428px) {
+
+    #splash {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .splash-loader {
+        top: 50%;
+        left: 50%;
+        z-index: 9;
+        position: fixed;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+    }
+    
+    #splash-logo {
+        width: 8rem;
+        height: 5rem;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    #menu-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #menu-toggle .icon{
+        font-size: 1.2rem
+    }
+
+    header {
+        height: 100dvh;
+    }
+
+    #header-logo {
+        display: none;
+    }
+
+    .header-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .social-bar {
+        display: none;
+    }
+
+    .header-img {
+        width: 100%;
+    }
+
+    .header-img img{
+        bottom: 0;
+        height: 80%;
+        z-index: 3;
+        position: absolute;
+    }
+
+    .header-text {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-title {
+        margin: 0;
+        font-size: 1.8rem;
+        padding-block: 1rem;
+    }
+    
+    .header-tagline {
+        font-size: 1.4rem;
+    }
+
+    #typewriter-cursor {
+        display: none;
+    }
+
+    .magneto {
+        z-index: 4;
+    }
+
+    .about-bg {
+        top: unset;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        mask: linear-gradient(to bottom, transparent, #272727);
+    }
+
+    .about-quote {
+        display: none;
+    }
+
+    .about-header {
+        display: block;
+        text-align: center;
+    }
+
+    .about-content {
+        width: 100%;
+        min-height: 60%;
+        max-height: 70%;
+    }
+
+    .about-tags {
+        margin-top: 2rem;
+        align-items: center;
+    }
+
+    .about-tag {
+        font-size: 1.4rem;
+        color: #ffffff;
+    }
+
+    .about-desc {
+        width: 100%;
+        margin-top: 21rem;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .education-header {
+        display: block;
+        text-align: center;
+    }
+
+    .accolades {
+        width: 100%;
+        align-items: normal;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .accolade-column {
+        width: 100%;
+        height: 33%;
+    }
+
+    .accolade-header {
+        height: 100%;
+    }
+
+    .accolade-icon {
+        height: 4rem;
+    }
+    
+    .accolade-image {
+        height: 4rem;
+    }
+
+    .accolade-title {
+        font-size: 1.2rem;
+    }
+
+    .accolade-sep, .accolade-body {
+        display: none;
+    }
+    
+    #contact {
+        display: none;
+    }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 429px) and (max-width: 810px) {
+    
+}
+
+/* Tablet - Landscape */
+@media screen and (min-width: 811px) and (max-width: 1080px) {
+
+}
+
+@media screen and (min-width: 1081px) and (max-width: 1366px) {
+    
     .header-title{
         font-size: 5.5rem;
     }
@@ -770,130 +938,5 @@ html.lenis, html.lenis body {
 
     .offcanvas-nav-item {
         min-height: 3.6rem;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-
-    #splash {
-        display: none;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #splash-logo {
-        top: 50%;
-        left: 50%;
-        margin: 0;
-        transform: translate(-50%, -50%);
-    }
-
-    nav {
-        height: 4rem;
-        justify-content: space-between;
-    }
-
-    .nav-list {
-        display: none;
-    }
-
-    #menu-toggle {
-        top: 1rem;
-        right: 1rem;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    #menu-toggle .icon{
-        font-size: 1.2rem
-    }
-
-    header {
-        height: 100dvh;
-    }
-
-    #header-logo {
-        margin: 0;
-        height: 1.4rem;
-        position: static;
-        display: inline-flex;
-    }
-
-    .header-container {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header-content {
-        height: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .social-bar {
-        display: none;
-    }
-
-    .header-img {
-        width: 100%;
-    }
-
-    .header-img img{
-        bottom: 0;
-        height: 90%;
-        z-index: 3;
-        position: absolute;
-    }
-
-    .header-text {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .header-title {
-        margin: 0;
-        font-size: 2rem;
-        padding-block: 1rem;
-    }
-    
-    .header-tagline {
-        font-size: 1.6rem;
-    }
-
-    #typewriter-cursor {
-        display: none;
-    }
-
-    .magneto {
-        z-index: 4;
-    }
-
-    .introduction-container {
-        height: 100%;
-        flex-direction: column;
-        margin-block: 0;
-        margin-inline: 0;
-    }
-
-    .intro-tags,
-    .intro-text {
-        width: 100%;
-        min-height: 15rem;
-        text-align: center;
-    }
-
-    .intro-tags {
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-    }
-
-    .intro-tag {
-        font-size: 1.4rem;
-    }
-
-    .intro-text {
-        background-color: #ffffff00;
     }
 }
