@@ -541,15 +541,9 @@
         OffcanvasClose.addEventListener('mouseleave', resetOffcanvasClose)
 
     </script>
+
+    <!-- Contact Timeline -->
     <script>
-
-        let section_headers = document.querySelectorAll('.section-header')
-        let about = document.querySelector('#about')
-        let aboutBG = document.querySelector('.about-bg')
-        let aboutTags = document.querySelectorAll('.about-tag')
-        let aboutDesc = document.querySelector('.about-desc')
-        let aboutText = document.querySelector('.about-text')
-
         let contact = document.querySelector('#contact')
         let contactBG = document.querySelector('.contact-bg')
 
@@ -558,74 +552,9 @@
             opacity: 0,
         })
         
-        gsap.set(aboutText, {
-            yPercent: 100,
-            opacity: 0
-        })
-
-        gsap.set(aboutBG, {
-            opacity: 0
-        })
-
         gsap.set(contactBG, {
             opacity: 0
         })
-
-        gsap.to(aboutText, {
-            scrollTrigger: {
-                trigger: about,
-                start: 'top 50%',
-                toggleActions: "restart",
-            },
-            opacity: 1,
-            yPercent: 0,
-            duration: 1
-        })
-
-        gsap.to(aboutBG, {
-            scrollTrigger: {
-                trigger: about,
-                toggleActions: 'restart'
-            },
-            delay: .5,
-            opacity: 1,
-            duration: 2
-        })
-
-        aboutTags.forEach((aboutTag, index) => {
-            gsap.set(aboutTag, {
-                xPercent: -20,
-                opacity: 0
-            }
-        );
-
-            gsap.to(aboutTag, {
-                scrollTrigger: {
-                    trigger: aboutTag,
-                    toggleActions: "restart",
-                },
-                delay: index * 1,
-                xPercent: 0,
-                opacity: 1
-            })
-        });
-
-        section_headers.forEach((section_header) => {
-            gsap.set(section_header, {
-                xPercent: -100,
-                opacity: 0
-            }
-        );
-
-            gsap.to(section_header, {
-                scrollTrigger: {
-                    trigger: section_header,
-                    toggleActions: "restart",
-                },
-                xPercent: 0,
-                opacity: 1
-            })
-        });
         
         gsap.to(contactBG, {
             scrollTrigger: {
@@ -638,6 +567,7 @@
         })
 
     </script>
+    <!-- Splash Timeline -->
     <script>
         // splash timeline
         const splash = document.querySelector('#splash')
@@ -682,6 +612,7 @@
             return splash_timeline
         }
     </script>
+    <!-- Header Timeline -->
     <script>
 
         // header animations and timeline
@@ -693,10 +624,8 @@
         const header = document.querySelector('#header')
         const titleSpan = document.querySelector('.header-title span')
         const taglineSpan = document.querySelector('.header-tagline span')
-        
-        // Master Timeline
 
-        const setInitialStates = () => {
+        const setHeaderStates = () => {
             gsap.set(navList, {
                 xPercent: 50,
                 opacity: 0
@@ -732,9 +661,9 @@
                 defaults: {
                     ease: 'power2.inOut'
                 }
-            })
+            });
 
-            .to(headShot, {
+            header_timeline.to(headShot, {
                 yPercent: 0,
                 scale: 1,
                 opacity: 1
@@ -832,10 +761,86 @@
             scale: 1,
             opacity: 1,
         })
+    </script>
+    <!-- About Timeline -->
+    <script>
 
-        master_timeline.add(setInitialStates())
-        master_timeline.add(splashAnimation())
-        master_timeline.add(headerAnimation())
+        const about = document.querySelector('#about')
+        const aboutBG = document.querySelector('.about-bg')
+        const about_header = document.querySelector('.about-header')
+        const aboutTags = document.querySelectorAll('.about-tag')
+        const aboutText = document.querySelector('.about-text')
+
+        const setAboutStates = () => {
+
+            gsap.set(about_header, {
+                xPercent: -100,
+                opacity: 0
+            });
+
+            aboutTags.forEach((aboutTag) => {
+                gsap.set(aboutTag, {
+                    xPercent: -20,
+                    opacity: 0
+                });
+            })
+
+            gsap.set(aboutText, {
+                yPercent: 100,
+                opacity: 0
+            })
+
+            gsap.set(aboutBG, {
+                opacity: 0
+            })
+        }
+
+        const aboutAnimation = () => {
+            const about_timeline = gsap.timeline({
+                defaults: {
+                    ease: 'power2.inOut',
+                },
+                scrollTrigger: {
+                    trigger: about,
+                    toggleActions: "restart"
+                }
+            });
+            
+            about_timeline.to(about_header, {  
+                xPercent: 0,
+                opacity: 1
+            })
+
+            aboutTags.forEach((aboutTag, index) => {
+                about_timeline.to(aboutTag, {
+                    delay: 0.5,
+                    xPercent: 0,
+                    opacity: 1,
+                    ease: 'power1.inOut'
+                })
+            })
+            
+            about_timeline.to(aboutText, {
+                opacity: 1,
+                yPercent: 0,
+                duration: 1
+            })
+            .to(aboutBG, {
+                opacity: 1,
+                duration: 2
+            });
+
+            return about_timeline;
+        };
+
+    master_timeline
+        .add(setSplashStates())
+        .add(splashAnimation())
+        .add(setHeaderStates())
+        .add(headerAnimation())
+    setAboutStates()
+    aboutAnimation()
+
     </script>
 </body>
 </html>
