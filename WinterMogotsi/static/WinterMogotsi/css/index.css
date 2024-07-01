@@ -138,6 +138,7 @@ nav {
     fill: #ffffff;
     stroke-width: 0;
     position: absolute;
+    animation: 5s logo-stroke ease infinite alternate-reverse;
 }
 
 .header-content {
@@ -335,6 +336,7 @@ nav {
 
 .about-quote {
     width: 70%;
+    display: none;
     color: #ffffff;
     font-size: 1.2rem;
     align-self: flex-end;
@@ -426,9 +428,10 @@ nav {
     height: 8rem;
     display: flex;
     color: #272727;
+    fill: #272727;
     align-items: center;
     justify-content: center;
-    animation: 6s icon-stroke forwards infinite;
+    /* animation: 6s icon-stroke forwards infinite; */
 }
 
 .hyperion-icon {
@@ -863,14 +866,16 @@ html.lenis, html.lenis body {
 
 }
 
+/* laptop */
+
 @media screen and (min-width: 1081px) and (max-width: 1366px) {
     
     .header-title{
-        font-size: 5.5rem;
+        font-size: 5rem;
     }
 
     .header-tagline{
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 
     .header-img {
@@ -878,8 +883,8 @@ html.lenis, html.lenis body {
     }
 
     .magneto {
-        width: 8.5rem;
-        height: 8.5rem;
+        width: 8rem;
+        height: 8rem;
     }
 
     .social-bar {

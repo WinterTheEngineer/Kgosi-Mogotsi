@@ -321,7 +321,6 @@
             </ul>
         </div>
         <div class="offcanvas-footer p-0">
-            <p class="social-bar-header">Socials</p>
             <div class="nav-social-bar">
                 <a href="https://github.com/CodeMasterWinter" target="_blank" class="social-link">
                     <i class="fa-brands fa-github"></i>
@@ -542,31 +541,6 @@
 
     </script>
 
-    <!-- Contact Timeline -->
-    <script>
-        let contact = document.querySelector('#contact')
-        let contactBG = document.querySelector('.contact-bg')
-
-        gsap.set(menu, {
-            scale: 0.5,
-            opacity: 0,
-        })
-        
-        gsap.set(contactBG, {
-            opacity: 0
-        })
-        
-        gsap.to(contactBG, {
-            scrollTrigger: {
-                trigger: contact,
-                toggleActions: 'restart'
-            },
-            delay: .5,
-            opacity: 1,
-            duration: 2
-        })
-
-    </script>
     <!-- Splash Timeline -->
     <script>
         // splash timeline
@@ -574,7 +548,7 @@
         const splash_logo = document.querySelector('#splash-logo')
 
         // Master Timeline
-        const master_timeline = gsap.timeline();
+        const splash_sequence = gsap.timeline();
         
         const setSplashStates = () => {
 
@@ -760,7 +734,14 @@
             },
             scale: 1,
             opacity: 1,
+            autoAlpha: 1
         })
+
+        splash_sequence
+        .add(setSplashStates())
+        .add(splashAnimation())
+        .add(setHeaderStates())
+        .add(headerAnimation())
     </script>
     <!-- About Timeline -->
     <script>
@@ -770,6 +751,14 @@
         const about_header = document.querySelector('.about-header')
         const aboutTags = document.querySelectorAll('.about-tag')
         const aboutText = document.querySelector('.about-text')
+
+        const about_sequence = gsap.timeline({
+            scrollTrigger: {
+                trigger: about,
+                ease: 'power2.inOut',
+                toggleActions: "play none none reset"
+            }
+        });
 
         const setAboutStates = () => {
 
@@ -799,16 +788,13 @@
             const about_timeline = gsap.timeline({
                 defaults: {
                     ease: 'power2.inOut',
-                },
-                scrollTrigger: {
-                    trigger: about,
-                    toggleActions: "restart"
                 }
             });
             
             about_timeline.to(about_header, {  
                 xPercent: 0,
-                opacity: 1
+                opacity: 1,
+                duration: 1
             })
 
             aboutTags.forEach((aboutTag, index) => {
@@ -832,14 +818,50 @@
 
             return about_timeline;
         };
+        
+        aboutTags.forEach((aboutTag, index) => {
+            gsap.to(aboutTag, {
+                scrollTrigger: {
+                    trigger: aboutTag,
+                    start: 'top',
+                    scrub: true
+                },
+                delay: 0.5,
+                xPercent: 20,
+                opacity: 0,
+                ease: 'power1.inOut'
+            })
+        })
 
-    master_timeline
-        .add(setSplashStates())
-        .add(splashAnimation())
-        .add(setHeaderStates())
-        .add(headerAnimation())
-    setAboutStates()
-    aboutAnimation()
+    about_sequence
+        .add(setAboutStates())
+        .add(aboutAnimation())
+
+    </script>
+    <!-- Contact Timeline -->
+    <script>
+        let contact = document.querySelector('#contact')
+        let contactBG = document.querySelector('.contact-bg')
+
+        gsap.set(menu, {
+            scale: 0.5,
+            opacity: 0,
+            autoAlpha: 0
+        })
+        
+        gsap.set(contactBG, {
+            opacity: 0
+        })
+        
+        gsap.to(contactBG, {
+            scrollTrigger: {
+                trigger: contact,
+                toggleActions: 'restart'
+            },
+            delay: .5,
+            opacity: 1,
+            duration: 2
+        })
 
     </script>
 </body>
