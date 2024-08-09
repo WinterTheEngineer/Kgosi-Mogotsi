@@ -54,13 +54,8 @@
                         </a>
                     </li>
                     <li class="nav-item m-0 p-3">
-                        <a href="#experience" class="nav-link">
-                            Experience
-                        </a>
-                    </li>
-                    <li class="nav-item m-0 p-3">
-                        <a href="#projects" class="nav-link">
-                            My Work
+                        <a href="#references" class="nav-link">
+                            References
                         </a>
                     </li>
                     <li class="nav-item m-0 p-3">
@@ -92,6 +87,9 @@
                 <span class="text">My Work</span>
             </a>
             <div class="social-bar">
+                <a href="#" target="#" class="social-link">
+                    <i class="fa-solid fa-file"></i>
+                </a>
                 <a href="https://github.com/CodeMasterWinter" target="_blank" class="social-link">
                     <i class="fa-brands fa-github"></i>
                 </a>
@@ -139,11 +137,16 @@
                     <p class="about-tag"><span>Peerless</span> Proficiency</p>
                 </div>
                 <div class="about-desc m-0 mt-4">
-                    <p class="about-text">My <span>boundless</span> passion for coding, paired 
-                    with my <span>unrivaled</span> proficiency in all related
-                    fields, enables me to create solutions that 
-                    set a new and  unrivaled standard for any 
-                    organization.</p>
+                    <p class="about-text">
+                        I am <span>Rhulani Mogotsi</span>, a curious and passionate 
+                        developer with a penchant for using code to solve problems.
+                        <br><br>
+                        My <span>boundless</span> passion for coding, paired 
+                        with my <span>peerless</span> proficiency in all related
+                        fields, enables me to create solutions that 
+                        set a new and unrivaled standard for any 
+                        organization.
+                    </p>
                 </div>
             </div>
         </div>
@@ -234,22 +237,15 @@
                     <label for="id_phone">Phone Number (Optional):</label>
                     <input type="tel" name="phone" id="id_phone" placeholder="Type here">
                 </div>
-                <div class="col-6 form-block p-3">
-                    <label for="id_service">Service:</label>
-                    <select name="service" id="id_service">
-                        <option value="sell">I want to SELL...</option>
-                        <option value="buy">I want to BUY...</option>
-                        <option value="rent_out">Rent out (I'm an owner)</option>
-                        <option value="rent_in">I want to rent...</option>
-                    </select>
+                <div class="col-6 form-block justify-content-end align-items-center p-3">
+                    <p class="form-block-prompt">I need a...</p>
                 </div>
                 <div class="col-6 form-block p-3">
-                    <label for="id_property">Property:</label>
+                    <label for="id_service">Service:</label>
                     <select name="property" id="id_property">
-                        <option value="apartment">an Apartment</option>
-                        <option value="house">a House</option>
-                        <option value="land">Land</option>
-                        <option value="commercial">a Commercial Property</option>
+                        <option value="apartment">Software Engineer</option>
+                        <option value="house">Web Developer</option>
+                        <option value="land">Full Stack Developer</option>
                     </select>
                 </div>
                 <div class="col-8 form-block p-3">
@@ -753,7 +749,7 @@
         const about_sequence = gsap.timeline({
             scrollTrigger: {
                 trigger: about,
-                ease: 'power2.inOut',
+                ease: 'power1.inOut',
                 toggleActions: "play none none reset"
             }
         });
@@ -783,40 +779,39 @@
         }
 
         const aboutAnimation = () => {
-            const about_timeline = gsap.timeline({
-                defaults: {
-                    ease: 'power2.inOut',
-                }
-            });
+            const about_timeline = gsap.timeline();
             
             about_timeline.to(about_header, {  
                 xPercent: 0,
                 opacity: 1,
-                duration: 1
+                duration: 1,
+                ease: 'power1.inOut'
             })
+            .to(aboutBG, {
+                opacity: 1,
+                duration: 2,
+                ease: 'power1.inOut'
+            }, '<');
 
             aboutTags.forEach((aboutTag, index) => {
                 about_timeline.to(aboutTag, {
-                    delay: 0.5,
+                    delay: 0.1*index,
                     xPercent: 0,
                     opacity: 1,
                     ease: 'power1.inOut'
                 })
             })
-            
+
             about_timeline.to(aboutText, {
+                // delay: 1,
                 opacity: 1,
                 yPercent: 0,
                 duration: 1
             })
-            .to(aboutBG, {
-                opacity: 1,
-                duration: 2
-            });
 
             return about_timeline;
         };
-        
+
         aboutTags.forEach((aboutTag, index) => {
             gsap.to(aboutTag, {
                 scrollTrigger: {
@@ -829,6 +824,18 @@
                 opacity: 0,
                 ease: 'power1.inOut'
             })
+        })
+
+        gsap.to(aboutText, {
+            scrollTrigger: {
+                trigger: aboutText,
+                start: 'top 60%',
+                end: 'bottom 30%',
+                scrub: true,
+            },
+            yPercent: -50,
+            opacity: 0,
+            ease: 'power1.inOut'
         })
 
     about_sequence
