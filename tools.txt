@@ -1,0 +1,28 @@
+Python
+Django
+JavaScript
+HTML
+CSS
+Bootstrap
+VS Code
+Azure
+AWS
+Docker
+Git
+Github
+Stack
+Zoom
+Teams
+Google Meet
+Excel
+Powerpoint
+Outlook
+NPM
+ReactJS
+WordPress
+Vue.js
+Angular
+Linux
+NodeJS
+Figma
+Jira
