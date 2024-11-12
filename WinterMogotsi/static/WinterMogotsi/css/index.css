@@ -36,7 +36,7 @@
 header {
     height: 100vh;
     overflow: hidden;
-    background: #a3a3a3;
+    background: #afafaf;
 }
 
 .header-container{
@@ -401,7 +401,7 @@ nav {
 
 #education {
     height: 100dvh;
-    background-color: #a3a3a3;
+    background-color: #afafaf;
 }
 
 .education-container {
