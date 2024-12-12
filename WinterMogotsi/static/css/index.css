@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url(../images/site-bg.jpg) fixed no-repeat;
+    background: url(../images/grainy-bg.jpeg) fixed no-repeat;
     background-size: cover;
     /* background: linear-gradient(135deg, #222 25%, #555 25%, #555 50%, #222 50%, #222 75%, #555 75%, #555 100%); */
 }
@@ -47,7 +47,7 @@ nav ul li a {
     text-decoration: none;
     justify-content: center;
     font-family: 'Helvetica Neue';
-    background: -webkit-linear-gradient(20deg, #7D7D7D, #242424);
+    background: -webkit-linear-gradient(20deg, #7D7D7D, #535353);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -77,7 +77,7 @@ nav ul li a:hover {
 .header-text h3 span {
     opacity: .5;
     font-size: 2rem;
-    background: -webkit-linear-gradient(20deg, #7D7D7D, #242424);
+    background: -webkit-linear-gradient(20deg, #7D7D7D, #535353);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -134,6 +134,14 @@ ion-icon {
 
 .site-links ul a:hover {
     opacity: 1;
+}
+
+.site-links ul a ion-icon {
+    transition: transform .3s ease;
+}
+
+.site-links ul a:hover ion-icon {
+    transform: translateX(.75rem);
 }
 
 .social-link {
