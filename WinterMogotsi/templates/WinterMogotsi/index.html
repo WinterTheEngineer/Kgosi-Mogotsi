@@ -9,76 +9,55 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- CDNs -->
     <script src="https://kit.fontawesome.com/62306f6812.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+
     <title>Rhulani Mogotsi &#149 Software Engineer</title>
 </head>
 <body>
     <header id="header">
-        <div class="container-fluid header-container p-4">
+        <div class="container-fluid header-container">
             <nav>
-                <a href="/" class="logo-link">
-                    <svg id="header-logo" width="381" height="151" viewBox="0 0 381 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M190.033 146V148.5H192.533H223.893H226.393V146V49.7313L266.081 76.1899V146V148.5H268.581H299.94H302.44V146V76.1867L341.932 49.7427V146V148.5H344.432H375.793H378.293V146V5.85999V3.35999H375.793H349.529H348.74L348.094 3.81278L284.163 48.6225L220.231 3.81278L219.585 3.35999H218.797H192.533H190.033V5.85999V146Z" stroke="white" stroke-width="5"/>
-                        <path d="M3.22 146V148.5H5.72H37.08H39.58V146V96.952H100.322L129.587 147.257L130.31 148.5H131.748H167.42H171.895L169.549 144.689L139.09 95.2166C148.729 92.9619 156.457 88.4318 162.103 81.5311C168.462 73.7587 171.488 63.1981 171.488 50.156C171.488 34.8253 167.311 22.9325 158.519 14.987C149.949 7.12436 138.032 3.35999 123.124 3.35999H5.72H3.22V5.85999V146ZM130.843 62.8171L130.823 62.835L130.804 62.8534C128.418 65.1359 124.756 66.4715 119.403 66.472C119.402 66.472 119.401 66.472 119.4 66.472L39.58 66.2819V33.84H119.4C124.755 33.84 128.417 35.1757 130.804 37.4586L130.844 37.4969L130.886 37.5334C133.209 39.5659 134.736 43.4903 134.736 50.156C134.736 56.6584 133.223 60.6352 130.843 62.8171Z" stroke="white" stroke-width="5"/>
-                    </svg>
-                </a>
-                <!-- <ul class="nav-list p-0 m-0">
-                    <li class="nav-item m-0 p-3">
-                        <a href="#about" class="nav-link">
+                <ul class="">
+                    <li>
+                        <a href="#about">
                             About
                         </a>
                     </li>
-                    <li class="nav-item m-0 p-3">
-                        <a href="#education" class="nav-link">
+                    <li>
+                        <a href="#education">
                             Education
                         </a>
                     </li>
-                    <li class="nav-item m-0 p-3">
-                        <a href="#references" class="nav-link">
+                    <li>
+                        <a href="#references">
                             References
                         </a>
                     </li>
-                    <li class="nav-item m-0 p-3">
-                        <a href="#contact" class="nav-link">
+                    <li>
+                        <a href="#contact">
                             Contact
                         </a>
                     </li>
-                </ul> -->
-                <button id="menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav" aria-controls="offcanvas-nav">
-                    <i class="fa-solid fa-bars icon"></i>
-                    <div class="menu-backdrop">
-                    </div>
-                </button>                  
+                </ul>               
             </nav>
-            <div class="header-content">
-                <div class="header-img">
-                    <img src="{% static 'WinterMogotsi/images/winter-placeholder.png' %}" loading="lazy" alt="Winter Mogotsi, Full-Stack Developer">
-                </div>
-                <div class="header-text me-md-3">
-                    <h1 class="header-title">
-                        <span>Rhulani Mogotsi</span>
-                    </h1>                          
-                    <h1 class="header-tagline">
-                        <span>Software Engineer</span>
-                    </h1>
-                </div>
+            <div class="header-text">
+                <h1>
+                    Rhulani Mogotsi
+                </h1>                          
+                <h3>
+                    Software Engineer &#149 Web Developer
+                </h3>
             </div>
-            <a href="" class="magneto">
-                <span class="text">My Work</span>
-            </a>
-            <div class="social-bar">
+            <a class="resume-button" href="">Download My Resume</a>
+            <!-- <div class="social-bar">
                 <a href="#" target="#" class="social-link">
                     <i class="fa-solid fa-file"></i>
                 </a>
@@ -91,7 +70,7 @@
                 <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" class="social-link">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-            </div>
+            </div> -->
         </div>
     </header>
     <!-- <section id="about">
@@ -323,13 +302,9 @@
     </div>
     {% endblock nav %}
 
-    <script src="{% static 'WinterMogotsi/js/index.js' %}"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     
