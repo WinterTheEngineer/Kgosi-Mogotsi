@@ -1,8 +1,21 @@
+@font-face {
+    font-family: 'SCHABO Condensed';
+    src: url('../fonts/SCHABO/SCHABO-Condensed.woff2') format('woff2'),
+         url('../fonts/SCHABO/SCHABO-Condensed.woff') format('woff'),
+         url('../fonts/SCHABO/SCHABO-Condensed.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Zen Dots';
+}
+
+body {
+    background: linear-gradient(to right, #984BB7, #061739);
 }
 
 #splash {
@@ -36,7 +49,6 @@
 header {
     height: 100vh;
     overflow: hidden;
-    background: #afafaf;
 }
 
 .header-container{
@@ -170,7 +182,7 @@ nav {
 }
 
 .header-title {
-    font-size: 7rem;
+    font-size: 20rem;
     font-weight: 800;
     color: #ffffff;
     overflow: hidden;
@@ -181,12 +193,13 @@ nav {
     color: #272727;
     overflow: hidden;
     font-size: 3.5rem;
-    font-family: 'Zen Dots';
 }
 
 .header-title span,
 .header-tagline span {
     display: block;
+    text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
 }
 
 .header-title,
