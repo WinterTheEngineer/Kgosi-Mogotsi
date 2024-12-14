@@ -33,9 +33,11 @@ nav {
 
 #logo {
     display: flex;
+    margin: 0 1rem;
     font-size: 2rem;
     cursor: pointer;
     font-family: 'NIKEA';
+    text-decoration: none;
     background: linear-gradient(20deg, #8a80ff, #d74bee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -115,7 +117,7 @@ nav ul li a:hover {
 
 .resume-button {
     display: flex;
-    padding: .5rem;
+    margin: 1rem;
     position: relative;
     color: #ffffff80;
     align-items: center;
@@ -147,7 +149,7 @@ nav ul li a:hover {
 .site-links {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -259,22 +261,44 @@ nav ul li a:hover {
 } */
 
 #about {
-    z-index: 99;
-    height: 100dvh;
+    height: 100vh;
+    /* background: radial-gradient(at 52% 51%, #8a80ff 0px, transparent 50%), radial-gradient(at 93% 46%, #d74bee 0px, transparent 50%), radial-gradient(at 85% 14%, #d05911 0px, transparent 50%) #242424;
     --_mesh-gradient-blur: 100px;
     --_mesh-gradient-blend-mode: screen;
-    background: radial-gradient(at 52% 51%, #8a80ff 0px, transparent 50%), radial-gradient(at 93% 46%, #d74bee 0px, transparent 50%), radial-gradient(at 85% 14%, #d05911 0px, transparent 50%) #242424;
     mix-blend-mode: var(--_mesh-gradient-blend-mode);
-    filter: blur(var(--_mesh-gradient-blur));
+    filter: blur(var(--_mesh-gradient-blur)); */
 }
 
 .about-container {
     height: 100%;
 }
 
-.about-container p {
+.about-container h2 {
+    width: 50%;
     color: #fff;
-    font-size: large;
+    font-weight: 300;
+    line-height: 3rem;
+    /* font-size: 2rem; */
+}
+
+.about-container h2 span {
+    font-family: 'NIKEA';
+    background: linear-gradient(45deg, #8a80ff, #f79f3b, #d74bee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container h2 .soft {
+    font-family: 'Helvetica Neue';
+    background: linear-gradient(45deg, #8a80ff, #f79f3b, #d74bee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container p {
+    width: 50%;
+    color: #fff;
+    font-weight: 300;
 }
 
 /* Lenis CSS */
