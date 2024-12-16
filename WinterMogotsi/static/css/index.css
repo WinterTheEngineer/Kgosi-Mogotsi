@@ -6,8 +6,8 @@
 }
 
 body {
-    background: url(../images/grainy-bg.jpeg) fixed no-repeat;
-    background-size: cover;
+    /* background: url(../images/grainy-bg.jpeg) fixed no-repeat;
+    background-size: cover; */
     /* background: linear-gradient(135deg, #222 25%, #555 25%, #555 50%, #222 50%, #222 75%, #555 75%, #555 100%); */
 }
 
