@@ -11,6 +11,10 @@ body {
     /* background: linear-gradient(135deg, #222 25%, #555 25%, #555 50%, #222 50%, #222 75%, #555 75%, #555 100%); */
 }
 
+.container-fluid {
+    padding: 1rem;
+}
+
 header {
     height: 100vh;
 }
@@ -18,7 +22,6 @@ header {
 .header-container{
     height: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -30,33 +33,6 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-
-#logo {
-    display: flex;
-    margin: 0 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    font-family: 'NIKEA';
-    text-decoration: none;
-    background: linear-gradient(20deg, #8a80ff, #d74bee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* #logo::after {
-    content: "hulani";
-    font-family: 'NIKEA';
-    display: inline-block;
-    max-width: 0%;
-    vertical-align: bottom;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: max-width 1s ease-in-out;
-}
-
-#logo:hover::after {
-    max-width: 100%;
-} */
 
 nav ul {
     display: flex;
@@ -91,42 +67,27 @@ nav ul li a:hover {
 }
 
 .header-text {
-    text-align: left;
-}
-
-.header-text h1 {
-    font-size: 4rem;
-    font-family: 'NIKEA';
-    background: linear-gradient(45deg, #8a80ff, #f79f3b, #d74bee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.header-text h3 {
-    font-size: 2rem;
-    background: linear-gradient(20deg, #7D7D7D, #242424);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
 }
 
 .header-text h1,
 .header-text h3 {
-    text-align: center;
+    color: #1e1e1e;
     text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
 }
 
-.resume-button {
-    margin: 1rem;
-    padding: 1rem;
-    display: flex;
-    position: relative;
-    color: #ffffff80;
-    align-items: center;
-    border-radius: 2rem;
-    text-decoration: none;
-    justify-content: center;
-    border: 2px solid #ffffff00;
-    transition: color .3s ease, border-color .3s ease;
+.header-text h1 {
+    font-size: 10rem;
+}
+
+.header-text h3 {
+    opacity: .75;
+    font-size: 5rem;
+    line-height: 5rem;
+    display: inline-block;
 }
 
 .site-links ul ion-icon {
