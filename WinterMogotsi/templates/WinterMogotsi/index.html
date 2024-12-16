@@ -26,7 +26,6 @@
     <header id="header">
         <div class="container-fluid header-container">
             <nav>
-                <a href="/" id="logo">RM</a>
                 <ul class="">
                     <li class="animate__animated animate__fadeInLeft">
                         <a href="#about">
@@ -59,12 +58,8 @@
                 </h3>
             </div>
             <div class="site-links">
-                <a class="resume-button" href="">
-                    Download Resume
-                    <ion-icon name="arrow-back-circle"></ion-icon>
-                </a>
-                <ul>
-                    <a href="https://github.com/CodeMasterWinter" target="_blank">
+                <ul class="animate__animated animate__fadeInUp">
+                    <a href="https://github.com/CodeMasterWinter" target="_blank" >
                         Github
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
@@ -74,6 +69,10 @@
                     </a>
                     <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank">
                         LinkedIn
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank">
+                        Resume
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
                 </ul>
@@ -100,17 +99,22 @@
         </div>
     </section> -->
     <section id="about">
-        <div class="container-fluid about-container p-4">
-            <h2>I'm <span>Rhulani</span>,
-                <br>a <b>curious</b> and <b>passionate</b>
-                <br>Software Engineer and
-                <br>Web Developer with 4 years of coding experience
+        <div class="container-fluid about-grid p-4">
+            <h1 class="section-title grid-section">Who Am I</h1>
+            <img class="portrait-img grid-section" src="{% static 'images/portrait-img.jpg' %}"></img>
+            <h2 class="grid-section intro">I'm <span>Rhulani</span>,
+                a <b>curious</b> and <b>passionate</b>
+                Software Engineer and
+                Web Developer with<br>4 years of coding experience
                 and 3 years of professional experience.
             </h2>
-            <p>I have gained coding experience through various avenues, 
-                including freelance work, internships, and development 
-                roles at industry-standard organizations.
+            <p class="more-intro grid-section">
+                I have gained coding experience through various avenues, 
+                    including freelance work, internships, and development 
+                    roles at industry-standard organizations.
             </p>
+            <div class="div5 grid-section"> </div>
+            <div class="div6 grid-section"> </div>
         </div>
     </section>
     <!-- <section id="education">
