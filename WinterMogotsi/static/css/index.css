@@ -11,7 +11,19 @@
 }
 
 body {
-    background-color: #fffbf7;
+    /* background-color: #fffbf7; */
+    /* background: url(../images/bg.png) fixed no-repeat;
+    background-size: cover; */
+}
+
+#body-bg {
+    opacity: .05;
+    position: fixed;
+    font-size: 80rem;
+    text-wrap: nowrap;
+    margin-top: -20rem;
+    color: var(--purple);
+    font-family: 'SCHABO Condensed';
 }
 
 .container-fluid {
@@ -65,8 +77,8 @@ nav ul a {
 }
 
 .site-links a:hover {
-    opacity: .5;
-    color: var(--purple);
+    opacity: .7;
+    /* color: var(--purple); */
 }
 
 .site-links a ion-icon {
@@ -128,6 +140,7 @@ nav ul a {
 }
 
 .header-text p {
+    margin: 0;
     width: 40%;
     line-height: 1;
     font-size: 2rem;
@@ -141,6 +154,10 @@ nav ul a {
 
 .header-text p span:hover {
     color: #8a80ff;
+}
+
+#test {
+    height: 100vh;
 }
 
 html.lenis, html.lenis body {

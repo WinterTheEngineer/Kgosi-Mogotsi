@@ -4,8 +4,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <meta name="Rhulani Mogotsi - Software Engineer">
+    <meta name="locale" content="en_ZA">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'WinterMogotsi/images/favicon.ico' %}" type="image/x-icon">
+    <meta name="author" content="Rhulani Mogotsi, Web Developer">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="english">
+    <meta name="description" content="Rhulani Mogotsi, an Entry-Level Software Engineer and Web Developer with 4 years of experience.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:site_name" content="Rhulani Mogotsi - Software Engineer">
+    <meta property="og:url" content="https://www.rhulanimogotsi.com">
+    <meta property="og:title" content="Software Engineer and Web Developer">
+    <meta property="og:image" content="{% static 'images/site-image.png' %}">
+    <meta property="og:description" content="an Entry-Level Software Engineer and Web Developer with 4 years of experience.">
+
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +40,10 @@
     <title>Rhulani Mogotsi &#149 Software Engineer</title>
 </head>
 <body>
+    <span id="body-bg">RHULANI MOGOTSI</span>
     <header id="header">
         <div class="container-fluid header-container">
-            <nav>
+            <nav aria-label="Primary Navigation">
                 <ul class="nav-links">
                     <li class="animate__animated animate__fadeInLeft">
                         <a href="#about">
@@ -49,19 +67,19 @@
                     </li>
                 </ul>
                 <ul class="site-links animate__animated animate__fadeInUp">
-                    <a href="https://github.com/CodeMasterWinter" target="_blank" >
+                    <a href="https://github.com/CodeMasterWinter" target="_blank" rel="noopener noreferrer">
                         Github
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://twitter.com/WinterMogotsi" target="_blank">
+                    <a href="https://twitter.com/WinterMogotsi" target="_blank" rel="noopener noreferrer">
                         Twitter
                        <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank">
+                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" rel="noopener noreferrer">
                         LinkedIn
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank">
+                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" rel="noopener noreferrer">
                         Resume
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
@@ -79,12 +97,15 @@
                         Web Developer
                     </h3>
                 </div>
-                <p>A <span><b>curious</b></span> and <span><b>innovative</b></span> developer with <span><i>3 years</i></span> of industry experience,
+                <p>A <span>curious</span> and <span>innovative</span> full-stack developer with <span><i>3 years</i></span> of industry experience,
                     and <span><i>5 years</i></span> of coding experience overall.
                 </p>
             </div>
         </div>
-    </header>    
+    </header>
+    <!-- <section id="test">
+
+    </section>    -->
     {% if messages %}
         <ul class="messages p-3 m-0">
             <i class="fa-solid fa-circle-check message-icon"></i>
