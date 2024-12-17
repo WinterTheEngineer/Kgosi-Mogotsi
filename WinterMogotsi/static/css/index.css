@@ -17,6 +17,7 @@ body {
 }
 
 #body-bg {
+    z-index: -1;
     opacity: .05;
     position: fixed;
     font-size: 80rem;
@@ -25,6 +26,12 @@ body {
     color: var(--purple);
     font-family: 'SCHABO Condensed';
 }
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
 
 .container-fluid {
     padding: 1rem;
