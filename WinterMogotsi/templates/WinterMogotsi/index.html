@@ -83,121 +83,15 @@
                     and <i>5 years</i> of coding experience overall.</p>
             </div>
         </div>
-    </header>
-    <!-- <section id="education">
-        <div class="container-fluid education-container p-4">
-            <a href="#education"><h1 class="section-header education-header">My Education</h1></a>
-            <div class="accolades m-auto">
-                <div class="accolade-column col-4 p-3">
-                    <div class="accolade-header">
-                        <svg class="accolade-icon hyperion-icon" width="335" height="344" viewBox="0 0 335 344" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 273.975L0 0L14 0L14 273.975C14 277.855 10.866 281 7 281C3.13401 281 0 277.855 0 273.975Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M334.381 70.0097L334 343.01L320 342.99L320.381 69.9902C320.386 66.1242 323.525 62.9946 327.391 63C331.257 63.0054 334.386 66.1437 334.381 70.0097Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M227 7.05645V125H213V7.05645C213 3.15928 216.134 9.53674e-07 220 9.53674e-07C223.866 9.53674e-07 227 3.15928 227 7.05645Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M103 336.99L103.168 216.99L117.168 217.01L117 337.01C116.995 340.876 113.856 344.005 109.99 344C106.124 343.995 102.995 340.856 103 336.99Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 14V0H103V14H14Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M320 329L320 343L227 343L227 329L320 329Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M117 125V111H213V125H117Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M214 217L214 231L117 231L117 217L214 217Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M103 0L117 0L117 125H103L103 0Z"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M226.997 342.967L212.997 342.948L213.173 216.99L227.173 217.01L226.997 342.967Z"/>
-                        </svg>    
-                        <p class="accolade-title m-0">HyperionDev Certified<br>Software Engineer</p>
-                    </div>
-                    <hr class="accolade-sep">
-                    <div class="accolade-body">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Enim at doloremque excepturi nostrum cupiditate adipisci 
-                            maxime vero repudiandae quasi voluptatem velit quisquam 
-                            nobis qui reiciendis ratione odit, tenetur amet quas!
-                        </p>
-                    </div>
-                </div>
-                <div class="accolade-column col-4 p-3">
-                    <div class="accolade-header">
-                        <i class="fa-brands accolade-icon fa-meta"></i>
-                        <p class="accolade-title m-0">Meta Certified<br>Web Developer</p>
-                    </div>
-                    <hr class="accolade-sep">
-                    <div class="accolade-body">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Enim at doloremque excepturi nostrum cupiditate adipisci 
-                            maxime vero repudiandae quasi voluptatem velit quisquam 
-                            nobis qui reiciendis ratione odit, tenetur amet quas!
-                        </p>
-                    </div>
-                </div>
-                <div class="accolade-column col-4 p-3">
-                    <div class="accolade-header">
-                        <i class="fa-brands accolade-icon fa-aws"></i>
-                        <p class="accolade-title m-0">AWS Academy<br>Student</p>
-                    </div>
-                    <hr class="accolade-sep">
-                    <div class="accolade-body">
-                        <p>
-                            An avid advocator for self-study and continuous learning,
-                            I am a continued student of the AWS Academy
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="contact-bg p-5">
-            <h1 class="contact-title">Reach<br>Out</h1>
-        </div>
-        <div class="container-fluid contact-container p-5">
-            <form id="contact-form" action="{% url 'home' %}" method="post" class="row p5">
-                {% csrf_token %}
-                <div class="col-6 form-block p-3">
-                    <label for="id_full_name">Full name:</label>
-                    <input type="text" name="full_name" required="" id="id_full_name" placeholder="Type here">
-                </div>
-                <div class="col-6 form-block p-3">
-                    <label for="id_company">Company Name (Optional):</label>
-                    <input type="text" name="company" id="id_company" placeholder="Type here">
-                </div>
-                <div class="col-6 form-block p-3">
-                    <label for="id_email">Email:</label>
-                    <input type="email" name="email" maxlength="320" required="" id="id_email" placeholder="Type here">
-                </div>
-                <div class="col-6 form-block p-3">
-                    <label for="id_phone">Phone Number (Optional):</label>
-                    <input type="tel" name="phone" id="id_phone" placeholder="Type here">
-                </div>
-                <div class="col-6 form-block justify-content-end align-items-center p-3">
-                    <p class="form-block-prompt">I need a...</p>
-                </div>
-                <div class="col-6 form-block p-3">
-                    <label for="id_service">Service:</label>
-                    <select name="property" id="id_property">
-                        <option value="apartment">Software Engineer</option>
-                        <option value="house">Web Developer</option>
-                        <option value="land">Full Stack Developer</option>
-                    </select>
-                </div>
-                <div class="col-8 form-block p-3">
-                    <label for="id_message">Message:</label>
-                    <textarea name="message" required="" id="id_message" placeholder="Type Here"></textarea>
-                </div>
-                <div class="col-4 form-block p-3">
-                    <button id="contact-submit" type="submit">Send</button>
-                </div>
-            </form>
-        </div>
-        {% if messages %}
-            <ul class="messages p-3 m-0">
-                <i class="fa-solid fa-circle-check message-icon"></i>
-                {% for message in messages %}
-                <li class="message">{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-        </div>
-    </section> -->
+    </header>    
+    {% if messages %}
+        <ul class="messages p-3 m-0">
+            <i class="fa-solid fa-circle-check message-icon"></i>
+            {% for message in messages %}
+            <li class="message">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

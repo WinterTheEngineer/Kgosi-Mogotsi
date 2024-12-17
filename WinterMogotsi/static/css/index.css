@@ -67,6 +67,7 @@ nav ul a {
 
 .site-links a:hover {
     opacity: .5;
+    color: var(--purple);
 }
 
 .site-links a ion-icon {
@@ -123,6 +124,7 @@ nav ul a {
 }
 
 .header-text h3:hover {
+    color: var(--purple);
 }
 
 .header-text p {
@@ -131,140 +133,6 @@ nav ul a {
     line-height: 1;
     font-size: 2rem;
     color: #272727;
-}
-
-/* 
-#about {
-    height: 100dvh;
-    background-color: #272727;
-}
-
-.about-container {
-    height: 100%;
-    position: relative;
-}
-
-.about-content {
-    height: 45%;
-    display: flex;
-}
-
-.about-title {
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-.about-title::after {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    content: '';
-    height: .2rem;
-    position: absolute;
-    background-color: #ffffff;
-}
-
-#about a {
-    text-decoration: none;
-}
-
-.about-tags {
-    display: flex;
-    min-width: 60%;
-    flex-direction: column;
-}
-
-.about-tag {
-    font-size: 4rem;
-    color: #ffffff;
-}
-
-.about-tag span{
-    color: #ca00d8;
-}
-
-.about-desc {
-    width: 80%;
-}
-
-.about-text {
-    color: #ffffff;
-    font-size: 1.8rem;
-}
-
-.about-text span {
-    color: #ca00d8;
-} */
-
-#about {
-    height: 100vh;
-    /* background: radial-gradient(at 52% 51%, #8a80ff 0px, transparent 50%), radial-gradient(at 93% 46%, #d74bee 0px, transparent 50%), radial-gradient(at 85% 14%, #d05911 0px, transparent 50%) #242424;
-    --_mesh-gradient-blur: 100px;
-    --_mesh-gradient-blend-mode: screen;
-    mix-blend-mode: var(--_mesh-gradient-blend-mode);
-    filter: blur(var(--_mesh-gradient-blur)); */
-}
-
-.about-grid {
-    gap: 1rem;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-
-/* r */
-
-.section-title { grid-area: 1 / 1 / 2 / 3; }
-.portrait-img { grid-area: 2 / 1 / 5 / 3; }
-.intro { grid-area: 2 / 3 / 4 / 6; }
-.more-intro { grid-area: 4 / 4 / 5 / 6; }
-.div5 { grid-area: 3 / 6 / 5 / 7; }
-.div6 { grid-area: 1 / 6 / 2 / 7; } 
-
-.about-grid .section-title {
-    font-family: 'NIKEA';
-    color: #ffffff86;
-}
-
-.portrait-img {
-    width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
-    object-fit: cover;
-    border: none;
-}
-
-.portrait-img img {
-    width: 100%;
-    height: 100%;
-}
-
-.about-grid .intro {
-    color: #fff;
-    padding: 1rem;
-    font-weight: 300;
-    line-height: 3rem;
-}
-
-.about-grid h2 span {
-    font-family: 'NIKEA';
-    background: linear-gradient(45deg, #8a80ff, #f79f3b, #d74bee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.about-grid h2 .soft {
-    font-family: 'Helvetica Neue';
-    background: linear-gradient(45deg, #8a80ff, #f79f3b, #d74bee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.about-grid .more-intro {
-    color: #fff;
-    font-weight: 300;
 }
 
 /* Lenis CSS */
