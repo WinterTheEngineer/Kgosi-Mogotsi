@@ -1,3 +1,8 @@
+:root {
+    --bg-lavender: #f5ebfa;
+    --bg-dark: #e7dbef;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +11,7 @@
 }
 
 body {
-    /* background: url(../images/grainy-bg.jpeg) fixed no-repeat;
-    background-size: cover; */
-    /* background: linear-gradient(135deg, #222 25%, #555 25%, #555 50%, #222 50%, #222 75%, #555 75%, #555 100%); */
+    /* background-color: #FEF5EA; */
 }
 
 .container-fluid {
@@ -26,9 +29,9 @@ header {
 }
 
 nav {
-    flex: .2;
+    flex: .1;
     display: flex;
-    align-items: end;
+    align-items: left;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -36,7 +39,6 @@ nav {
 nav ul {
     margin: 0;
     padding: 0;
-    width: 50%;
     list-style: none;
     justify-content: space-evenly;
 }
@@ -54,6 +56,10 @@ nav ul a {
     -webkit-text-fill-color: transparent;
 }
 
+.nav-links li a span {
+    margin-right: .5rem;
+}
+
 .site-links a {
     display: flex;
     font-size: 1.4rem;
@@ -66,12 +72,8 @@ nav ul a {
 }
 
 .site-links a ion-icon {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-}
-
-.site-links a ion-icon {
     margin-left: .5rem;
+    font-size: 1.2rem;
     transition: transform .3s ease;
 }
 
@@ -95,28 +97,43 @@ nav ul a {
 }
 
 .header-text {
-    flex: .8;
+    flex: .9;
     display: flex;
-    width: fit-content;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .header-text h1,
 .header-text h3 {
-    color: #1e1e1e;
+    color: #272727;
     text-transform: uppercase;
     font-family: 'SCHABO Condensed';
 }
 
 .header-text h1 {
     font-size: 10rem;
+    margin-bottom: -1.75rem;
 }
 
 .header-text h3 {
-    opacity: .75;
     font-size: 5rem;
     line-height: 5rem;
-    display: inline-block;
+    margin-bottom: -.5rem;
+    opacity: 0.7 !important;
+}
+
+.header-text p {
+    width: 40%;
+    opacity: .5;
+    line-height: 1;
+    font-size: 2rem;
+    color: #272727;
+    /* font-weight: 500;r */
+}
+
+.header-text p span {
+    opacity: 1;
+    font-style: italic;
 }
 
 /* 
