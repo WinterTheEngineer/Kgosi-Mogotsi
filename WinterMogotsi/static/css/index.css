@@ -1,5 +1,5 @@
 :root {
-    --bg-lavender: #f5ebfa;
+    --purple: #8a80ff;
     --bg-dark: #e7dbef;
 }
 
@@ -51,9 +51,7 @@ nav ul a {
 
 .nav-links li a:hover {
     transform: translateX(-1rem);
-    background: linear-gradient(20deg, #8a80ff, #d74bee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-color: #8a80ff70;
 }
 
 .nav-links li a span {
@@ -118,22 +116,22 @@ nav ul a {
 .header-text h3 {
     font-size: 5rem;
     line-height: 5rem;
+    width: fit-content;
+    color: var(--purple);
     margin-bottom: -.5rem;
     opacity: 0.7 !important;
+    transition: color .3s ease;
+}
+
+.header-text h3:hover {
 }
 
 .header-text p {
     width: 40%;
-    opacity: .5;
+    /* opacity: .5; */
     line-height: 1;
     font-size: 2rem;
     color: #272727;
-    /* font-weight: 500;r */
-}
-
-.header-text p span {
-    opacity: 1;
-    font-style: italic;
 }
 
 /* 
