@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    cursor: none;
     box-sizing: border-box;
     font-family: 'Helvetica Neue';
 }
@@ -20,11 +21,45 @@ body {
     z-index: -1;
     opacity: .05;
     position: fixed;
-    font-size: 80rem;
+    font-size: 60rem;
     text-wrap: nowrap;
     margin-top: -20rem;
     color: var(--purple);
     font-family: 'SCHABO Condensed';
+}
+
+#inner-cursor {
+    top: 5rem;
+    left: 5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    transition: width .5s ease, height .5s ease;
+}
+
+#inner-cursor.active {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: width .5s ease, height .5s ease;
+}
+
+#outer-cursor {
+    top: 5rem;
+    left: 5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    border: 2px solid #fff;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: .08s;
 }
 
 .prevent-select {
@@ -63,7 +98,7 @@ nav ul {
 }
 
 nav ul a {
-    color: #1e1e1e;
+    color: #272727;
     font-weight: 300;
     font-size: 1.4rem;
     text-decoration: none;
@@ -213,5 +248,10 @@ html.lenis, html.lenis body {
     .header-text h3 {
         font-size: 6.4rem;
         margin-bottom: .5rem;
+    }
+
+    #body-bg {
+        font-size: 80rem;
+        margin-top: -20rem;
     }
 }
