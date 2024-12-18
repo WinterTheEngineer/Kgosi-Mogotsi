@@ -30,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- CDNs -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -103,7 +104,7 @@
             </div>
         </div>
     </header>
-    <section id="test">
+    <section id="about">
 
     </section>   
     {% if messages %}
@@ -118,14 +119,10 @@
     <div id="inner-cursor"></div>
     <div id="outer-cursor"></div>
 
-    <script src="{% static 'js/index.js' %}" type="module"></script>
+    <script src="{% static 'js/bundle.js' %}" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     
     <script>
         // Smooth scrolling for navigation links
@@ -139,21 +136,6 @@
                 });
             });
         });
-    </script>
-    <script>
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-        console.log(e)
-        })
-
-        lenis.on('scroll', ScrollTrigger.update)
-
-        gsap.ticker.add((time)=>{
-        lenis.raf(time * 1000)
-        })
-
-        gsap.ticker.lagSmoothing(0)
     </script>
 </body>
 </html>

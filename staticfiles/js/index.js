@@ -1,3 +1,30 @@
+import Lenis from 'lenis';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+// Lenis Smooth Scrolling
+
+// Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+
+
+// cursor styles
 let innerCursor = document.getElementById('inner-cursor')
 let outerCursor = document.getElementById('outer-cursor')
 
@@ -24,4 +51,18 @@ links.forEach(link => {
     link.addEventListener('mouseleave', () => {
         innerCursor.classList.remove("active");
     });
+});
+
+// animate body background
+const spanWidth = document.querySelector("#body-bg").offsetWidth;
+
+gsap.to("#body-bg", {
+    x: -spanWidth, // Adjust this value to determine how far the span moves
+    scrollTrigger: {
+        trigger: "body", // The trigger element for the scroll (you can choose a specific element here)
+        start: "top top", // When the top of the viewport reaches the top of the body
+        end: "bottom bottom", // When the bottom of the viewport reaches the bottom of the body
+        scrub: true, // Makes the animation smooth and syncs with the scroll
+        markers: true // Optional, for debugging scroll positions
+    }
 });
