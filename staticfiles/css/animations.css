@@ -186,7 +186,7 @@ header {
     background-blend-mode: overlay, normal, normal, normal, normal;
 } */
 
-@keyframes FadeInUp {
+@keyframes SlideUp {
     0% {
         transform: translateY(10rem);
     }

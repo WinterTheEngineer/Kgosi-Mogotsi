@@ -23,7 +23,7 @@ body {
     position: fixed;
     font-size: 60rem;
     text-wrap: nowrap;
-    max-width: 200vw;
+    max-width: 200rem;
     margin-top: -20rem;
     color: var(--purple);
     font-family: 'SCHABO Condensed';
@@ -194,9 +194,9 @@ nav ul a {
     color: #8a80ff;
 }
 
-/* #about {
+#about {
     height: 200vh;
-} */
+}
 
 html.lenis, html.lenis body {
     height: auto;
@@ -248,6 +248,7 @@ html.lenis, html.lenis body {
 
     #body-bg {
         font-size: 80rem;
+        max-width: 260rem;
         margin-top: -20rem;
     }
 }
