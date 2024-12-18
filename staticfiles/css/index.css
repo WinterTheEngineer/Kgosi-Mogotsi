@@ -23,6 +23,7 @@ body {
     position: fixed;
     font-size: 60rem;
     text-wrap: nowrap;
+    max-width: 200vw;
     margin-top: -20rem;
     color: var(--purple);
     font-family: 'SCHABO Condensed';
@@ -62,12 +63,6 @@ body {
     transform: translate(-50%, -50%);
     transition: .08s;
 }
-
-.prevent-select {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-  }
 
 .container-fluid {
     padding: 1rem;
@@ -199,9 +194,9 @@ nav ul a {
     color: #8a80ff;
 }
 
-#about {
-    height: 100vh;
-}
+/* #about {
+    height: 200vh;
+} */
 
 html.lenis, html.lenis body {
     height: auto;

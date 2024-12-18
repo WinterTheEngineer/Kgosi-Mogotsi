@@ -63,6 +63,5 @@ gsap.to("#body-bg", {
         start: "top top", // When the top of the viewport reaches the top of the body
         end: "bottom bottom", // When the bottom of the viewport reaches the bottom of the body
         scrub: true, // Makes the animation smooth and syncs with the scroll
-        markers: true // Optional, for debugging scroll positions
     }
 });
