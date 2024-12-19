@@ -36,51 +36,55 @@
 
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blue-mode.css' %}">
 
     <title>Rhulani Mogotsi &#149 Software Engineer</title>
 </head>
-<body>
-    <span id="body-bg" class="prevent-select">RHULANI MOGOTSI</span>
+<body class="themed">
+    <span id="body-bg" class="themed">RHULANI MOGOTSI</span>
     <header id="header">
         <div class="container-fluid header-container">
             <nav aria-label="Primary Navigation">
                 <ul class="nav-links">
                     <li class="animate__animated animate__fadeInLeft">
-                        <a href="#about">
+                        <a href="#about" class="themed">
                             About
                         </a>
                     </li>
                     <li class="animate__animated animate__fadeInLeft">
-                        <a href="#education">
+                        <a href="#education" class="themed">
                             Education
                         </a>
                     </li>
                     <li class="animate__animated animate__fadeInLeft">
-                        <a href="#references">
+                        <a href="#references" class="themed">
                             References
                         </a>
                     </li>
                     <li class="animate__animated animate__fadeInLeft">
-                        <a href="#contact">
+                        <a href="#contact" class="themed">
                             Contact
                         </a>
                     </li>
                 </ul>
-                <ul class="site-links animate__animated animate__fadeInLeft">
-                    <a href="https://github.com/CodeMasterWinter" target="_blank" rel="noopener noreferrer">
+                <div id="theme-picker">
+                    <button type="button" class="theme-button light" onclick="setTheme('light-mode')">light-mode</button>
+                    <button type="button" class="theme-button blue" onclick="setTheme('blue-mode')">blue-mode</button>
+                </div>
+                <ul class="site-links">
+                    <a href="https://github.com/CodeMasterWinter" class="themed" target="_blank" rel="noopener noreferrer">
                         Github
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://twitter.com/WinterMogotsi" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/WinterMogotsi" class="themed" target="_blank" rel="noopener noreferrer">
                         Twitter
                        <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
                         LinkedIn
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
                         Resume
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
@@ -88,17 +92,17 @@
             </nav>
             <div class="header-text">
                 <div>                    
-                    <h1 class="animate__animated animate__fadeInUp">
+                    <h1 class="themed">
                         Rhulani Mogotsi
                     </h1>                          
-                    <h3 class="animate__animated animate__fadeInUp">
+                    <h3 class="themed">
                         Software Engineer
                     </h3>
-                    <h3 class="animate__animated animate__fadeInUp">
+                    <h3 class="themed">
                         Web Developer
                     </h3>
                 </div>
-                <p>A <span>curious</span> and <span>innovative</span> full-stack developer with <span><i>3 years</i></span> of industry experience,
+                <p class="themed">A <span>curious</span> and <span>innovative</span> full-stack developer with <span><i>3 years</i></span> of industry experience,
                     and <span><i>5 years</i></span> of coding experience overall.
                 </p>
             </div>
@@ -116,8 +120,8 @@
         </ul>
     {% endif %}
 
-    <div id="inner-cursor"></div>
-    <div id="outer-cursor"></div>
+    <div id="inner-cursor" class="themed"></div>
+    <div id="outer-cursor" class="themed"></div>
 
     <script src="{% static 'js/bundle.js' %}" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

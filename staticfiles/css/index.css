@@ -2,13 +2,13 @@
     --malibu: #8a80ff;
     --light-blue: #4B6CB7;
     --dark-blue: #182848;
-    --charcoal: var(--charcoal);
+    --charcoal: #272727;
 }
 
 * {
     margin: 0;
     padding: 0;
-    cursor: none;
+    /* cursor: none; */
     box-sizing: border-box;
     font-family: 'Helvetica Neue';
 }
@@ -106,12 +106,13 @@ nav ul a {
 }
 
 .nav-links li a {
-    transition: opacity .3s ease;
+    display: block;
+    transition: opacity .3s ease, transform .3s ease;
 }
 
 .nav-links li a:hover {
     opacity: .7;
-    background-color: var(--malibu);
+    transform: translateX(-1rem);
 }
 
 .nav-links li a span {

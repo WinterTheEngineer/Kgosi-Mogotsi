@@ -78,3 +78,24 @@ runBackground();
 window.addEventListener('resize', function() {
     updateBackgroundPosition();
 });
+
+function setTheme(theme) {
+    const themeElements = document.querySelectorAll(".themed");
+
+    themeElements.forEach(element => {
+        
+        //remove the current applied theme
+        [...element.classList].forEach(cls => {
+            if (cls.endsWith("-mode")) {
+                element.classList.remove(cls);
+                console.log(`removed class ${cls}`)
+            }
+        });
+
+        if (theme !== "light-mode") {
+            element.classList.add(theme);
+            console.log(`add class ${theme}`)
+        }
+    });
+}
+window.setTheme = setTheme;

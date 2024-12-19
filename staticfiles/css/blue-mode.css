@@ -15,7 +15,7 @@ body.blue-mode {
     border: 2px solid #ffffff70;
 }
 
-nav ul a.blue-mode {
+.nav-links li a.blue-mode {
     color: #ffffff;
 }
 
