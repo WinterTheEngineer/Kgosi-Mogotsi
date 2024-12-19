@@ -3,7 +3,6 @@ body.blue-mode {
 }
 
 #body-bg.blue-mode {
-    opacity: .05;
     color: #ffffff;
 }
 
@@ -15,12 +14,8 @@ body.blue-mode {
     border: 2px solid #ffffff70;
 }
 
-.nav-links li a.blue-mode {
+nav ul a.blue-mode {
     color: #ffffff;
-}
-
-.nav-links li a.blue-mode:hover {
-    background-color: transparent;
 }
 
 .header-text h1.blue-mode,

@@ -1,0 +1,36 @@
+body.dark-mode {
+    background: var(--charcoal)
+}
+
+#body-bg.dark-mode {
+    color: #ffffff;
+}
+
+#outer-cursor.dark-mode {
+    border: 2px solid #ffffff70;
+}
+
+nav ul a.dark-mode {
+    color: #ffffff;
+}
+
+.header-text h1.dark-mode,
+.header-text h3.dark-mode {
+    color: #ffffff;
+}
+
+.header-text h3.dark-mode:hover {
+    color: var(--malibu);
+}
+
+.header-text p.dark-mode {
+    color: #ffffff70;
+}
+
+.header-text p.dark-mode span {
+    color: #ffffff;
+}
+
+.header-text p.dark-mode span:hover {
+    color: var(--malibu)
+}

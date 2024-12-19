@@ -121,20 +121,18 @@ nav ul a {
 
 #theme-picker {
     display: flex;
-    align-items: center;
+    align-items: last baseline;
     flex-direction: column;
     justify-content: space-between;
 }
 
 #theme-picker button {
     border: none;
-    width: 1.6rem;
-    height: 1.6rem;
-    border-radius: 50%;
-}
-
-#theme-picker button.light {
-    background-color: #ffffff;
+    margin: .5rem 0;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: .2rem 1rem;
+    background-color: var(--charcoal);
 }
 
 .site-links a {
