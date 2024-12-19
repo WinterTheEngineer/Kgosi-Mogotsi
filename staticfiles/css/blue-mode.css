@@ -1,0 +1,43 @@
+body.blue-mode {
+    background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+}
+
+#body-bg.blue-mode {
+    opacity: .05;
+    color: #ffffff;
+}
+
+#inner-cursor.blue-mode {
+    background-color: #ffffff70;
+}
+
+#outer-cursor.blue-mode {
+    border: 2px solid #ffffff70;
+}
+
+nav ul a.blue-mode {
+    color: #ffffff;
+}
+
+.nav-links li a.blue-mode:hover {
+    background-color: transparent;
+}
+
+.header-text h1.blue-mode,
+.header-text h3.blue-mode,
+.header-text h3.blue-mode:hover {
+    color: #ffffff;
+}
+
+.header-text h3.blue-mode {
+    opacity: 0.4 !important;
+}
+
+.header-text p.blue-mode {
+    color: #ffffff70;
+}
+
+.header-text p.blue-mode span,
+.header-text p.blue-mode span:hover {
+    color: #ffffff;
+}
