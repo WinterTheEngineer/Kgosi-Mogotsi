@@ -14,7 +14,7 @@
 }
 
 .themed {
-    transition: color 1s ease, background-color 1s ease;
+    transition: color 2s ease, background-color 2s ease;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
 #inner-cursor.active {
     width: 1.5rem;
     height: 1.5rem;
-    transition: width .5s ease, height .5s ease, background-color .5s ease;
+    transition: width .5s ease, height .5s ease;
 }
 
 #outer-cursor {
@@ -107,12 +107,12 @@ nav ul a {
 
 .nav-links li a {
     display: block;
-    transition: opacity .3s ease, transform .3s ease;
+    transition: transform .3s ease;
 }
 
 .nav-links li a:hover {
     opacity: .7;
-    transform: translateX(-1rem);
+    transform: translateX(-.5rem);
 }
 
 .nav-links li a span {
@@ -138,7 +138,6 @@ nav ul a {
 .site-links a {
     display: flex;
     align-items: center;
-    transition: opacity .3s ease;
 }
 
 .site-links a:hover {
@@ -186,7 +185,6 @@ nav ul a {
     width: fit-content;
     margin-bottom: -.5rem;
     opacity: 0.7 !important;
-    transition: color .3s ease;
 }
 
 .header-text h3:hover {
@@ -203,7 +201,6 @@ nav ul a {
 
 .header-text p span {
     color: #272727;
-    transition: color .3s ease;
 }
 
 .header-text p span:hover {
