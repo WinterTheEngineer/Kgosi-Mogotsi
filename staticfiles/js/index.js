@@ -63,6 +63,7 @@ function runBackground() {
 
     gsap.to("#body-bg", {
         x: -spanWidth, // Adjust this value to determine how far the span moves
+        ease: "none",
         scrollTrigger: {
             trigger: "body", // The trigger element for the scroll (you can choose a specific element here)
             start: "top top", // When the top of the viewport reaches the top of the body

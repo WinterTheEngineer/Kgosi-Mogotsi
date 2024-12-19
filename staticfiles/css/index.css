@@ -32,8 +32,8 @@ body {
 #inner-cursor {
     top: 5rem;
     left: 5rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: .75rem;
+    height: .75rem;
     position: fixed;
     border-radius: 50%;
     pointer-events: none;
@@ -44,17 +44,17 @@ body {
 }
 
 #inner-cursor.active {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--purple);
+    width: 1.5rem;
+    height: 1.5rem;
+    /* background-color: var(--purple); */
     transition: width .5s ease, height .5s ease, background-color .5s ease;
 }
 
 #outer-cursor {
     top: 5rem;
     left: 5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     position: fixed;
     border-radius: 50%;
     pointer-events: none;
@@ -195,7 +195,7 @@ nav ul a {
 }
 
 #about {
-    height: 200vh;
+    height: 900vh;
 }
 
 html.lenis, html.lenis body {
