@@ -249,7 +249,7 @@ html.lenis, html.lenis body {
 }
 
 /* desktop */
-@media screen and (min-width: 1367px) {
+@media screen and (min-width: 1601px) {
 
     .header-text h1 {
         font-size: 16rem;
