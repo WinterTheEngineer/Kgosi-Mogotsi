@@ -185,6 +185,7 @@ nav ul a {
     width: fit-content;
     margin-bottom: -.5rem;
     opacity: 0.7 !important;
+    transition: color .5s ease;
 }
 
 .header-text h3:hover {
@@ -201,6 +202,7 @@ nav ul a {
 
 .header-text p span {
     color: #272727;
+    transition: color .5s ease;
 }
 
 .header-text p span:hover {
