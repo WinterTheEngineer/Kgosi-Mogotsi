@@ -209,10 +209,6 @@ nav ul a {
     color: var(--malibu);
 }
 
-#about {
-    height: 900vh;
-}
-
 html.lenis, html.lenis body {
     height: auto;
 }
@@ -231,6 +227,33 @@ html.lenis, html.lenis body {
     
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
+}
+
+#contact {
+    height: 100vh;
+}
+
+.contact-container {
+    height: 100%;
+}
+
+.contact-container h1 {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    font-size: 10rem;
+    flex-direction: column;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
+}
+
+.contact-container h1 span {
+    font-family: 'SCHABO Condensed';
+}
+
+.contact-container h1 span:last-child {
+    color: var(--malibu);
 }
 
 /* Mobile - Portrait */

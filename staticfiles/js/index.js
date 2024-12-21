@@ -72,12 +72,27 @@ function runBackground() {
         }
     });
 };
-
 runBackground();
 
-window.addEventListener('resize', function() {
-    updateBackgroundPosition();
+gsap.set("#contact span", {
+    opacity: 0,
+    x: -100, // Place them 100px to the left of their initial position
 });
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#contact",
+        start: "top center", // Trigger when the top of #contact reaches the center of the viewport
+        toggleActions: "play none none none", // Play animation on enter
+    },
+})
+    .to("#contact span", {
+        opacity: 1,
+        x: 0,
+        stagger: 0.2, // Sequential animation with 0.2s delay between each span
+        duration: 1,
+        ease: "power2.out",
+    });
 
 function setTheme(theme) {
     const themeElements = document.querySelectorAll(".themed");
