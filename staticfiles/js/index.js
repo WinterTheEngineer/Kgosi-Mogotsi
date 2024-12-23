@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     // cursor styles
-    let innerCursor = document.getElementById('inner-cursor')
+    let cursor = document.getElementById('cursor')
     
     document.addEventListener('mousemove', moveCursor);
 
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let x = e.clientX;
         let y = e.clientY;
 
-        innerCursor.style.left = `${x}px`;
-        innerCursor.style.top = `${y}px`;
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
     }
 
     let links = Array.from(document.querySelectorAll("a"));
@@ -44,20 +44,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // mouse click
     // hover (only works for links)
     document.addEventListener('mousedown', () => {
-        innerCursor.classList.toggle("active");
+        cursor.classList.toggle("active");
     });
 
     document.addEventListener('mouseup', () => {
-        innerCursor.classList.toggle("active");
+        cursor.classList.toggle("active");
     });
 
     links.forEach(link => {
         link.addEventListener('mouseover', () => {
-            innerCursor.classList.toggle("hover");
+            cursor.classList.toggle("hover");
         });
 
         link.addEventListener('mouseleave', () => {
-            innerCursor.classList.remove("hover");
+            cursor.classList.remove("hover");
         });
     });
 });
