@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     // cursor styles
     let innerCursor = document.getElementById('inner-cursor')
-    let outerCursor = document.getElementById('outer-cursor')
-
+    
     document.addEventListener('mousemove', moveCursor);
 
     function moveCursor(e){
@@ -38,20 +37,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
         innerCursor.style.left = `${x}px`;
         innerCursor.style.top = `${y}px`;
-        
-        outerCursor.style.left = `${x}px`;
-        outerCursor.style.top = `${y}px`;
     }
 
     let links = Array.from(document.querySelectorAll("a"));
 
+    // mouse click
+    // hover (only works for links)
+    document.addEventListener('mousedown', () => {
+        innerCursor.classList.toggle("active");
+    });
+
+    document.addEventListener('mouseup', () => {
+        innerCursor.classList.toggle("active");
+    });
+
     links.forEach(link => {
         link.addEventListener('mouseover', () => {
-            innerCursor.classList.toggle("active");
+            innerCursor.classList.toggle("hover");
         });
 
         link.addEventListener('mouseleave', () => {
-            innerCursor.classList.remove("active");
+            innerCursor.classList.remove("hover");
         });
     });
 });
@@ -82,7 +88,7 @@ gsap.set("#contact span", {
 gsap.timeline({
     scrollTrigger: {
         trigger: "#contact",
-        start: "top center", // Trigger when the top of #contact reaches the center of the viewport
+        start: "top 50%", // Trigger when the top of #contact reaches the center of the viewport
         toggleActions: "play none none none", // Play animation on enter
     },
 })

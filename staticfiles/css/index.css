@@ -39,34 +39,26 @@ body {
 #inner-cursor {
     top: 5rem;
     left: 5rem;
-    width: .75rem;
-    height: .75rem;
+    width: 1.5rem;
+    height: 1.5rem;
     position: fixed;
     border-radius: 50%;
     pointer-events: none;
-    background-color: var(--malibu);
+    mix-blend-mode: difference;
+    background-color: #ffffff;
     transform: translate(-50%, -50%);
-    transition: width .5s ease, height .5s ease;
+    transition: width .5s ease .3s, height .5s ease .3s;
+}
+
+#inner-cursor.hover {
+    width: 3rem;
+    height: 3rem;
+    transition: width .3s ease, height .3s ease;
 }
 
 #inner-cursor.active {
-    width: 1.5rem;
-    height: 1.5rem;
-    transition: width .5s ease, height .5s ease;
-}
-
-#outer-cursor {
-    top: 5rem;
-    left: 5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    position: fixed;
-    border-radius: 50%;
-    pointer-events: none;
-    border: 2px solid var(--charcoal);
-    /* mix-blend-mode: difference; */
-    transform: translate(-50%, -50%);
-    transition: .08s;
+    mix-blend-mode: normal;
+    background-color: #8a80ff;
 }
 
 .container-fluid {
