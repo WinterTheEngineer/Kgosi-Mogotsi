@@ -112,11 +112,11 @@
     </header>
     <section id="contact">
         <div class="container-fluid contact-container">
-            <h1>
+            <h2>
                 <span>Let's</span>
                 <span>Make</span>
                 <span>MAGIC</span>
-            </h1>
+            </h2>
             <form action="{% url 'contact' %}" method="POST" role="form">
                 {% csrf_token %}
                 <p>My name is
@@ -129,11 +129,12 @@
                         maxlength="255" 
                         required 
                         aria-required="true" 
-                        placeholder="full name" 
+                        placeholder="your full name" 
                         title="Your full name"
                     >
                 </span>
-                and I'm interested in your
+                and I'm interested in<br>
+                your
                 <span class="form-group">
                     <label for="id_service">Service:</label>
                     <input 
@@ -143,7 +144,7 @@
                         maxlength="255" 
                         required 
                         aria-required="true" 
-                        placeholder="Service you are interested in" 
+                        placeholder="the service you require" 
                         title="The service you want to inquire about"
                     >
                 </span>
@@ -160,7 +161,7 @@
                             maxlength="320" 
                             required 
                             aria-required="true" 
-                            placeholder="email address" 
+                            placeholder="your email address" 
                             title="Your valid email address"
                         >
                     </span>,<br>
@@ -173,20 +174,20 @@
                             id="id_phone" 
                             required 
                             aria-required="true" 
-                            placeholder="phone number" 
-                            title="Your phone number, including country code"
+                            placeholder="your phone number" 
+                            title="Your phone number"
                         >
                     </span>.
                 </p>
                 <p>
-                    Additionally,<br>
+                    A few things I'd like to discuss:<br>
                     <span class="form-group">
                         <label for="id_message">Message:</label>
                         <textarea 
                             name="message" 
                             id="id_message" 
                             rows="3"
-                            cols="35"
+                            cols="30"
                             required 
                             aria-required="true" 
                             placeholder="Write your message here" 

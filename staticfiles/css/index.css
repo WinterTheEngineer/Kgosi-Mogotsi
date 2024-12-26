@@ -39,6 +39,7 @@ body {
 #cursor {
     top: 5rem;
     left: 5rem;
+    z-index: 99;
     width: 1.5rem;
     height: 1.5rem;
     position: fixed;
@@ -229,7 +230,7 @@ html.lenis, html.lenis body {
     display: flex;
 }
 
-.contact-container h1 {
+.contact-container h2 {
     width: 25%;
     height: 100%;
     display: flex;
@@ -241,11 +242,11 @@ html.lenis, html.lenis body {
     font-family: 'SCHABO Condensed';
 }
 
-.contact-container h1 span {
+.contact-container h2 span {
     font-family: 'SCHABO Condensed';
 }
 
-.contact-container h1 span:last-child {
+.contact-container h2 span:last-child {
     color: var(--malibu);
 }
 
@@ -257,6 +258,10 @@ html.lenis, html.lenis body {
     justify-content: space-evenly;
 }
 
+#contact form .submit-group {
+display: flex;
+}
+
 #contact form label {
     display: none;
 }
@@ -265,6 +270,7 @@ html.lenis, html.lenis body {
 #contact form textarea {
     border: none;
     outline: none;
+    margin-top: 1rem;
     background: none;
     /* padding-top: 1rem;
     padding-left: 1rem; */
@@ -295,7 +301,6 @@ html.lenis, html.lenis body {
     position: relative;
     padding: .5rem 1rem;
     border-radius: 2rem;
-    margin-left: 3rem;
     transition: background-color .5s ease;
     background-color: var(--charcoal);
 }
