@@ -35,6 +35,6 @@ nav ul a.dark-mode {
     color: var(--malibu)
 }
 
-.contact-container h1 span {
+.contact-container h1.dark-mode span {
     color: #ffffff;
 }
