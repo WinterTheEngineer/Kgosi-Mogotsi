@@ -20,7 +20,7 @@ def contact(request):
 
     if request.method == "POST":
 
-        form = ContactForm
+        form = ContactForm(request.POST)
         if form.is_valid():
 
             # extract and process form data
@@ -40,8 +40,8 @@ def contact(request):
                 f"Message:\n{message}"
             )
 
-            sender = os.getenv("EMAIL")
-            recipient_list = [os.getenv("EMAIL")]
+            sender = os.getenv("EMAIL_HOST_USER")
+            recipient_list = [os.getenv("EMAIL_HOST_USER")]
 
             try:
                 send_mail(subject, body, sender, recipient_list)

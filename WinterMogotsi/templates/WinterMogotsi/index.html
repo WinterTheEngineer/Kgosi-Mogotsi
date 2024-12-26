@@ -117,6 +117,87 @@
                 <span>Make</span>
                 <span>MAGIC</span>
             </h1>
+            <form action="{% url 'contact' %}" method="POST" role="form">
+                {% csrf_token %}
+                <p>My name is
+                <span class="form-group">
+                    <label for="id_name">Name:</label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="id_name" 
+                        maxlength="255" 
+                        required 
+                        aria-required="true" 
+                        placeholder="full name" 
+                        title="Your full name"
+                    >
+                </span>
+                and I'm interested in your
+                <span class="form-group">
+                    <label for="id_service">Service:</label>
+                    <input 
+                        type="text" 
+                        name="service" 
+                        id="id_service" 
+                        maxlength="255" 
+                        required 
+                        aria-required="true" 
+                        placeholder="Service you are interested in" 
+                        title="The service you want to inquire about"
+                    >
+                </span>
+                services.</p>
+                
+                <p>
+                    You can reach me at
+                    <span class="form-group">
+                        <label for="id_email">Email:</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="id_email" 
+                            maxlength="320" 
+                            required 
+                            aria-required="true" 
+                            placeholder="email address" 
+                            title="Your valid email address"
+                        >
+                    </span>,<br>
+                    or give me a call at
+                    <span class="form-group">
+                        <label for="id_phone">Phone:</label>
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            id="id_phone" 
+                            required 
+                            aria-required="true" 
+                            placeholder="phone number" 
+                            title="Your phone number, including country code"
+                        >
+                    </span>.
+                </p>
+                <p>
+                    Additionally,<br>
+                    <span class="form-group">
+                        <label for="id_message">Message:</label>
+                        <textarea 
+                            name="message" 
+                            id="id_message" 
+                            rows="3"
+                            cols="35"
+                            required 
+                            aria-required="true" 
+                            placeholder="Write your message here" 
+                            title="The message you want to send"
+                        ></textarea>
+                    </span>
+                    <span class="form-group">
+                        <button type="submit">Send Message</button>
+                    </span>
+                </p>
+            </form>            
         </div>
     </section>
 
