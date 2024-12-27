@@ -112,14 +112,14 @@
     </header>
     <section id="contact">
         <div class="container-fluid contact-container">
-            <h2>
+            <h2 class="themed">
                 <span>Let's</span>
                 <span>Make</span>
                 <span>MAGIC</span>
             </h2>
             <form action="{% url 'contact' %}" method="POST" role="form">
                 {% csrf_token %}
-                <p>My name is
+                <p class="themed">My name is
                 <span class="form-group">
                     <label for="id_name">Name:</label>
                     <input 
@@ -150,7 +150,7 @@
                 </span>
                 services.</p>
                 
-                <p>
+                <p class="themed">
                     You can reach me at
                     <span class="form-group">
                         <label for="id_email">Email:</label>
@@ -179,7 +179,7 @@
                         >
                     </span>.
                 </p>
-                <p>
+                <p class="themed">
                     A few things I'd like to discuss:<br>
                     <span class="submit-group">
                         <span class="form-group">
