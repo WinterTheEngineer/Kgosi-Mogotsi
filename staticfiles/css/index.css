@@ -255,7 +255,7 @@ html.lenis, html.lenis body {
     font-size: 2rem;
     margin-left: 3rem;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #contact form .submit-group {
@@ -322,6 +322,7 @@ html.lenis, html.lenis body {
     height: 8rem;
     color: white;
 }
+
 /* 
 #contact form button::after {
     top: 0;
@@ -366,5 +367,17 @@ html.lenis, html.lenis body {
         font-size: 80rem;
         max-width: 260rem;
         margin-top: -20rem;
+    }
+
+    .contact-container h2 {
+        font-size: 14rem;
+    }
+
+    #contact form {
+        margin: 5rem 10rem;
+    }
+
+    #contact form textarea {
+        width: 100%;
     }
 }
