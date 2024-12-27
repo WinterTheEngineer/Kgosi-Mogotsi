@@ -14,13 +14,8 @@ nav ul a.dark-mode {
     color: #ffffff;
 }
 
-.header-text h1.dark-mode,
-.header-text h3.dark-mode {
+.header-text h1.dark-mode{
     color: #ffffff;
-}
-
-.header-text h3.dark-mode:hover {
-    color: var(--malibu);
 }
 
 .header-text p.dark-mode {
