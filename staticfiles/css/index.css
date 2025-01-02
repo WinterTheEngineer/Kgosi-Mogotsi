@@ -230,14 +230,14 @@ nav ul a {
 }
 
 .about-intro h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--malibu);
     text-transform: uppercase;
     font-family: 'SCHABO Condensed';
 }
 
 .about-intro p {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 1;
 }
 
