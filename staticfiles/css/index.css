@@ -201,24 +201,41 @@ nav ul a {
     color: var(--malibu);
 }
 
-html.lenis, html.lenis body {
-    height: auto;
+.quote-separator {
+    padding-block: 5rem;
 }
-    
-.lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+
+.quote-separator p {
+    margin: 0;
+    text-align: center;
+    font-size: 1.6rem;
 }
-    
-.lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
+
+.quote-separator p span {
+    font-size: 1rem;
 }
-    
-.lenis.lenis-stopped {
-    overflow: hidden;
+
+#about {
+    min-height: 100vh;
 }
-    
-.lenis.lenis-scrolling iframe {
-    pointer-events: none;
+
+.about-container {
+    height: 100%;
+}
+
+.about-intro {
+    width: 50%;
+}
+
+.about-intro h2 {
+    font-size: 4rem;
+    color: var(--malibu);
+    text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
+}
+
+.about-intro p {
+    font-size: 2rem;
 }
 
 #contact {
@@ -322,18 +339,27 @@ html.lenis, html.lenis body {
     height: 8rem;
     color: white;
 }
+    
 
-/* 
-#contact form button::after {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--malibu);
-} */
+html.lenis, html.lenis body {
+    height: auto;
+}
+    
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+    
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+    
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+    
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
 
 /* Mobile - Portrait */
 @media screen and (min-width: 240px) and (max-width: 428px) {
