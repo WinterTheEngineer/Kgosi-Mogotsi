@@ -202,7 +202,9 @@ nav ul a {
 }
 
 .quote-separator {
-    padding-block: 5rem;
+    height: 75vh;
+    display: grid;
+    place-items: center;
 }
 
 .quote-separator p {
@@ -224,7 +226,7 @@ nav ul a {
 }
 
 .about-intro {
-    width: 50%;
+    width: 45%;
 }
 
 .about-intro h2 {
@@ -236,6 +238,11 @@ nav ul a {
 
 .about-intro p {
     font-size: 2rem;
+    line-height: 1;
+}
+
+.about-intro p span{
+    color: var(--malibu);
 }
 
 #contact {
