@@ -100,6 +100,58 @@ gsap.timeline({
         ease: "power2.out",
     });
 
+gsap.set(".header-text h1", {
+    opacity: .5,
+    y: -75, // Place them 100px to the left of their initial position
+});
+
+gsap.set(".header-text h3", {
+    opacity: 0,
+    y: -75, // Place them 100px to the left of their initial position
+});
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#header",
+        toggleActions: "play none none reset", // Play animation on enter
+    },
+})
+    .to(".header-text h1", {
+        opacity: 1,
+        duration: 1,
+        y: 0, // Sequential animation with 0.2s delay between each span
+        ease: "power2.out",
+    })
+    .to(".header-text h3", {
+        opacity: 1,
+        y: 0,
+        stagger: 0.5, // Sequential animation with 0.2s delay between each span
+        duration: 1,
+        ease: "power2.out",
+    });
+
+
+gsap.set(".portrait-img", {
+    opacity: 0,
+    y: -100, // Place them 100px to the left of their initial position
+});
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#about",
+        start: "top 40%",
+        toggleActions: "play none none none", // Play animation on enter
+    },
+})
+    .to(".portrait-img", {
+        opacity: 1,
+        duration: 1,
+        y: 0, // Sequential animation with 0.2s delay between each span
+        ease: "power2.out",
+    })
+
+
+
 function setTheme(theme) {
     const themeElements = document.querySelectorAll(".themed");
 
