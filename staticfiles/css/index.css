@@ -218,11 +218,13 @@ nav ul a {
 }
 
 #about {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .about-container {
     height: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .about-intro {
@@ -237,12 +239,26 @@ nav ul a {
 }
 
 .about-intro p {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1;
 }
 
 .about-intro p span{
     color: var(--malibu);
+}
+
+.portrait-img {
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    justify-self: flex-end;
+    border-radius: 1rem;
+}
+
+.portrait-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #contact {
