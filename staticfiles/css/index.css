@@ -218,18 +218,22 @@ nav ul a {
 }
 
 #about {
-    height: 400vh;
+    height: 100vh;
 }
 
 .about-container {
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
-
-.about-intro {
-    width: 45%;
-}
+    
+.about-intro { grid-area: 1 / 1 / 3 / 4; }
+.about-trades { grid-area: 1 / 4 / 3 / 5; }
+.about-personal { grid-area: 3 / 2 / 5 / 5; }
+.div4 { grid-area: 3 / 1 / 5 / 2; }
 
 .about-intro h2 {
     font-size: 5rem;
@@ -239,26 +243,35 @@ nav ul a {
 }
 
 .about-intro p {
-    font-size: 2rem;
     line-height: 1;
+    font-size: 3.6rem;
 }
 
 .about-intro p span{
     color: var(--malibu);
 }
 
-.portrait-img {
-    width: 35%;
-    height: 100vh;
-    overflow: hidden;
-    justify-self: flex-end;
-    border-radius: 1rem;
+.about-trades {
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    /* justify-content: flex-end; */
 }
 
-.portrait-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about-trades li {
+    font-size: 1.2rem;
+    /* font-weight: 700; */
+}
+
+.about-personal {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+.about-personal p {
+    width: 70%;
+    font-size: 1.6rem;
 }
 
 #contact {
