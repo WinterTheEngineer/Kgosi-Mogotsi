@@ -122,19 +122,23 @@
     </div>
     <section id="about">
         <div class="container-fluid about-container">
-            <div class="about-intro">
-                <p>Ambitious <span>Full Stack Developer</span> 
-                    with a passion for problem solving and a resolve 
-                    to use code and technology to help provide innovative solutions 
-                    to modern crises.
-                </p>
-            </div>
+            <p class="about-intro">Ambitious <span>Full Stack Developer</span> 
+                with a passion for problem solving and a resolve 
+                to use code and technology to help provide innovative solutions 
+                to modern crises.
+            </p>
             <ul class="about-trades">
                 <li>Software Engineer</li>
                 <li>Web Developer</li>
                 <li>UI/UX Designer</li>
             </ul>
-            <div class="about-personal">
+            <p class="about-personal">
+                I love gaming and astronomy,<br>I like to fix old PCs for fun,<br>
+                and... <span>I've never eaten a waffle.</span>
+            </p>
+            <canvas id="location-globe">
+                
+            </canvas>
         </div>
     </section>
     <section id="contact">
@@ -259,6 +263,19 @@
                 });
             });
         });
+    </script>
+    <script>
+        const globeCanvas = document.querySelector('#scene');
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
+
+        const ctx = canvas.getContext('2d');
+
+        if (window.devicePixelRatio > 1) {
+            canvas.width = canvas.clientWidth * 2;
+            canvas.height = canvas.clientHeight * 2;
+            ctx.scale(2, 2);
+        }
     </script>
 </body>
 </html>

@@ -233,21 +233,15 @@ nav ul a {
 .about-intro { grid-area: 1 / 1 / 3 / 4; }
 .about-trades { grid-area: 1 / 4 / 3 / 5; }
 .about-personal { grid-area: 3 / 2 / 5 / 5; }
-.div4 { grid-area: 3 / 1 / 5 / 2; }
+#location-globe { grid-area: 3 / 1 / 5 / 2; }
 
-.about-intro h2 {
-    font-size: 5rem;
-    color: var(--malibu);
-    text-transform: uppercase;
-    font-family: 'SCHABO Condensed';
-}
-
-.about-intro p {
+.about-intro {
     line-height: 1;
     font-size: 3.6rem;
 }
 
-.about-intro p span{
+.about-intro span,
+.about-personal span {
     color: var(--malibu);
 }
 
@@ -265,13 +259,11 @@ nav ul a {
 
 .about-personal {
     display: flex;
-    align-items: end;
+    font-size: 2.4rem;
+    word-spacing: -.25rem;
+    align-items: flex-end;
+    flex-direction: column;
     justify-content: flex-end;
-}
-
-.about-personal p {
-    width: 70%;
-    font-size: 1.6rem;
 }
 
 #contact {
