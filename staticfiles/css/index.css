@@ -83,14 +83,16 @@ nav {
     justify-content: space-between;
 }
 
-nav ul {
+nav ul,
+footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
     justify-content: space-evenly;
 }
 
-nav ul a {
+nav ul a,
+.footer-nav ul a {
     color: var(--charcoal);
     font-weight: 300;
     font-size: 1.4rem;
@@ -392,6 +394,78 @@ html.lenis, html.lenis body {
     
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
+}
+
+footer {
+    height: 90vh;
+    margin-top: 5rem;
+    background-color: var(--charcoal);
+}
+
+.footer-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+.footer-nav ul a {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-nav ul a ion-icon {
+    margin-left: .5rem;
+    font-size: 1.2rem;
+    transition: transform .3s ease;
+}
+
+.footer-nav ul a:hover ion-icon {
+    transform: rotate(-45deg);
+}
+
+.nav-links li a {
+    display: block;
+    transition: transform .3s ease;
+}
+
+.nav-links li a:hover {
+    opacity: .7;
+    transform: translateX(-.5rem);
+}
+
+.nav-links li a span {
+    margin-right: .5rem;
+}
+
+.footer-nav .copyright {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.footer-brand {
+    margin: 0;
+    opacity: .2;
+    height: 42%;
+    line-height: 1;
+    font-size: 17rem;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
+}
+
+.footer-brand span:hover {
+    transform: translateX(-10rem);
 }
 
 /* Mobile - Portrait */
