@@ -233,7 +233,7 @@ nav ul a {
 .about-intro { grid-area: 1 / 1 / 3 / 4; }
 .about-trades { grid-area: 1 / 4 / 3 / 5; }
 .about-personal { grid-area: 3 / 2 / 5 / 5; }
-#location-globe { grid-area: 3 / 1 / 5 / 2; }
+.about-location { grid-area: 3 / 1 / 5 / 2; }
 
 .about-intro {
     line-height: 1;
@@ -259,11 +259,16 @@ nav ul a {
 
 .about-personal {
     display: flex;
-    font-size: 2.4rem;
+    font-size: 2rem;
     word-spacing: -.25rem;
     align-items: flex-end;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+#location-globe {
+    width: 6rem;
+    height: 6rem;
 }
 
 #contact {

@@ -133,12 +133,9 @@
                 <li>UI/UX Designer</li>
             </ul>
             <p class="about-personal">
-                I love gaming and astronomy,<br>I like to fix old PCs for fun,<br>
-                and... <span>I've never eaten a waffle.</span>
+                I love gaming and astronomy,<br>and I like to fix old PCs for fun.<br>
+                Also... <span>I've never eaten a waffle.</span>
             </p>
-            <canvas id="location-globe">
-                
-            </canvas>
         </div>
     </section>
     <section id="contact">
@@ -263,19 +260,6 @@
                 });
             });
         });
-    </script>
-    <script>
-        const globeCanvas = document.querySelector('#scene');
-        canvas.width = canvas.clientWidth;
-        canvas.height = canvas.clientHeight;
-
-        const ctx = canvas.getContext('2d');
-
-        if (window.devicePixelRatio > 1) {
-            canvas.width = canvas.clientWidth * 2;
-            canvas.height = canvas.clientHeight * 2;
-            ctx.scale(2, 2);
-        }
     </script>
 </body>
 </html>
