@@ -266,9 +266,9 @@ nav ul a {
     justify-content: flex-end;
 }
 
-#location-globe {
-    width: 6rem;
-    height: 6rem;
+#scene {
+    width: 10rem;
+    height: 10rem;
 }
 
 #contact {
