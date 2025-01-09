@@ -1,4 +1,5 @@
 import os
+import datetime
 from dotenv import load_dotenv
 from .forms import ContactForm
 from django.contrib import messages
@@ -9,7 +10,10 @@ load_dotenv()
 
 def index(request):
 
+    x = datetime.datetime.now()
+
     context = {
+        'activeYear': x.year,
         'page_title': 'Home',
         'form': ContactForm
     }
