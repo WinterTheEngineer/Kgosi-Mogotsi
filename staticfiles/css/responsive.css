@@ -1,0 +1,54 @@
+/* Mobile - Portrait */
+@media screen and (min-width: 240px) and (max-width: 428px) {
+
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 429px) and (max-width: 810px) {
+    
+}
+
+/* Tablet - Landscape */
+@media screen and (min-width: 811px) and (max-width: 1080px) {
+
+}
+
+
+/* larger laptop */
+@media screen and (min-width: 1601px) {
+    .footer-brand {
+        font-size: 22rem;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1601px) {
+
+    .header-text h1 {
+        font-size: 16rem;
+        margin-bottom: -3rem;
+    }
+
+    .header-text h3 {
+        font-size: 6.4rem;
+        margin-bottom: .5rem;
+    }
+
+    #body-bg {
+        font-size: 80rem;
+        max-width: 260rem;
+        margin-top: -20rem;
+    }
+
+    .contact-container h2 {
+        font-size: 14rem;
+    }
+
+    #contact form {
+        margin: 5rem 10rem;
+    }
+
+    #contact form textarea {
+        width: 100%;
+    }
+}

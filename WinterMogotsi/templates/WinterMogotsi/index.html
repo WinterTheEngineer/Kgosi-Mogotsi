@@ -36,6 +36,7 @@
 
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'css/blue-mode.css' %}">
     <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}">
 
@@ -238,60 +239,59 @@
         <div class="container-fluid footer-container">
             <div class="footer-nav">
                 <p class="copyright">
-                    © Rhulani Mogotsi {{activeYear}}<br>All rights reserved 
+                    All rights reserved<br> © Rhulani Mogotsi {{activeYear}}
                 </p>
-                <ul class="region">
-                    <li>
-                        Johannesburg
-                    </li>
-                    <li>
-                        South Africa
-                    </li>
-                </ul>
-                <ul class="nav-links">
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#about" class="themed">
-                            About
+                <p class="region">
+                        Johannesburg<br>
+                        South Africa<br>
+                        26.2056° S, 28.0337° E
+                </p>
+                <div class="d-flex">
+                    <ul class="nav-links">
+                        <li class="animate__animated animate__fadeInLeft">
+                            <a href="#about" class="themed">
+                                About
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="animate__animated animate__fadeInLeft">
+                            <a href="#education" class="themed">
+                                Education
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="animate__animated animate__fadeInLeft">
+                            <a href="#references" class="themed">
+                                References
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="animate__animated animate__fadeInLeft">
+                            <a href="#contact" class="themed">
+                                Contact
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>   
+                    <ul class="site-links">
+                        <a href="https://github.com/CodeMasterWinter" class="themed" target="_blank" rel="noopener noreferrer">
+                            Github
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </a>
-                    </li>
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#education" class="themed">
-                            Education
+                        <a href="https://twitter.com/WinterMogotsi" class="themed" target="_blank" rel="noopener noreferrer">
+                            Twitter
+                           <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
+                            LinkedIn
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </a>
-                    </li>
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#references" class="themed">
-                            References
+                        <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
+                            Resume
                             <ion-icon name="arrow-forward-outline"></ion-icon>
                         </a>
-                    </li>
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#contact" class="themed">
-                            Contact
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="site-links">
-                    <a href="https://github.com/CodeMasterWinter" class="themed" target="_blank" rel="noopener noreferrer">
-                        Github
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                    <a href="https://twitter.com/WinterMogotsi" class="themed" target="_blank" rel="noopener noreferrer">
-                        Twitter
-                       <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
-                        LinkedIn
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
-                        Resume
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                </ul>   
+                    </ul>   
+                </div>
             </div>
             <p class="footer-brand">
                 Rhulani Mogotsi
