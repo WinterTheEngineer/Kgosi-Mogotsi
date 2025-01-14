@@ -261,9 +261,18 @@ nav ul a,
     justify-content: flex-end;
 }
 
-#scene {
-    width: 10rem;
-    height: 10rem;
+#work {
+    min-height: 100vh;
+}
+
+.work-container {
+    height: 100%;
+}
+
+.work-container h2 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
 }
 
 #contact {
