@@ -413,7 +413,7 @@ footer {
 .footer-nav {
     display: flex;
     padding: 2rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .footer-nav ul {
@@ -429,6 +429,7 @@ footer {
 
 .footer-nav .copyright,
 .footer-nav .region {
+    margin-inline-end: 1rem;
     color: #ffffff;
     font-weight: 300;
     font-size: 1.4rem;
