@@ -15,9 +15,9 @@
 
 
 /* larger laptop */
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1366px) {
     .footer-brand {
-        font-size: 22rem;
+        font-size: 21rem;
     }
 }
 
