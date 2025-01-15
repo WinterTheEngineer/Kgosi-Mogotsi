@@ -125,22 +125,28 @@
     </div>
     <section id="about">
         <div class="container-fluid about-container">
-            <p class="about-intro">Ambitious <span>Full Stack Developer</span> 
-                with a passion for problem solving and a resolve 
-                to use code and technology to help provide innovative solutions 
-                to modern crises.
-            </p>
-            <ul class="about-trades">
-                <li>Software Engineer</li>
-                <li>Web Developer</li>
-                <li>UI/UX Designer</li>
-            </ul>
-            <p class="about-personal">
-                I love gaming and astronomy,<br>and I like to fix old PCs for fun.<br>
-                Also... <span>I've never eaten a waffle.</span>
-            </p>
-            <div class="about-location">
-                
+            <div class="about-img">
+                <img src="{% static 'images/portrait-img.jpg' %}" alt="">
+            </div>
+            <div class="about-text">
+                <p class="about-intro">Ambitious <span>Full Stack Developer</span> 
+                    with a passion for problem solving and a resolve 
+                    to use code and technology to help provide innovative solutions 
+                    to modern crises.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <p class="about-personal">
+                        I love gaming and astronomy,<br>and I like to fix old PCs for fun.<br>
+                        Also, <span>I've never eaten a waffle.</span>
+                    </p>
+                    <div class="about-location">
+                        <ion-icon name="earth-outline"></ion-icon>
+                        <p>
+                            Johannesburg,<br>
+                            <span>South Africa</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
