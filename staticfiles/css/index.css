@@ -525,7 +525,6 @@ footer {
 
 .footer-nav .copyright,
 .footer-nav .region {
-    margin-inline-end: 1rem;
     color: #ffffff;
     font-weight: 300;
     font-size: 1.4rem;
@@ -538,26 +537,24 @@ footer {
 
 .footer-nav .region,
 .footer-nav .copyright {
-    margin: 0;
+    margin: 0 1rem 0 0;
     padding: 0 5rem 0 0;
     border-right: .5px solid #ffffff50;
 }
 
 .footer-brand {
     left: 50%;
+    /* opacity: .3; */
     bottom: -6rem;
     line-height: 1;
     font-size: 18rem;
     overflow: hidden;
     text-wrap: nowrap;
     position: absolute;
+    color: #ffffff;
     text-transform: uppercase;
     transform: translateX(-50%);
     font-family: 'SCHABO Condensed';
-
-    background: linear-gradient(#ffffff80, #272727 70%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .footer-brand span:hover {
