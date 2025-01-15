@@ -580,6 +580,8 @@ footer {
     font-family: 'SCHABO Condensed';
 }
 
-.footer-brand span:hover {
-    transform: translateX(-10rem);
+.footer-brand span {
+    color: var(--malibu);
+    text-transform: uppercase;
+    font-family: 'SCHABO Condensed';
 }
