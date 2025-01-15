@@ -285,12 +285,12 @@ nav ul a,
 }
 
 #work {
-    margin-block: 5rem;
     min-height: 100vh;
 }
 
 .work-container {
     height: 100%;
+    padding: 0 1rem;
 }
 
 .work-container h2 {
