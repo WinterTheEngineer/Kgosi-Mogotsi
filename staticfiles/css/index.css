@@ -285,6 +285,7 @@ nav ul a,
 }
 
 #work {
+    margin-top: 10rem;
     min-height: 100vh;
 }
 
@@ -316,7 +317,7 @@ nav ul a,
 }
 
 .panel-img {
-    flex: .3;
+    /* flex: .3; */
     height: 100%;
     display: inline;
 }
@@ -407,7 +408,7 @@ nav ul a,
     width: 25%;
     height: 100%;
     display: flex;
-    font-size: 10rem;
+    font-size: 12rem;
     color: var(--charcoal);
     flex-direction: column;
     justify-content: space-between;
