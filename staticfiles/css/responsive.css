@@ -16,8 +16,48 @@
 
 /* larger laptop */
 @media screen and (min-width: 1368px) and (max-width: 1600px) {
+    .header-text h1 {
+        font-size: 8rem;
+        margin-bottom: -1rem;
+    }
+
+    .header-text h3 {
+        font-size: 4rem;
+        /* margin-bottom: .5rem; */
+    }
+
+    nav ul a,
+    .footer-nav ul a {
+        font-size: 1.2rem;
+    }
+
+    .header-text p {
+        width: 40%;
+        font-size: 1.6rem;
+    }
+
+    .quote-separator {
+        height: 75vh;
+    }
+
+    .quote-separator p {
+        font-size: 1.2rem;
+    }
+
+    .about-intro {
+        font-size: 2.4rem;
+    }
+
+    .about-personal {
+        font-size: 1.6rem;
+    }
+
+    .contact-container h2 {
+        font-size: 10rem;
+    }
+    
     .footer-brand {
-        font-size: 21rem;
+        font-size: 18rem;
     }
 }
 

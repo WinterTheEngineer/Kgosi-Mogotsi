@@ -253,6 +253,7 @@ nav ul a,
 
 .about-personal {
     margin: 0;
+    line-height: 1;
     font-size: 2rem;
     word-spacing: -.25rem;
 }
