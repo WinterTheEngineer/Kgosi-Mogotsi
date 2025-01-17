@@ -15,13 +15,13 @@
 
 
 /* larger laptop */
-@media screen and (min-width: 1368px) {
+@media screen and (min-width: 1368px) and (max-width: 1600px) {
     .footer-brand {
         font-size: 21rem;
     }
 }
 
-/* desktop */
+/* desktop
 @media screen and (min-width: 1601px) {
 
     .header-text h1 {
@@ -51,4 +51,4 @@
     #contact form textarea {
         width: 100%;
     }
-}
+} */
