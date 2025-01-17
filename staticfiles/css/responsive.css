@@ -14,8 +14,8 @@
 }
 
 
-/* larger laptop */
-@media screen and (min-width: 1368px) and (max-width: 1600px) {
+/* small laptop */
+@media screen and (min-width: 1280px) {
     .header-text h1 {
         font-size: 8rem;
         margin-bottom: -1rem;
@@ -49,7 +49,7 @@
     }
 
     .about-personal {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .contact-container h2 {
@@ -57,38 +57,45 @@
     }
     
     .footer-brand {
-        font-size: 18rem;
+        font-size: 17rem;
     }
 }
 
-/* desktop
-@media screen and (min-width: 1601px) {
+/* larger laptops */
+@media screen and (min-width: 1441px) and (max-width: 1600px){
 
     .header-text h1 {
-        font-size: 16rem;
-        margin-bottom: -3rem;
+        font-size: 10rem;
+        margin-bottom: -1rem;
     }
 
     .header-text h3 {
-        font-size: 6.4rem;
-        margin-bottom: .5rem;
+        font-size: 5rem;
+        /* margin-bottom: .5rem; */
     }
 
-    #body-bg {
-        font-size: 80rem;
-        max-width: 260rem;
-        margin-top: -20rem;
+    nav ul a,
+    .footer-nav ul a {
+        font-size: 1.4rem;
     }
 
-    .contact-container h2 {
-        font-size: 14rem;
+    .header-text p {
+        font-size: 1.8rem;
     }
 
-    #contact form {
-        margin: 5rem 10rem;
+    .quote-separator p {
+        font-size: 1.6rem;
     }
 
-    #contact form textarea {
-        width: 100%;
+    .about-intro {
+        font-size: 3rem;
     }
-} */
+
+    .about-personal {
+        font-size: 2rem;
+    }
+
+    .footer-brand {
+        font-size: 21rem;
+}
+}
