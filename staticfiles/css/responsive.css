@@ -1,6 +1,51 @@
 /* Mobile - Portrait */
 @media screen and (min-width: 240px) and (max-width: 428px) {
+    #cursor {
+        display: none;
+    }
 
+    nav {
+        display: none;
+    }
+
+    .header-text {
+        flex: 1;
+    }
+
+    #header {
+        height: 100dvh;
+    }
+
+    .header-text h1 {
+        margin-bottom: 0;
+        font-size: 4.2rem;
+        text-align: center;
+    }
+
+    .header-text h3 {
+        font-size: 2rem;
+        display: inline;
+        text-align: center;
+    }
+
+    .header-text p {
+        width: 100%;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .quote-separator {
+        /* height: 30vh; */
+        padding: 0 1rem;
+    }
+
+    .quote-separator p {
+        font-size: 1.2rem;
+    }
+
+    #about, #work, #contact, footer {
+        display: none;
+    }
 }
 
 /* Tablet Portrait */
