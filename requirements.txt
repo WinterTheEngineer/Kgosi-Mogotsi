@@ -1,8 +1,12 @@
 asgiref==3.7.2
 Django==5.0.1
 django-phonenumber-field==8.0.0
+django-phonenumbers==1.0.1
 load-dotenv==0.1.0
 ngrok==1.2.0
+phonenumbers==8.13.53
+pyngrok==7.2.3
 python-dotenv==1.0.1
+PyYAML==6.0.2
 sqlparse==0.4.4
 tzdata==2023.4
