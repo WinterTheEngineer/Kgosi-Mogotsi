@@ -89,13 +89,14 @@
     }
     
     #work h2 {
-        margin-bottom: 1rem;
-        font-size: 4.4rem;
+        font-size: 4.5rem;
         text-align: center;
+        margin-bottom: 1rem;
     }
     
     .work-panel {
         height: 100%;
+        padding: 1rem 0;
         min-height: 16rem;
         flex-direction: column;
     }
@@ -130,8 +131,36 @@
         display: inline-block;
     }
 
-    #contact, footer {
+    #contact {
         display: none;
+    }
+    
+    .footer-nav {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .footer-nav .region,
+    .footer-nav .copyright {
+        padding: 0;
+        border: none;
+        font-size: 1rem;
+        margin: 0 0 1.6rem 0;
+    }
+
+    .footer-nav ul {
+        margin: 0 1rem 0 0;
+    }
+    
+    .footer-nav .site-links a,
+    .footer-nav ul li a,
+    .footer-nav .site-links a ion-icon ,
+    .footer-nav ul li a ion-icon {
+        font-size: 1rem;
+    }
+    
+    .footer-brand {
+        font-size: 3rem;
     }
 }
 
