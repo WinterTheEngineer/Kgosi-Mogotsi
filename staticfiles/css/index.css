@@ -1,3 +1,7 @@
+* {
+    transition: height .5s ease;
+}
+
 :root {
     --malibu: #8a80ff;
     --light-blue: #4B6CB7;
