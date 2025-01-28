@@ -421,11 +421,8 @@ nav ul a,
 }
 
 .contact-container h2 span {
-    font-family: 'SCHABO Condensed';
-}
-
-.contact-container h2 span:last-child {
     color: var(--malibu);
+    font-family: 'SCHABO Condensed';
 }
 
 #contact form {
@@ -500,7 +497,6 @@ nav ul a,
     height: 8rem;
     color: white;
 }
-    
 
 html.lenis, html.lenis body {
     height: auto;
