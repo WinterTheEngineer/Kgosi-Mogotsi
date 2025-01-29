@@ -145,9 +145,9 @@
 
     .contact-container h2 {
         width: 100%;
+        line-height: 1;
         font-size: 4.5rem;
         white-space: nowrap;
-        height: min-content;
         flex-direction: row;
         justify-content: center;
     }
@@ -166,10 +166,35 @@
         font-size: 1.2rem;
     }
 
+    #contact form {
+        display: none; /* Hide all elements inside the form */
+    }
+
+    #contact form.responsive {
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    #contact form .form-group {
+        margin: 1rem 0;
+    }
+
+    #contact form label {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
     #contact form input,
     #contact form textarea {
+    margin: 0;
+    width: 100%;
     border-bottom: 2px dotted #27272770;
-}
+    }
+
+    #contact form input {
+        padding-left: .5rem;
+    }
 
     #contact form .submit-group {
         flex-direction: column;
@@ -181,6 +206,7 @@
     
     footer {
         height: 100%;
+        margin-top: 2rem;
     }
 
     .footer-nav {

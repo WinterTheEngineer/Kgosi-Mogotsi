@@ -415,7 +415,7 @@ nav ul a,
     font-size: 12rem;
     color: var(--charcoal);
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-transform: uppercase;
     font-family: 'SCHABO Condensed';
 }

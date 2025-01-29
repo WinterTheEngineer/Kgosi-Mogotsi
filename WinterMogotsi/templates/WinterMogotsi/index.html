@@ -311,6 +311,78 @@
                         </span>
                     </div>
                 </p>
+            </form>
+            <form class="responsive" action="{% url 'contact' %}" method="POST" role="form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_name">Name:</label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="id_name" 
+                        maxlength="255" 
+                        required 
+                        aria-required="true" 
+                        placeholder="your full name" 
+                        title="Your full name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="id_service">Service:</label>
+                    <input 
+                        type="text" 
+                        name="service" 
+                        id="id_service" 
+                        maxlength="255" 
+                        required 
+                        aria-required="true" 
+                        placeholder="the service you require" 
+                        title="The service you want to inquire about"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="id_email">Email:</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="id_email" 
+                        maxlength="320" 
+                        required 
+                        aria-required="true" 
+                        placeholder="your email address" 
+                        title="Your valid email address"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="id_phone">Phone:</label>
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        id="id_phone" 
+                        required 
+                        aria-required="true" 
+                        placeholder="your phone number" 
+                        title="Your phone number"
+                    >
+                </div>
+                <div class="submit-group">
+                    <div class="form-group">
+                        <label for="id_message">Message:</label>
+                        <textarea 
+                            name="message" 
+                            id="id_message" 
+                            rows="3"
+                            cols="30"
+                            required 
+                            aria-required="true" 
+                            placeholder="Write your message here" 
+                            title="The message you want to send"
+                        ></textarea>
+                    </div>
+                    <div class="form-group button-group">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </div>
             </form>            
         </div>
     </section>
