@@ -405,7 +405,8 @@ nav ul a,
 .contact-container {
     height: 100%;
     display: flex;
-    /* padding: 5rem; */
+    padding: 8rem 10rem;
+    justify-content: center;
 }
 
 .contact-container h2 {
@@ -431,6 +432,10 @@ nav ul a,
     margin-left: 3rem;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#contact form.responsive {
+    display: none;
 }
 
 #contact form .submit-group {
