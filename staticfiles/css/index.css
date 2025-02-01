@@ -405,8 +405,8 @@ nav ul a,
 .contact-container {
     height: 100%;
     display: flex;
-    padding: 8rem 10rem;
-    justify-content: center;
+    padding: 10rem 2rem;
+    /* justify-content: space-between; */
 }
 
 .contact-container h2 {
@@ -427,11 +427,16 @@ nav ul a,
 }
 
 #contact form {
+    width: 100%;
     display: flex;
     font-size: 2rem;
     margin-left: 3rem;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#contact form br {
+    display: none;
 }
 
 #contact form.responsive {
