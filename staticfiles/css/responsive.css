@@ -1,5 +1,158 @@
+/* larger laptops */
+@media screen and (max-width: 1440px){
+
+    .header-text h1 {
+        font-size: 10rem;
+        margin-bottom: -1rem;
+    }
+
+    .header-text h3 {
+        font-size: 5rem;
+        /* margin-bottom: .5rem; */
+    }
+
+    nav ul a,
+    .footer-nav ul a {
+        font-size: 1.4rem;
+    }
+
+    .header-text p {
+        font-size: 1.8rem;
+    }
+
+    .quote-separator p {
+        font-size: 1.6rem;
+    }
+
+    .about-intro {
+        font-size: 3rem;
+    }
+
+    .about-personal {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .footer-brand {
+        font-size: 21rem;
+    }
+}
+
+/* tablet - Landscape */
+@media screen and (max-width: 1280px){
+    .header-text h1 {
+        font-size: 8rem;
+        margin-bottom: -1rem;
+    }
+
+    .header-text h3 {
+        font-size: 4rem;
+        /* margin-bottom: .5rem; */
+    }
+
+    nav ul a,
+    .footer-nav ul a {
+        font-size: 1.2rem;
+    }
+
+    .header-text p {
+        width: 40%;
+        font-size: 1.6rem;
+    }
+
+    .quote-separator {
+        height: 75vh;
+    }
+
+    .quote-separator p {
+        font-size: 1.2rem;
+    }
+
+    .about-intro {
+        font-size: 2.4rem;
+    }
+
+    .about-personal {
+        font-size: 1.8rem;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-container h2 {
+        font-size: 10rem;
+    }
+    
+    .footer-brand {
+        font-size: 17rem;
+    }
+}
+
+/* Tablet - Portrait */
+@media screen and (max-width: 768px) {
+    .header-text h1 {
+        font-size: 10rem;
+    }
+
+    .header-text h3 {
+        font-size: 4.75rem;
+    }
+
+    .header-text p {
+        font-size: 2.4rem;
+    }
+
+    .quote-separator {
+        /* height: 25vh; */
+    }
+
+    .quote-separator p {
+        font-size: 1.6rem;
+    }
+
+    .about-img {
+        height: 40%;
+    }
+
+    .about-intro {
+        font-size: 2.4rem;
+    }
+
+    .about-location {
+        justify-content: right;
+    }
+
+    #work {
+        margin-top: 5rem;
+    }
+
+    #work h2 {
+        font-size: 5rem;
+        text-align: left;
+    }
+
+    .panel-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .panel-title h3 {
+        font-size: 2.5rem;
+    }
+
+    .panel-title p {
+        margin: 0;
+        font-size: 1.6rem;
+    }
+}
+
 /* Mobile - Portrait */
-@media screen and (min-width: 240px) and (max-width: 768px) {
+@media screen and (min-width: 240px) and (max-width: 767px) {
     #cursor {
         display: none;
     }
@@ -229,159 +382,5 @@
     
     .footer-brand {
         display: none;
-    }
-}
-
-/* Tablet - Portrait */
-@media screen and (min-width: 769px) and (max-width: 1279px) {
-    .header-text h1 {
-        font-size: 10rem;
-    }
-
-    .header-text h3 {
-        font-size: 4.75rem;
-    }
-
-    .header-text p {
-        font-size: 2.4rem;
-    }
-
-    .quote-separator {
-        /* height: 25vh; */
-    }
-
-    .quote-separator p {
-        font-size: 1.6rem;
-    }
-
-    .about-img {
-        height: 40%;
-    }
-
-    .about-intro {
-        font-size: 2.4rem;
-    }
-
-    .about-location {
-        justify-content: right;
-    }
-
-    #work {
-        margin-top: 5rem;
-    }
-
-    #work h2 {
-        font-size: 5rem;
-        text-align: left;
-    }
-
-    .panel-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .panel-title h3 {
-        font-size: 2.5rem;
-    }
-
-    .panel-title p {
-        margin: 0;
-        font-size: 1.6rem;
-    }
-}
-
-
-/* small laptop */
-@media screen and (min-width: 1280px) and (max-width: 1440px) {
-    .header-text h1 {
-        font-size: 8rem;
-        margin-bottom: -1rem;
-    }
-
-    .header-text h3 {
-        font-size: 4rem;
-        /* margin-bottom: .5rem; */
-    }
-
-    nav ul a,
-    .footer-nav ul a {
-        font-size: 1.2rem;
-    }
-
-    .header-text p {
-        width: 40%;
-        font-size: 1.6rem;
-    }
-
-    .quote-separator {
-        height: 75vh;
-    }
-
-    .quote-separator p {
-        font-size: 1.2rem;
-    }
-
-    .about-intro {
-        font-size: 2.4rem;
-    }
-
-    .about-personal {
-        font-size: 1.8rem;
-    }
-
-    .contact-container {
-        padding: 1rem;
-    }
-
-    .contact-container h2 {
-        font-size: 10rem;
-    }
-    
-    .footer-brand {
-        font-size: 17rem;
-    }
-}
-
-/* larger laptops */
-@media screen and (min-width: 1441px) and (max-width: 1600px){
-
-    .header-text h1 {
-        font-size: 10rem;
-        margin-bottom: -1rem;
-    }
-
-    .header-text h3 {
-        font-size: 5rem;
-        /* margin-bottom: .5rem; */
-    }
-
-    nav ul a,
-    .footer-nav ul a {
-        font-size: 1.4rem;
-    }
-
-    .header-text p {
-        font-size: 1.8rem;
-    }
-
-    .quote-separator p {
-        font-size: 1.6rem;
-    }
-
-    .about-intro {
-        font-size: 3rem;
-    }
-
-    .about-personal {
-        font-size: 2rem;
-    }
-
-    .contact-container {
-        padding: 1rem;
-    }
-
-    .footer-brand {
-        font-size: 21rem;
     }
 }
