@@ -1,5 +1,5 @@
 /* larger laptops */
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1650px){
 
     .header-text h1 {
         font-size: 10rem;
@@ -38,6 +38,61 @@
 
     .footer-brand {
         font-size: 21rem;
+    }
+}
+
+/* larger laptops */
+@media screen and (max-width: 1440px){
+
+    .header-text h1 {
+        font-size: 8rem;
+        margin-bottom: -1rem;
+    }
+
+    .header-text h3 {
+        font-size: 4rem;
+        /* margin-bottom: .5rem; */
+    }
+
+    nav ul a,
+    .footer-nav ul a {
+        font-size: 1.2rem;
+    }
+
+    .header-text p {
+        font-size: 1.6rem;
+    }
+
+    .quote-separator {
+        height: 60vh;
+    }
+
+    .quote-separator p {
+        font-size: 1.4rem;
+    }
+
+    .about-intro {
+        font-size: 2.4rem;
+    }
+
+    .about-personal {
+        font-size: 1.8rem;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-container h2 {
+        font-size: 10rem;
+    }
+
+    .contact-container p {
+        font-size: 1.7rem;
+    }
+
+    .footer-brand {
+        font-size: 18rem;
     }
 }
 
