@@ -168,6 +168,11 @@ nav ul a,
     margin-bottom: -2rem;
 }
 
+.header-text h1 span {
+    font-family: inherit;
+    color: var(--malibu);
+}
+
 .header-text h3 {
     font-size: 7rem;
     line-height: 1;
