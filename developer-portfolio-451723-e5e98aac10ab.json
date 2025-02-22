@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "developer-portfolio-451723",
+  "private_key_id": "e5e98aac10ab0b8eddc11df27b9e7b428b105802",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4lZDg142dqTDg\n+l2W6UaOkF3b1o5yoXtOOruuK8OO/JQTM/3f1WEFCLFaD0+XL+KxK7dDf63LexCT\n0jz/p371JV19ZZjafD4m2vKjDeaiWc9Yx0I34ULhu1RTlG3Gx3lttE2hA7y29NPc\njTEkKeVm4BPwp7CUbW5HxYzKt3mdbG5TRt815fZYntmW5rLyy9froe3JqzX/O/ek\nsaa1jJq3Lt0pWqejTDLUp3wxES+HFKD9aloDgsShmGQ6IFdpbmSzkqCHval9RHpV\nRn8AuB7vyDiRLqQ2ysXWunStFLBUMBWXzQWjSMPuk6wxzVukpSEN1S6TPFlW13yo\nKYn7BYsZAgMBAAECggEAATK0UudHQ6iVWQJ7AMehFfwNJegDuu3+JET4kqH1Vhxg\n1CqUWWNzyqHyr75Vcopkpuh9GyatILra4dC9pV2nku0ECTQzfKiNiThG1qTYlEFv\nuXhqnzz6r4clHhlCqKWDDeGbluHUs93NMbtnYCAW/XbTHk7iVCZNLtFTD35HH2zR\nzJcUj/ViDIvsWlY4iGg5t7/ncv7tf1Q1EUZGBusZwzgYoDyiBARShj8P1szwpxq4\nCOC/7XwgC4L8dyC8EZLh8kTOuydM1kMEgZQh3toFB+bJ1C7Fcc7grO/SydZou/Vx\nAWRB+N7FI7TT7e/NdD2d+sFkEI7jzXHv4zH3b0aPMQKBgQDaTxUASHZwEo8gDB09\nlNnx+hzKTmngg2cePDz3QdTzSFPXbmNbwWbp5NNrjsEChcPVPDVYAhI5t0ui/nab\nVLCjzLv0pnMAYpXVliPbP0M3WiX64yFR0a+Aqda1ykj6IEXznixNA7RCdqpNjJuM\nsKNe9ngqheNZqhY6jfgu7XfhCQKBgQDYc+fBQ631gK43BBW+HEQfSC8vIHREZyvM\ntJtSR6HhKnu6E5Q4TuxBmTB37eZIgwKgNv41ZTwqipdlAqulx0k2sUYotNAyDoHy\njKY+W71YLDKwpTCtcq3mH7m1T3THz3R/giiDlgfmNmhsQLN91OUdRM29cadRxbye\noMmwXaytkQKBgEsply11xXFosmZyRU8ChNdPKcJtpP5rv4EldEgdHlh0uokdtI/O\n0sQMyM3rZICd1YMBK8yVSfkdJqmDuwpX6kk7ICtnc4jaaIQVIVtHOLlCDHmI4dvt\nueMuloIYl2+m1O6/srkBYXrQqGny00tpNZZofY8GcfRZHzYh0yU1FWUhAoGBAKRv\nMOGeQ7pcvnynCsl4+bt1//piQlFwu1Jw5goUxwKiXooWs6QvOMYA1VRWk3oEpOsH\nvAjeVl3PGYIwDCwNgC4fcDgeXIeag9e6R9TZprckJIITjC5ID5niAheePA5LKKpx\nO8vzHx8huCR85p6yLDgW++FuRPkXKdqsNWxZTYQxAoGBAItpK5s6437I0CQK/GH4\nMOq6ab+z9ukkjmoH/+V2UDLQ+bpElxMUlqioQs+PAlj5GwHyz+gRkA/TMSg9j8Gz\n7Ys0TOQaWP3yVhM0nvqSgo+hNi5i9M0IGT6bU32/XmcyiG+zIJqEknVtLmhVKQdW\ntLjOf5+21htuiZIAulP5tCT0\n-----END PRIVATE KEY-----\n",
+  "client_email": "portfolio-resume-access@developer-portfolio-451723.iam.gserviceaccount.com",
+  "client_id": "118372196837617026139",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/portfolio-resume-access%40developer-portfolio-451723.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

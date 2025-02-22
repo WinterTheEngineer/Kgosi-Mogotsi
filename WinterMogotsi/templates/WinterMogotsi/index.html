@@ -87,7 +87,7 @@
                         LinkedIn
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
+                    <a href="{% url 'download_resume' %}" class="themed">
                         Resume
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </a>
@@ -260,7 +260,7 @@
             <h2 class="themed">
                 Let's<br>
                 Make<br>
-                WinterTheDevMAGIC
+                MAGIC
             </h2>
             <form action="{% url 'contact' %}" method="POST" role="form">
                 {% csrf_token %}

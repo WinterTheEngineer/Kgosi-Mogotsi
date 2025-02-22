@@ -2,7 +2,9 @@ import os
 import datetime
 from dotenv import load_dotenv
 from .forms import ContactForm
+from google.cloud import storage
 from django.contrib import messages
+from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
@@ -59,3 +61,21 @@ def contact(request):
             messages.error(request, "There was an error with your form. Please try again.")
     
     return redirect('index')
+
+
+def download_resume(request):
+    # Initialize GCS client
+    client = storage.Client()
+    bucket_name = "portfolio_file_transfer_storage"  # Replace with your bucket name
+    file_name = "resume.pdf"  # Replace with your file name
+    bucket = client.get_bucket(bucket_name)
+    blob = bucket.blob(file_name)
+
+    # Download the file as bytes
+    file_content = blob.download_as_bytes()
+
+    # Create response with the file
+    response = HttpResponse(file_content, content_type="application/pdf")
+    response["Content-Disposition"] = f'attachment; filename="{file_name}"'
+
+    return response
