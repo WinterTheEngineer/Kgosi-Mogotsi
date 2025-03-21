@@ -90,14 +90,38 @@ footer ul li {
 nav ul a,
 .footer-nav ul a {
     font-size: .9rem;
+    position: relative;
     color: var(--cream);
     text-decoration: none;
+}
+
+nav ul a::after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    height: 1px;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: var(--cream);
+    transition: transform .3s ease;
+}
+
+nav ul a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .action-link {
     padding: .5rem 1rem;
     border-radius: .5rem;
     background-color: var(--malibu);
+}
+
+.action-link::after,
+.action-link:hover::after {
+    display: none;
 }
 
 .nav-links a:hover ion-icon {
