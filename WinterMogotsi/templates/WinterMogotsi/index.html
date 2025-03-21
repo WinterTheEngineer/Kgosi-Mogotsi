@@ -39,262 +39,325 @@
 
     <title>Rhulani Mogotsi &#149 Software Engineer</title>
 </head>
-<body class="themed">
-    <span id="body-bg" class="themed">RHULANI MOGOTSI</span>
-    <header id="header">
-        <div class="container-fluid header-container">
-            <nav aria-label="Primary Navigation">
-                <!-- <ul class="nav-links">
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#about" class="themed">
-                            About
-                        </a>
-                    </li>
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#education" class="themed">
-                            Education
-                        </a>
-                    </li>
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#references" class="themed">
-                            References
-                        </a>
-                    </li>
-                    <li class="animate__animated animate__fadeInLeft">
-                        <a href="#contact" class="themed">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-                <div id="theme-picker">
-                    <button type="button" class="theme-button light" onclick="setTheme('light-mode')">light-mode</button>
-                    <button type="button" class="theme-button blue" onclick="setTheme('blue-mode')">blue-mode</button>
-                    <button type="button" class="theme-button blue" onclick="setTheme('dark-mode')">dark-mode</button>
-                </div> -->
-                <ul class="site-links">
-                    <a href="https://github.com/CodeMasterWinter" class="themed" target="_blank" rel="noopener noreferrer">
-                        Github
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                    <a href="https://twitter.com/winterthedev" class="themed" target="_blank" rel="noopener noreferrer">
-                        Twitter
-                       <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
-                        LinkedIn
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                    <a href="{% url 'download_resume' %}" class="themed">
-                        Resume
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                </ul>           
-            </nav>
-            <div class="header-text">
-                <div>                    
-                    <h1 class="themed">
-                        Rhulani Mogotsi
-                    </h1>                          
-                    <h3 class="themed">
-                        Software Engineer,
-                    <br>
-                        Web Developer
-                    </h3>
-                </div>
-                <p class="themed">
-                    A curious and innovative <span class="themed">full-stack developer</span>
-                    with <span class="themed"><i>5 years</i></span> of coding experience and 
-                    an arsenal of development tools and knowledge to offer.
-                </p>
-            </div>
-        </div>
-    </header>
-    <div class="quote-separator">
-        <p class="themed">
-            "The code you write today shapes the world of tomorrow..."
-            <br><span>Unknown</span>
-        </p>
-        <!-- <p class="themed">
-            "Mankind was born on Earth. It was never meant to die here."
-            <br><span>Joseph Cooper, Interstellar (2014)</span>
-        </p> -->
-    </div>
-    <section id="about">
-        <div class="container-fluid about-container">
-            <div class="about-img">
-                <img src="{% static 'images/portrait-img.jpg' %}" alt="">
-            </div>
-            <div class="about-text">
-                <p class="about-intro">Ambitious <span>Full Stack Developer</span> 
-                    with a passion for problem solving and a resolve 
-                    to use code and technology to help provide innovative solutions 
-                    to modern crises.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <p class="about-personal">
-                        I love gaming and astronomy,<br>and I like to fix old PCs for fun.<br>
-                        Also, <span>I've never eaten a waffle.</span>
-                    </p>
-                    <div class="about-location">
-                        <ion-icon name="earth-outline"></ion-icon>
-                        <p>
-                            Johannesburg,<br>
-                            <span>South Africa</span>
+<body>
+    <div class="container-fluid main-container">
+        <header id="header">
+            <div class="container-fluid header-container">
+                <nav aria-label="Primary Navigation">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="#work">
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#work">
+                                My Work
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#testimonials">
+                                Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#references">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="action-link">
+                            <a href="#contact">
+                                Work With Me
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-img">
+                    <div class="overlay">
+                        <p class="attributes">
+                            Branding<br>
+                            UI/UX Design<br>
+                            Web Development<br>
+                            Software Development
                         </p>
                     </div>
+                    <img src="{% static 'images/header-headshot.jpeg' %}" alt="headshot for Rhulani Mogotsi, aka WinterTheDev">
+                </div> 
+                <div class="header-text">
+                    <h1>
+                        <span>Winter</span>TheDev
+                    </h1>                          
+                    <h3>
+                        Web Developer
+                        <br>
+                        Software Engineer
+                    </h3>
                 </div>
             </div>
+        </header>
+        <!-- <div class="quote-separator">
+            <p class="themed">
+                "The code you write today shapes the world of tomorrow..."
+                <br><span>Unknown</span>
+            </p>
+            <p class="themed">
+                "Mankind was born on Earth. It was never meant to die here."
+                <br><span>Joseph Cooper, Interstellar (2014)</span>
+            </p>
         </div>
-    </section>
-    <section id="work">
-        <div class="container-fluid work-container">
-            <h2>Selected Works</h2>
-            <div class="work-panel">
-                <div class="panel-details">
-                    <div class="panel-title">
-                        <h3><span>KnowEscape</span> Consulting</h3>
-                        <p class="panel-date">2024</p>
-                    </div>
-                    <!-- <div class="panel-links">
-                        <a href="https://github.com/CodeMasterWinter/KnowEscape" target="_blank" class="site-link me-2">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="https://knowescape.co.za" target="_blank" class="site-link visit-link">
-                            Visit Site
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                    </div> -->
+        <section id="about">
+            <div class="container-fluid about-container">
+                <div class="about-img">
+                    <img src="{% static 'images/portrait-img.jpg' %}" alt="">
                 </div>
-                <ul class="panel-services">
-                    <li>
-                        Web Design
-                    </li>
-                    <li>
-                        Brand Design
-                    </li>
-                    <li>
-                        UI/UX Design
-                    </li>
-                    <li>
-                        Web Development
-                    </li>
-                    <li>
-                        SEO Specialization
-                    </li>
-                </ul>
-                <div class="panel-img">
-                    <img src="{% static 'images/panels/knowescape.png' %}" alt="">
+                <div class="about-text">
+                    <p class="about-intro">Ambitious <span>Full Stack Developer</span> 
+                        with a passion for problem solving and a resolve 
+                        to use code and technology to help provide innovative solutions 
+                        to modern crises.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="about-personal">
+                            I love gaming and astronomy,<br>and I like to fix old PCs for fun.<br>
+                            Also, <span>I've never eaten a waffle.</span>
+                        </p>
+                        <div class="about-location">
+                            <ion-icon name="earth-outline"></ion-icon>
+                            <p>
+                                Johannesburg,<br>
+                                <span>South Africa</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="work-panel">
-                <div class="panel-details">
-                    <div class="panel-title">
-                        <h3><span>XStreamer</span> Music</h3>
-                        <p class="panel-date">2023</p>
+        </section>
+        <section id="work">
+            <div class="container-fluid work-container">
+                <h2>Selected Works</h2>
+                <div class="work-panel">
+                    <div class="panel-details">
+                        <div class="panel-title">
+                            <h3><span>KnowEscape</span> Consulting</h3>
+                            <p class="panel-date">2024</p>
+                        </div>
+                        <div class="panel-links">
+                            <a href="https://github.com/CodeMasterWinter/KnowEscape" target="_blank" class="site-link me-2">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                            <a href="https://knowescape.co.za" target="_blank" class="site-link visit-link">
+                                Visit Site
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
                     </div>
-                    <!-- <div class="panel-links">
-                        <a href="https://github.com/CodeMasterWinter/KnowEscape" target="_blank" class="site-link me-2">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="https://knowescape.co.za" target="_blank" class="site-link visit-link">
-                            Visit Site
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                    </div> -->
-                </div>
-                <ul class="panel-services">
-                    <li>
-                        Brand Design
-                    </li>
-                </ul>
-                <div class="panel-img">
-                    <img src="{% static 'images/panels/XStreamer.png' %}" alt="">
-                </div>
-            </div>
-            <div class="work-panel">
-                <div class="panel-details">
-                    <div class="panel-title">
-                        <h3><span>Erica</span>OS</h3>
-                        <p class="panel-date">2023</p>
+                    <ul class="panel-services">
+                        <li>
+                            Web Design
+                        </li>
+                        <li>
+                            Brand Design
+                        </li>
+                        <li>
+                            UI/UX Design
+                        </li>
+                        <li>
+                            Web Development
+                        </li>
+                        <li>
+                            SEO Specialization
+                        </li>
+                    </ul>
+                    <div class="panel-img">
+                        <img src="{% static 'images/panels/knowescape.png' %}" alt="">
                     </div>
-                    <!-- <div class="panel-links">
-                        <a href="https://github.com/CodeMasterWinter/KnowEscape" target="_blank" class="site-link me-2">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="https://knowescape.co.za" target="_blank" class="site-link visit-link">
-                            Visit Site
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                    </div> -->
                 </div>
-                <ul class="panel-services">
-                    <li>
-                        Brand Design
-                    </li>
-                    <li>
-                        UI/UX Design
-                    </li>
-                    <li>
-                        Web Development
-                    </li>
-                    <li>
-                        Software Development
-                    </li>
-                </ul>
-                <div class="panel-img">
-                    <img src="{% static 'images/panels/EricaOS.png' %}" alt="">
+                <div class="work-panel">
+                    <div class="panel-details">
+                        <div class="panel-title">
+                            <h3><span>XStreamer</span> Music</h3>
+                            <p class="panel-date">2023</p>
+                        </div>
+                        <div class="panel-links">
+                            <a href="https://github.com/CodeMasterWinter/KnowEscape" target="_blank" class="site-link me-2">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                            <a href="https://knowescape.co.za" target="_blank" class="site-link visit-link">
+                                Visit Site
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="panel-services">
+                        <li>
+                            Brand Design
+                        </li>
+                    </ul>
+                    <div class="panel-img">
+                        <img src="{% static 'images/panels/XStreamer.png' %}" alt="">
+                    </div>
                 </div>
-            </div>
-    </section>
-    <div class="quote-separator">
-        <p class="themed">
-            "Mankind was born on Earth. It was never meant to die here."
-            <br><span>Joseph Cooper, Interstellar (2014)</span>
-        </p>
-    </div>
-    <section id="contact">
-        <div class="container-fluid contact-container">
-            <h2 class="themed">
-                Let's<br>
-                Make<br>
-                MAGIC
-            </h2>
-            <form action="{% url 'contact' %}" method="POST" role="form">
-                {% csrf_token %}
-                <p class="themed">My name is
-                <span class="form-group">
-                    <label for="id_name">Name:</label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        id="id_name" 
-                        maxlength="255" 
-                        required 
-                        aria-required="true" 
-                        placeholder="your full name" 
-                        title="Your full name"
-                    >
-                </span>
-                and I'm interested in<br>
-                your
-                <span class="form-group">
-                    <label for="id_service">Service:</label>
-                    <input 
-                        type="text" 
-                        name="service" 
-                        id="id_service" 
-                        maxlength="255" 
-                        required 
-                        aria-required="true" 
-                        placeholder="the service you require" 
-                        title="The service you want to inquire about"
-                    >
-                </span>
-                services.</p>
-                
-                <p class="themed">
-                    You can reach me at
+                <div class="work-panel">
+                    <div class="panel-details">
+                        <div class="panel-title">
+                            <h3><span>Erica</span>OS</h3>
+                            <p class="panel-date">2023</p>
+                        </div>
+                        <div class="panel-links">
+                            <a href="https://github.com/CodeMasterWinter/KnowEscape" target="_blank" class="site-link me-2">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                            <a href="https://knowescape.co.za" target="_blank" class="site-link visit-link">
+                                Visit Site
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="panel-services">
+                        <li>
+                            Brand Design
+                        </li>
+                        <li>
+                            UI/UX Design
+                        </li>
+                        <li>
+                            Web Development
+                        </li>
+                        <li>
+                            Software Development
+                        </li>
+                    </ul>
+                    <div class="panel-img">
+                        <img src="{% static 'images/panels/EricaOS.png' %}" alt="">
+                    </div>
+                </div>
+        </section>
+        <div class="quote-separator">
+            <p class="themed">
+                "Mankind was born on Earth. It was never meant to die here."
+                <br><span>Joseph Cooper, Interstellar (2014)</span>
+            </p>
+        </div>
+        <section id="contact">
+            <div class="container-fluid contact-container">
+                <h2 class="themed">
+                    Let's<br>
+                    Make<br>
+                    MAGIC
+                </h2>
+                <form action="{% url 'contact' %}" method="POST" role="form">
+                    {% csrf_token %}
+                    <p class="themed">My name is
                     <span class="form-group">
+                        <label for="id_name">Name:</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="id_name" 
+                            maxlength="255" 
+                            required 
+                            aria-required="true" 
+                            placeholder="your full name" 
+                            title="Your full name"
+                        >
+                    </span>
+                    and I'm interested in<br>
+                    your
+                    <span class="form-group">
+                        <label for="id_service">Service:</label>
+                        <input 
+                            type="text" 
+                            name="service" 
+                            id="id_service" 
+                            maxlength="255" 
+                            required 
+                            aria-required="true" 
+                            placeholder="the service you require" 
+                            title="The service you want to inquire about"
+                        >
+                    </span>
+                    services.</p>
+                    
+                    <p class="themed">
+                        You can reach me at
+                        <span class="form-group">
+                            <label for="id_email">Email:</label>
+                            <input 
+                                type="email" 
+                                name="email" 
+                                id="id_email" 
+                                maxlength="320" 
+                                required 
+                                aria-required="true" 
+                                placeholder="your email address" 
+                                title="Your valid email address"
+                            >
+                        </span>,<br>
+                        or
+                        <span class="form-group">
+                            <label for="id_phone">Phone:</label>
+                            <input 
+                                type="tel" 
+                                name="phone" 
+                                id="id_phone" 
+                                required 
+                                aria-required="true" 
+                                placeholder="your phone number" 
+                                title="Your phone number"
+                            >
+                        </span>.
+                    </p>
+                    <p class="themed">
+                        A few things I'd like to discuss:<br>
+                        <span class="submit-group">
+                            <span class="form-group">
+                                <label for="id_message">Message:</label>
+                                <textarea 
+                                    name="message" 
+                                    id="id_message" 
+                                    rows="3"
+                                    cols="30"
+                                    required 
+                                    aria-required="true" 
+                                    placeholder="Write your message here" 
+                                    title="The message you want to send"
+                                ></textarea>
+                            </span>
+                            <span class="form-group button-group">
+                                <button type="submit">Send Message</button>
+                            </span>
+                        </div>
+                    </p>
+                </form>
+                <form class="responsive" action="{% url 'contact' %}" method="POST" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Name:</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="id_name" 
+                            maxlength="255" 
+                            required 
+                            aria-required="true" 
+                            placeholder="your full name" 
+                            title="Your full name"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="id_service">Service:</label>
+                        <input 
+                            type="text" 
+                            name="service" 
+                            id="id_service" 
+                            maxlength="255" 
+                            required 
+                            aria-required="true" 
+                            placeholder="the service you require" 
+                            title="The service you want to inquire about"
+                        >
+                    </div>
+                    <div class="form-group">
                         <label for="id_email">Email:</label>
                         <input 
                             type="email" 
@@ -306,9 +369,8 @@
                             placeholder="your email address" 
                             title="Your valid email address"
                         >
-                    </span>,<br>
-                    or
-                    <span class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="id_phone">Phone:</label>
                         <input 
                             type="tel" 
@@ -319,12 +381,9 @@
                             placeholder="your phone number" 
                             title="Your phone number"
                         >
-                    </span>.
-                </p>
-                <p class="themed">
-                    A few things I'd like to discuss:<br>
-                    <span class="submit-group">
-                        <span class="form-group">
+                    </div>
+                    <div class="submit-group">
+                        <div class="form-group">
                             <label for="id_message">Message:</label>
                             <textarea 
                                 name="message" 
@@ -336,160 +395,88 @@
                                 placeholder="Write your message here" 
                                 title="The message you want to send"
                             ></textarea>
-                        </span>
-                        <span class="form-group button-group">
+                        </div>
+                        <div class="form-group button-group">
                             <button type="submit">Send Message</button>
-                        </span>
+                        </div>
                     </div>
-                </p>
-            </form>
-            <form class="responsive" action="{% url 'contact' %}" method="POST" role="form">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="id_name">Name:</label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        id="id_name" 
-                        maxlength="255" 
-                        required 
-                        aria-required="true" 
-                        placeholder="your full name" 
-                        title="Your full name"
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="id_service">Service:</label>
-                    <input 
-                        type="text" 
-                        name="service" 
-                        id="id_service" 
-                        maxlength="255" 
-                        required 
-                        aria-required="true" 
-                        placeholder="the service you require" 
-                        title="The service you want to inquire about"
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="id_email">Email:</label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        id="id_email" 
-                        maxlength="320" 
-                        required 
-                        aria-required="true" 
-                        placeholder="your email address" 
-                        title="Your valid email address"
-                    >
-                </div>
-                <div class="form-group">
-                    <label for="id_phone">Phone:</label>
-                    <input 
-                        type="tel" 
-                        name="phone" 
-                        id="id_phone" 
-                        required 
-                        aria-required="true" 
-                        placeholder="your phone number" 
-                        title="Your phone number"
-                    >
-                </div>
-                <div class="submit-group">
-                    <div class="form-group">
-                        <label for="id_message">Message:</label>
-                        <textarea 
-                            name="message" 
-                            id="id_message" 
-                            rows="3"
-                            cols="30"
-                            required 
-                            aria-required="true" 
-                            placeholder="Write your message here" 
-                            title="The message you want to send"
-                        ></textarea>
-                    </div>
-                    <div class="form-group button-group">
-                        <button type="submit">Send Message</button>
-                    </div>
-                </div>
-            </form>            
-        </div>
-    </section>
-    <footer>
-        <div class="container-fluid footer-container">
-            <div class="footer-nav">
-                <p class="copyright">
-                    All rights reserved<br> © Rhulani Mogotsi {{activeYear}}
-                </p>
-                <p class="region">
-                        Johannesburg<br>
-                        South Africa<br>
-                        26.2056° S, 28.0337° E
-                </p>
-                <div class="d-flex">
-                    <ul class="nav-links">
-                        <li class="animate__animated animate__fadeInLeft">
-                            <a href="#header" class="themed">
-                                Header
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="animate__animated animate__fadeInLeft">
-                            <a href="#about" class="themed">
-                                About
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="animate__animated animate__fadeInLeft">
-                            <a href="#work" class="themed">
-                                Projects
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="animate__animated animate__fadeInLeft">
-                            <a href="#contact" class="themed">
-                                Contact
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </li>
-                    </ul>   
-                    <ul class="site-links">
-                        <a href="https://github.com/CodeMasterWinter" class="themed" target="_blank" rel="noopener noreferrer">
-                            Github
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                        <a href="https://twitter.com/WinterMogotsi" class="themed" target="_blank" rel="noopener noreferrer">
-                            Twitter
-                           <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
-                            LinkedIn
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                        <a href="{% url 'download_resume' %}" class="themed">
-                            Resume
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </a>
-                    </ul>   
-                </div>
+                </form>            
             </div>
-            <p class="footer-brand">
-                <span>Rhulani</span> Mogotsi
-            </p>
-        </div>
-    </footer>
-    {% if messages %}
-        <ul class="messages p-3 m-0">
-            <i class="fa-solid fa-circle-check message-icon"></i>
-            {% for message in messages %}
-            <li class="message">{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-
-    <div id="cursor" class="themed"></div>
+        </section>
+        <footer>
+            <div class="container-fluid footer-container">
+                <div class="footer-nav">
+                    <p class="copyright">
+                        All rights reserved<br> © Rhulani Mogotsi {{activeYear}}
+                    </p>
+                    <p class="region">
+                            Johannesburg<br>
+                            South Africa<br>
+                            26.2056° S, 28.0337° E
+                    </p>
+                    <div class="d-flex">
+                        <ul class="nav-links">
+                            <li class="animate__animated animate__fadeInLeft">
+                                <a href="#header" class="themed">
+                                    Header
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="animate__animated animate__fadeInLeft">
+                                <a href="#about" class="themed">
+                                    About
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="animate__animated animate__fadeInLeft">
+                                <a href="#work" class="themed">
+                                    Projects
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li class="animate__animated animate__fadeInLeft">
+                                <a href="#contact" class="themed">
+                                    Contact
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>   
+                        <ul class="site-links">
+                            <a href="https://github.com/CodeMasterWinter" class="themed" target="_blank" rel="noopener noreferrer">
+                                Github
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                            <a href="https://twitter.com/WinterMogotsi" class="themed" target="_blank" rel="noopener noreferrer">
+                                Twitter
+                               <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rhulani-mogotsi-7bab64286" class="themed" target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                            <a href="{% url 'download_resume' %}" class="themed">
+                                Resume
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </ul>   
+                    </div>
+                </div>
+                <p class="footer-brand">
+                    <span>Rhulani</span> Mogotsi
+                </p>
+            </div>
+        </footer> -->
+        {% if messages %}
+            <ul class="messages p-3 m-0">
+                <i class="fa-solid fa-circle-check message-icon"></i>
+                {% for message in messages %}
+                <li class="message">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    
+        <div id="cursor" class="themed"></div>
+    </div>
 
     <script src="{% static 'js/index.js' %}"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
