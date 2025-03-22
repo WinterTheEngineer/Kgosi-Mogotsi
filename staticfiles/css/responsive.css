@@ -26,12 +26,17 @@
     header {
         padding: .5rem;
     }
+
+    .header-img {
+        height: 90%;
+    }
     
     .header-img .overlay .attributes{
         font-size: .75rem;
     }
 
     .header-text {
+        height: 10%;
         flex-direction: column;
         justify-content: center;
     }
@@ -47,9 +52,14 @@
     }
 
     .header-text h3 {
-        width: 95%;
-        font-size: 1rem;
-        flex-direction: row;
-        justify-content: space-between;
+        font-size: 1.2rem;
+    }
+
+    .header-text h3.tagline {
+        display: none;
+    }
+
+    .header-text h3.responsive {
+        display: inline-block;
     }
 }
