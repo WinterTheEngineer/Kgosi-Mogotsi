@@ -6,24 +6,85 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 
-    <meta name="Rhulani Mogotsi - Software Engineer">
+    <meta name="Rhulani Mogotsi - Software Engineer &#149 Web Developer &#149 Data Scientist">
     <meta name="locale" content="en_ZA">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Rhulani Mogotsi, Web Developer">
+    <meta name="author" content="Rhulani Mogotsi">
     <meta name="robots" content="index, follow">
     <meta name="language" content="english">
-    <meta name="description" content="Rhulani Mogotsi, an Entry-Level Software Engineer and Web Developer with 4 years of experience.">
+    <meta 
+        name="description" 
+        content="Rhulani Mogotsi, commonly known as 'WinterTheDev', a Full-Stack Developer with 5 years of experience building high-quality software and web applications.">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_ZA">
-    <meta property="og:site_name" content="Rhulani Mogotsi - Software Engineer">
-    <meta property="og:url" content="https://www.rhulanimogotsi.com">
-    <meta property="og:title" content="Software Engineer and Web Developer">
+    <meta property="og:site_name" content="Rhulani Mogotsi - Software Engineer &#149 Web Developer &#149 Data Scientist">
+    <meta property="og:url" content="https://www.winterthedev.io">
+    <meta property="og:title" content="Rhulani Mogotsi - Software Engineer &#149 Web Developer &#149 Data Scientist">
     <meta property="og:image" content="{% static 'images/site-image.png' %}">
-    <meta property="og:description" content="an Entry-Level Software Engineer and Web Developer with 4 years of experience.">
+    <meta property="og:description" content="Rhulani Mogotsi, commonly known as 'WinterTheDev', a Full-Stack Developer with 5 years of experience building high-quality software and web applications.">
 
     <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Rhulani Mogotsi",
+          "alternateName": "WinterTheDev",
+          "jobTitle": "Full-Stack Developer &#149 Web Developer &#149 Data Scientist",
+          "description": "Rhulani Mogotsi, commonly known as 'WinterTheDev', a Full-Stack Developer with 5 years of experience building high-quality software and web applications.",
+          "image": "https://yourdomain.com/static/images/header-headshot.jpeg",
+          "url": "https://www.winterthedev.io",
+          "sameAs": [
+            "https://www.linkedin.com/in/yourprofile",
+            "https://github.com/yourgithub",
+            "https://twitter.com/yourtwitter"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+          },
+          "knowsAbout": [
+            "Web Development",
+            "Software Engineering",
+            "UI/UX Design",
+            "Branding",
+            "Data Science"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services",
+            "itemListElement": [
+              {
+                "@type": "Service",
+                "name": "Web Development",
+                "url": "https://yourdomain.com#work",
+                "description": "Custom websites, frontend and backend development."
+              },
+              {
+                "@type": "Service",
+                "name": "Software Development",
+                "url": "https://yourdomain.com#work",
+                "description": "Scalable applications, automation, and custom software solutions."
+              },
+              {
+                "@type": "Service",
+                "name": "Data Science",
+                "url": "https://yourdomain.com#work",
+                "description": "Data analysis, machine learning models, and predictive analytics."
+              }
+            ]
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "mailto:your@email.com",
+            "url": "https://yourdomain.com#references"
+          }
+        }
+    </script>
+    
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +98,7 @@
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
-    <title>Rhulani Mogotsi &#149 Software Engineer</title>
+    <title>Rhulani Mogotsi &#149 Software Engineer &#149 Web Developer &#149 Data Scientist</title>
 </head>
 <body>
     <div class="container-fluid main-container">
@@ -46,26 +107,26 @@
                 <nav aria-label="Primary Navigation">
                     <ul class="nav-links">
                         <li>
-                            <a href="#work">
+                            <a href="#work" title="Learn more about me as a Full-Stack Developer.">
                                 About Me
                             </a>
                         </li>
                         <li>
-                            <a href="#work">
+                            <a href="#work" title="View my portfolio and past projects.">
                                 My Work
                             </a>
                         </li>
                         <li>
-                            <a href="#testimonials">
+                            <a href="#testimonials" title="Read testimonials from past clients I've served.">
                                 Testimonials
                             </a>
                         </li>
                         <li>
-                            <a href="#references">
+                            <a href="#references" title="Fill in the form to contact me.">
                                 Contact
                             </a>
                         </li>
-                        <li class="action-btn work">
+                        <li class="action-btn work" title="Let me know what you need, and I'll let you know how i can help">
                             <a href="#contact">
                                 Work With Me
                             </a>
@@ -78,8 +139,7 @@
                                 hx-swap="none"
                                 hx-on:htmx:before-request="this.innerText = 'Downloading...'; this.disabled = true"
                                 hx-on:htmx:after-request="this.innerText = 'Done!'; setTimeout(() => { this.innerText = 'Download Resume'; this.disabled = false }, 5000)"
-                                href="{% url 'download_resume' %}"
-                                download>
+                                rel="noopener noreferrer">
                                 Download Resume
                             </a>
                         </li>
@@ -93,23 +153,26 @@
                         <p class="attributes">
                             Branding<br>
                             UI/UX Design<br>
+                            Data Science<br>
                             Web Development<br>
                             Software Development
                         </p>
                     </div>
-                    <img src="{% static 'images/header-headshot.jpeg' %}" alt="headshot for Rhulani Mogotsi, aka WinterTheDev">
+                    <img src="{% static 'images/header-headshot.jpeg' %}"
+                        alt="Professional headshot of Rhulani Mogotsi, also known as WinterTheDev, a Full-Stack Developer specializing in Web Development, Software Development and Data Science">
                 </div> 
                 <div class="header-text">
                     <h1>
                         <span>Winter</span>TheDev
                     </h1>                          
-                    <h3 class="tagline">
+                    <h2 class="tagline">
                         Web Developer<br>
+                        Data Scientist<br>
                         Software Engineer
                     </h3>
-                    <h3 class="responsive">
+                    <h2 class="responsive">
                         Full-Stack Developer
-                    </h3>
+                    </h2>
                 </div>
             </div>
         </header>

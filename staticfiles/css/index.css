@@ -186,7 +186,7 @@ nav ul a:hover::after {
 }
 
 .header-text h1,
-.header-text h3 {
+.header-text h2 {
     margin: 0;
     font-family: 'Integral CF';
 }
@@ -206,14 +206,15 @@ nav ul a:hover::after {
     color: var(--malibu);
 }
 
-.header-text h3 {
+.header-text h2 {
     opacity: .3;
-    font-size: 2.5rem;
+    line-height: .9;
+    font-size: 2rem;
     text-align: right;
     color: var(--cream);
 }
 
-.header-text h3.responsive {
+.header-text h2.responsive {
     display: none;
 }
 
