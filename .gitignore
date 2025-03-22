@@ -6,6 +6,9 @@ __pycache__
 db.sqlite3
 media
 
+# Google Cloud Credentials
+developer-portfolio-451723-366c5dd4e091.json
+
 node_modules/
 #jetbrains
 .idea/

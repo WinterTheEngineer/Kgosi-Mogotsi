@@ -58,10 +58,11 @@ header {
     margin: 0;
     padding: 0;
     height: 100%;
+    position: relative;
 }
 
 nav {
-    top: 2rem;
+    top: 1rem;
     left: 50%;
     z-index: 99;
     display: flex;
@@ -123,6 +124,8 @@ nav ul a:hover::after {
 }
 
 .action-btn.resume {
+    right: -42rem;
+    position: absolute;
     background-color: var(--charcoal);
 }
 

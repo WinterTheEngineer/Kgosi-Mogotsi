@@ -70,11 +70,19 @@
                                 Work With Me
                             </a>
                         </li>
-                        <!-- <li class="action-btn resume">
-                            <a href="#contact">
-                                My Resume
+                        <li class="action-btn resume">
+                            <a 
+                                id="download-link"
+                                hx-get="{% url 'download_resume' %}" 
+                                hx-trigger="click" 
+                                hx-swap="none"
+                                hx-on:htmx:before-request="this.innerText = 'Downloading...'; this.disabled = true"
+                                hx-on:htmx:after-request="this.innerText = 'Done!'; setTimeout(() => { this.innerText = 'Download Resume'; this.disabled = false }, 5000)"
+                                href="{% url 'download_resume' %}"
+                                download>
+                                Download Resume
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </nav>
                 <button class="nav-toggle">
