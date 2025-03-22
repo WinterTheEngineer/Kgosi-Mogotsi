@@ -135,6 +135,10 @@ nav ul a:hover::after {
     transform: translateX(.5rem);
 }
 
+.nav-toggle {
+    display: none;
+}
+
 .header-img {
     height: 85%;
     overflow: hidden;
@@ -167,7 +171,8 @@ nav ul a:hover::after {
 .header-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+    object-position: top;
 }
 
 .header-text {
@@ -200,9 +205,15 @@ nav ul a:hover::after {
 
 .header-text h3 {
     opacity: .3;
+    display: flex;
     font-size: 2.5rem;
     text-align: right;
     color: var(--cream);
+    flex-direction: column;
+}
+
+.header-text h3 span{
+    font-family: inherit;
 }
 
 .quote-separator {
