@@ -113,14 +113,21 @@ nav ul a:hover::after {
     transform-origin: left;
 }
 
-.action-link {
+.action-btn {
     padding: .5rem 1rem;
     border-radius: .5rem;
+}
+
+.action-btn.work {
     background-color: var(--malibu);
 }
 
-.action-link::after,
-.action-link:hover::after {
+.action-btn.resume {
+    background-color: var(--charcoal);
+}
+
+.action-btn::after,
+.action-btn:hover::after {
     display: none;
 }
 
