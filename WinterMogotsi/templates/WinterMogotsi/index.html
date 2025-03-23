@@ -590,7 +590,7 @@
                 if (!response.ok) throw new Error("Failed to fetch resume");
 
                 const data = await response.json();
-                window.location.href = data.download_url; // Redirect to signed URL
+                window.open(data.download_url, "_blank"); // Redirect to signed URL
 
             } catch (error) {
                 console.error("Error downloading resume:", error);
