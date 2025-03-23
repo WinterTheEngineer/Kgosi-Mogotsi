@@ -96,6 +96,7 @@
 
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
     <title>Rhulani Mogotsi &#149 Software Engineer &#149 Web Developer &#149 Data Scientist</title>
@@ -176,6 +177,11 @@
                 </div>
             </div>
         </header>
+        <section id="about">
+            <div class="container-xl cta-container">
+                
+            </div>
+        </section>
         <!-- <div class="quote-separator">
             <p class="themed">
                 "The code you write today shapes the world of tomorrow..."
@@ -555,7 +561,10 @@
                 {% endfor %}
             </ul>
         {% endif %}
-    
+            
+        <div id="logo-bg">
+            <img src="{% static 'images/logo - textless.png' %}" alt="WinterTheDev's personal brand logo, loosely emulating the atomic model.">
+        </div>
         <div id="cursor" class="themed"></div>
     </div>
 

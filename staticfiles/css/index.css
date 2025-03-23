@@ -16,6 +16,17 @@ body {
     background-color: var(--charcoal);
 }
 
+#logo-bg img {
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: auto;
+    opacity: .1;
+    height: 100vh;
+    position: fixed;
+    animation: atomic 10s infinite linear;
+}
+
 .main-container {
     padding: 0;
     width: 100%;
@@ -218,30 +229,13 @@ nav ul a:hover::after {
     display: none;
 }
 
-.quote-separator {
-    height: 50vh;
-    display: grid;
-    place-items: center;
-}
-
-.quote-separator p {
-    margin: 0;
-    text-align: center;
-    font-size: 1.6rem;
-}
-
-.quote-separator p span {
-    font-size: 1rem;
-}
-
 #about {
     height: 100vh;
 }
 
 .about-container {
     height: 100%;
-    display: flex;
-    /* padding: 5rem; */
+    border: 1px solid red;
 }
 
 .about-img {
