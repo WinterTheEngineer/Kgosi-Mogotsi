@@ -19,3 +19,17 @@
         transform: translateX(30%) rotate(-360deg);
     }
 }
+
+@media screen and (min-width: 240px) and (orientation: portrait) {
+    @keyframes atomic {
+        0% {
+            transform-origin: center;
+            transform: translateY(-50%) scale(1.5) rotate(0);
+        }
+        
+        100% {
+            transform-origin: center;
+            transform: translateY(-50%) scale(1.5) rotate(-360deg);
+        }
+    }
+}
