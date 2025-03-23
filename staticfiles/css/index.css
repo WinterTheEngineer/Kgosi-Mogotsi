@@ -126,6 +126,7 @@ nav ul a:hover::after {
 }
 
 .action-btn {
+    cursor: pointer;
     padding: .5rem 1rem;
     border-radius: .5rem;
 }
@@ -136,6 +137,7 @@ nav ul a:hover::after {
 
 .action-btn.resume {
     right: -42rem;
+    color: #FFF9EB;
     position: absolute;
     background-color: var(--charcoal);
 }

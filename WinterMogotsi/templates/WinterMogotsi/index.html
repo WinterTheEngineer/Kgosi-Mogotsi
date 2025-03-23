@@ -133,14 +133,7 @@
                             </a>
                         </li>
                         <li class="action-btn resume">
-                            <a 
-                                id="download-link"
-                                hx-get="{% url 'download_resume' %}" 
-                                hx-trigger="click" 
-                                hx-swap="none"
-                                hx-on:htmx:before-request="this.innerText = 'Downloading...'; this.disabled = true"
-                                hx-on:htmx:after-request="this.innerText = 'Done!'; setTimeout(() => { this.innerText = 'Download Resume'; this.disabled = false }, 5000)"
-                                rel="noopener noreferrer">
+                            <a id="download_resume">
                                 Download Resume
                             </a>
                         </li>
@@ -585,6 +578,29 @@
                 });
             });
         });
+
+        // Resume Download
+        let resume_btn = document.getElementById("download_resume");
+
+        const getResume = async () => {
+            try {
+                resume_btn.innerHTML = "Downloading...";
+                
+                const response = await fetch("{% url 'download_resume' %}");
+                if (!response.ok) throw new Error("Failed to fetch resume");
+
+                const data = await response.json();
+                window.location.href = data.download_url; // Redirect to signed URL
+
+            } catch (error) {
+                console.error("Error downloading resume:", error);
+                alert("Failed to download resume. Please try again.");
+            } finally {
+                resume_btn.innerHTML = "Download Resume";
+            }
+        };
+
+        resume_btn.addEventListener('click', getResume);
     </script>
 </body>
 </html>

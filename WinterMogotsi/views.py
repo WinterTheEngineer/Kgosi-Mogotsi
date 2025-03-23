@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 from .forms import ContactForm
 from google.cloud import storage
 from django.contrib import messages
-from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
+from django.http import HttpResponse, JsonResponse
 
 load_dotenv()
 
@@ -64,18 +64,20 @@ def contact(request):
 
 
 def download_resume(request):
-    # Initialize GCS client
+    """Generate a signed URL instead of directly fetching the file."""
     client = storage.Client()
-    bucket_name = "portfolio_file_transfer_storage"  # Replace with your bucket name
-    file_name = "resume.pdf"  # Replace with your file name
-    bucket = client.get_bucket(bucket_name)
+    bucket_name = os.getenv("GCP_BUCKET_NAME")
+    file_name = "Rhulani Mogotsi - Official Resume.pdf"
+
+    bucket = client.bucket(bucket_name)
     blob = bucket.blob(file_name)
 
-    # Download the file as bytes
-    file_content = blob.download_as_bytes()
+    # Generate a signed URL that expires in 10 minutes
+    signed_url = blob.generate_signed_url(
+        version="v4",
+        expiration=datetime.timedelta(minutes=10),  
+        method="GET",
+    )
 
-    # Create response with the file
-    response = HttpResponse(file_content, content_type="application/pdf")
-    response["Content-Disposition"] = f'attachment; filename="{file_name}"'
+    return JsonResponse({"download_url": signed_url})
 
-    return response
