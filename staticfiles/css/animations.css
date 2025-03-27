@@ -20,7 +20,7 @@
     }
 }
 
-@media screen and (min-width: 240px) and (orientation: portrait) {
+@media screen and (min-width: 240px) and (max-width: 1024px) and (orientation: portrait) {
     @keyframes atomic {
         0% {
             transform-origin: center;

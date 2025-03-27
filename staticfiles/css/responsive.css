@@ -69,3 +69,43 @@
         display: inline-block;
     }
 }
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+    header {
+        border: 1px solid red;
+    }
+
+    .header-img {
+        height: 90%;
+    }
+
+    .header-text {
+        height: 10%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .header-text h2.responsive {
+        display: none;
+    }
+
+    .header-text h2.tagline {
+        text-align: right;
+        display: inline-block;
+    }
+}
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1366px) 
+  and (orientation: landscape) {
+  
+    .header-text h1 {
+        font-size: 6rem;
+  }
+
+}
