@@ -66,18 +66,17 @@ body {
 
 header {
     height: 100vh;
-    padding: 1rem;
 }
 
 .header-container{
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     height: 100%;
     position: relative;
 }
 
 nav {
-    top: 1rem;
+    top: 2rem;
     left: 50%;
     z-index: 99;
     display: flex;
@@ -140,7 +139,7 @@ nav ul a:hover::after {
 }
 
 .action-btn.resume {
-    right: -42rem;
+    right: -41rem;
     color: #FFF9EB;
     position: absolute;
     background-color: var(--charcoal);
