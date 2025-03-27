@@ -16,6 +16,10 @@ body {
     background-color: var(--charcoal);
 }
 
+.section-divider {
+    height: 30vh;
+}
+
 #logo-bg img {
     top: 0;
     right: 0;
@@ -237,7 +241,7 @@ nav ul a:hover::after {
 
 .about-container {
     height: 100%;
-    border: 1px solid red;
+    padding: 2rem;
 }
 
 .about-img {
@@ -254,21 +258,31 @@ nav ul a:hover::after {
 
 .about-text {
     width: 70%;
-    height: 100%;
-    display: flex;
-    padding: 1rem 2rem;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.about-intro {
-    line-height: 1;
+.about-text h2,
+.about-text h2 i,
+.about-text h2 span {
+    font-family: 'Integral CF';
+    color: var(--cream);
+}
+
+.about-text h2 {
+    width: 50%;
+    opacity: .7;
     font-size: 3.2rem;
 }
 
-.about-intro span,
-.about-personal span {
+.about-text h2 span {
     color: var(--malibu);
+}
+
+.about-text p {
+    width: 50%;
+    opacity: .5;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--cream);
 }
 
 .about-personal {
