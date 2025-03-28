@@ -78,12 +78,12 @@ header {
 nav {
     top: 2rem;
     left: 50%;
+    width: 100%;
     z-index: 99;
     display: flex;
     position: absolute;
-    flex-direction: column;
     transform: translateX(-50%);
-    justify-content: space-between;
+    justify-content: center;
 }
 
 nav ul,
@@ -139,7 +139,7 @@ nav ul a:hover::after {
 }
 
 .action-btn.resume {
-    right: -41rem;
+    right: 1rem;
     color: #FFF9EB;
     position: absolute;
     background-color: var(--charcoal);

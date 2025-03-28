@@ -90,6 +90,10 @@
 
 @media screen and (min-width: 768px) and (orientation: portrait) {
     
+    #cursor {
+        display: none;
+    }
+
     .header-img {
         height: 90%;
     }
@@ -120,16 +124,29 @@
 
 @media only screen 
 and (min-width: 768px) 
-and (max-width: 1366px) 
+and (max-width: 1366px)
 and (orientation: landscape) {
-      
+    
+    #cursor {
+        display: none;
+    }
+    
+    nav ul a,
+    .footer-nav ul a {
+        font-size: .75rem;
+    }
+
     .header-text h1 {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 
     .about-text h2,
     .about-text p {
-        width: 80%;
+        width: 90%;
+    }
+
+    .about-text h2 {
+        font-size: 3rem;
     }
 
 }
