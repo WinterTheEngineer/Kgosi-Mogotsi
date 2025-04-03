@@ -110,7 +110,8 @@ nav ul a,
     text-decoration: none;
 }
 
-nav ul a::after {
+nav ul a::after,
+.visit-link::after {
     left: 0;
     bottom: 0;
     width: 100%;
@@ -123,7 +124,8 @@ nav ul a::after {
     transition: transform .3s ease;
 }
 
-nav ul a:hover::after {
+nav ul a:hover::after,
+.visit-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -368,6 +370,7 @@ nav ul a:hover::after {
 
 .panel-links {
     display: flex;
+    align-items: center;
 }
 
 .site-link {
@@ -377,27 +380,28 @@ nav ul a:hover::after {
     color: #ffffff;
     border-radius: 50%;
     align-items: center;
+    text-decoration: none;
     justify-content: center;
     background-color: #272727;
 }
 
 .visit-link {
-    width: auto;
-    border-radius: 2rem;
-    padding: .5rem 1rem;
+    margin-left: 1rem;
+    position: relative;
+    color: var(--cream);
     text-decoration: none;
 }
 
-.site-link ion-icon {
+.site-link i {
     font-size: 1.4rem;
 }
 
-.visit-link ion-icon {
+.visit-link i {
     margin-left: .5rem;
     transition: transform .3s ease;
 }
 
-.visit-link:hover ion-icon {
+.visit-link:hover i {
     transform: rotate(-45deg);
 }
 
@@ -420,6 +424,18 @@ nav ul a:hover::after {
     column-gap: 1rem;
     max-height: 16rem;
     overflow-x: scroll;
+    position: relative;
+}
+
+.panel-slides p {
+    margin: 0;
+    left: 1rem;
+    bottom: 1rem;
+    position: absolute;
+    padding: .5rem 1rem;
+    color: var(--cream);
+    border-radius: 2rem;
+    background-color: var(--malibu);
 }
 
 .panel-slides img {
