@@ -243,6 +243,9 @@ nav ul a:hover::after,
 .about-container {
     height: 100%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .about-img {
@@ -264,17 +267,23 @@ nav ul a:hover::after,
 }
 
 .about-text {
-    width: 70%;
+    width: 100%;
+    display: flex;
+}
+
+.about-text .text-content {
+    width: 60%;
 }
 
 .about-text h2,
 .about-text h2 i,
 .about-text h2 span {
     color: var(--cream);
+    font-family: 'Integral CF';
 }
 
 .about-text h2 {
-    width: 50%;
+    width: 70%;
 }
 
 .about-text h2 span {
@@ -283,44 +292,79 @@ nav ul a:hover::after,
 }
 
 .about-text p {
-    width: 50%;
+    width: 60%;
     opacity: .5;
     margin-top: 2rem;
     font-size: 1.2rem;
     color: var(--cream);
 }
 
-.about-personal {
-    margin: 0;
-    line-height: 1;
-    font-size: 2rem;
-    word-spacing: -.25rem;
+.about-text p span {
+    display: block;
+    margin-top: 1rem;
 }
 
-.about-location {
+.about-text .images {
+    width: 50%;
     display: flex;
+    max-height: 50vh;
     align-items: center;
+    justify-content: center;
 }
 
-.about-location ion-icon {
-    font-size: 8rem;
-    margin-right: 1rem;
+.about-text .images img {
+    height: 100%;
 }
 
-.about-location p {
-    margin: 0;
-    font-size: 3rem;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'SCHABO Condensed';
+.skills {
+    gap: 2rem;
+    display: flex;
 }
 
-.about-location p span {
-    font-size: 3.5rem;
+.skills .column {
+    flex: 1;
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    /* border-right: 1px solid #ddd; */
+}
+
+.skills .column:last-child {
+    border-right: none;
+}
+
+.skills .column h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     color: var(--malibu);
-    text-transform: uppercase;
-    font-family: 'SCHABO Condensed';
+    font-family: 'Integral CF';
+}
+
+.badges {
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.badge {
+    color: white;
+    font-size: 0.9em;
+    border-radius: 12px;
+    white-space: nowrap;
+    padding: .5rem 10px;
+    background-color: #FFF9EB40 ;
+}
+
+.about-stack div {
+    gap: .5rem;
+    display: flex;
+}
+
+.about-stack div p {
+    opacity: .7;
+    border-radius: 2rem;
+    padding: .4rem 1rem;
+    background-color: var(--cream);
 }
 
 #work {
