@@ -373,6 +373,7 @@ nav ul a:hover::after,
 
 .work-container {
     height: 100%;
+    padding: 0 2rem;
 }
 
 .work-container h2 {
@@ -684,4 +685,26 @@ footer {
     color: var(--malibu);
     text-transform: uppercase;
     font-family: 'SCHABO Condensed';
+}
+
+/* Lenis Styles */
+
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
 }

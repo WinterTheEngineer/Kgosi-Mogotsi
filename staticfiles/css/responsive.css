@@ -69,6 +69,10 @@
         display: inline-block;
     }
 
+    #about {
+        height: 100%;
+    }
+
     .about-container {
         padding: 1rem;
     }
@@ -76,6 +80,10 @@
     .about-text {
         width: 100%;
         flex-direction: column;
+    }
+
+    .about-text .text-content {
+        width: 100%;
     }
 
     .about-text h2 {
@@ -88,8 +96,27 @@
         font-size: 1rem;
     }
 
+    .about-text .images {
+        width: 100%;
+        margin: 5rem 0;
+        max-height: none;
+    }
+
+    .about-text .images img {
+        width: 100%;
+
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
     .section-title {
         font-size: 2rem;
+    }
+
+    .work-container {
+        padding: 0 .5rem;    
     }
 
     .work-panel {
@@ -126,7 +153,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 1366px) and (orientation: portrait) {
     
     #cursor {
         display: none;
