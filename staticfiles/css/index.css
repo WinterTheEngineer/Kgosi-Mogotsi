@@ -348,7 +348,7 @@ nav ul a:hover::after,
 
 .badge {
     color: white;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     border-radius: 12px;
     white-space: nowrap;
     padding: .5rem 10px;

@@ -197,7 +197,7 @@
     }
 }
 
-@media only screen 
+@media screen 
 and (min-width: 768px) 
 and (max-width: 1366px)
 and (orientation: landscape) {
@@ -215,13 +215,44 @@ and (orientation: landscape) {
         font-size: 4rem;
     }
 
-    .about-text h2,
-    .about-text p {
-        width: 90%;
+    #about {
+        min-height: 100vh;
+    }
+
+    .about-container {
+        padding: 2rem;
     }
 
     .about-text h2 {
-        font-size: 3rem;
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        width: 70%;
+        font-size: .9rem;
+    }
+
+    .about-text .images {
+        width: 50%;
+    }
+
+    .about-text .images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .skills .column h3 {
+        font-size: 2rem;
+    }
+        
+    .badge {
+        font-size: 0.75rem;
+        padding: .4rem 8px;
+    }
+
+    .work-container {
+        padding: 1rem;
     }
 
     .work-panel h3 {
