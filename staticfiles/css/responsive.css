@@ -1,3 +1,9 @@
+:root {
+    --malibu: #8a80ff;
+    --cream: #FFF9EB;
+    --charcoal: #000000;
+}
+
 @media screen and (min-width: 240px) and (orientation: portrait) {
     #logo-bg img {
         top: 100%;
@@ -22,11 +28,10 @@
         position: absolute;
         background: transparent;
     }
-
+    
     .nav-toggle ion-icon {
-        opacity: .76;
         font-size: 2rem;
-        color: var(--charcoal);
+        color: var(--cream);
     }
 
     .header-container {
