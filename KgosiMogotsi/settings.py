@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'WinterMogotsi',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'WinterTheDev.urls'
+ROOT_URLCONF = 'KgosiMogotsi.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'WinterTheDev.wsgi.application'
+WSGI_APPLICATION = 'KgosiMogotsi.wsgi.application'
 
 
 # Database

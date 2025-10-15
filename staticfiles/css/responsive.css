@@ -158,7 +158,7 @@
     }
 }
 
-@media screen and (min-width: 1366px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (orientation: portrait) {
     
     #cursor {
         display: none;
@@ -204,7 +204,7 @@
 
 @media screen 
 and (min-width: 768px) 
-and (max-width: 1366px)
+and (max-width: 1600px)
 and (orientation: landscape) {
     
     #cursor {
@@ -218,6 +218,10 @@ and (orientation: landscape) {
 
     .header-text h1 {
         font-size: 4rem;
+    }
+
+    .header-text h2 {
+        font-size: 1.2rem;
     }
 
     #about {

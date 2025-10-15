@@ -66,6 +66,7 @@ body {
 
 header {
     height: 100vh;
+    background: transparent;
 }
 
 .header-container{
@@ -495,20 +496,12 @@ nav ul a:hover::after,
 .contact-container {
     height: 100%;
     display: flex;
-    padding: 10rem 2rem;
-    /* justify-content: space-between; */
+    padding: 2rem;
+    justify-content: space-between;
 }
 
 .contact-container h2 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    font-size: 12rem;
-    color: var(--charcoal);
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-transform: uppercase;
-    font-family: 'SCHABO Condensed';
+    font-family: 'Integral CF';
 }
 
 .contact-container h2 span {
