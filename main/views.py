@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
+from django.conf import settings
 
 load_dotenv()
 
@@ -64,20 +65,5 @@ def contact(request):
 
 
 def download_resume(request):
-    """Generate a signed URL instead of directly fetching the file."""
-    client = storage.Client()
-    bucket_name = os.getenv("GCP_BUCKET_NAME")
-    file_name = "Rhulani Mogotsi - Official Resume.pdf"
-
-    bucket = client.bucket(bucket_name)
-    blob = bucket.blob(file_name)
-
-    # Generate a signed URL that expires in 10 minutes
-    signed_url = blob.generate_signed_url(
-        version="v4",
-        expiration=datetime.timedelta(minutes=10),  
-        method="GET",
-    )
-
-    return JsonResponse({"download_url": signed_url})
+    pass
 

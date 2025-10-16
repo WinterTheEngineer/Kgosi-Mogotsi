@@ -14,7 +14,7 @@
     <meta name="language" content="english">
     <meta 
         name="description" 
-        content="Rhulani Mogotsi, commonly known as 'WinterTheDev', a Full-Stack Developer with 5 years of experience building high-quality software and web applications.">
+        content="Rhulani Mogotsi, a Full-Stack Developer with 5 years of experience building high-quality software and web applications.">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_ZA">
@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://www.winterthedev.io">
     <meta property="og:title" content="Rhulani Mogotsi - Software Engineer &#149 Web Developer &#149 Data Scientist">
     <meta property="og:image" content="{% static 'images/site-image.png' %}">
-    <meta property="og:description" content="Rhulani Mogotsi, commonly known as 'WinterTheDev', a Full-Stack Developer with 5 years of experience building high-quality software and web applications.">
+    <meta property="og:description" content="Rhulani Mogotsi, a Full-Stack Developer with 5 years of experience building high-quality software and web applications.">
 
     <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
@@ -31,9 +31,9 @@
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Rhulani Mogotsi",
-          "alternateName": "WinterTheDev",
+          "alternateName": "Rhulani Mogotsi",
           "jobTitle": "Full-Stack Developer &#149 Web Developer &#149 Data Scientist",
-          "description": "Rhulani Mogotsi, commonly known as 'WinterTheDev', a Full-Stack Developer with 5 years of experience building high-quality software and web applications.",
+          "description": "Rhulani Mogotsi, a Full-Stack Developer with 5 years of experience building high-quality software and web applications.",
           "image": "https://yourdomain.com/static/images/header-headshot.jpeg",
           "url": "https://www.winterthedev.io",
           "sameAs": [
@@ -143,9 +143,8 @@
                             </a>
                         </li>
                         <li class="action-btn resume">
-                            <a id="download_resume">
-                                Download Resume
-                            </a>
+                            <a href="/static/resume.pdf" id="download_resume" download>Download Resume</a>
+
                         </li>
                     </ul>
                 </nav>
@@ -163,11 +162,11 @@
                         </p>
                     </div>
                     <img src="{% static 'images/header-headshot.jpeg' %}"
-                        alt="Professional headshot of Rhulani Mogotsi, also known as WinterTheDev, a Full-Stack Developer specializing in Web Development, Software Development and Data Science">
+                        alt="Professional headshot of Rhulani Mogotsi, a Full-Stack Developer specializing in Web Development, Software Development and Data Science">
                 </div> 
                 <div class="header-text">
                     <h1>
-                        <span>Winter</span>TheDev
+                        <span>RHULANI</span>MOGOTSI
                     </h1>                          
                     <h2 class="tagline">
                         Data Scientist<br>
@@ -218,7 +217,7 @@
                     </div>
                   
                     <div class="column">
-                      <h3>Hard Skills</h3>
+                      <h3>Technical Skills</h3>
                       <div class="badges">
                         <span class="badge">Python</span>
                         <span class="badge">Django</span>
@@ -343,11 +342,11 @@
                     </div>
                 </div>
         </section>
-        <section id="contact">
+        <!-- <section id="contact">
             <div class="container-fluid contact-container">
                 
             </div>
-        </section>
+        </section> -->
         <!-- <footer>
             <div class="container-fluid footer-container">
                 <div class="footer-nav">
@@ -449,19 +448,17 @@
             });
         });
 
-        // Resume Download
         let resume_btn = document.getElementById("download_resume");
 
         const getResume = async () => {
             try {
                 resume_btn.innerHTML = "Downloading...";
-                
+
                 const response = await fetch("{% url 'download_resume' %}");
                 if (!response.ok) throw new Error("Failed to fetch resume");
 
                 const data = await response.json();
-                window.open(data.download_url, "_blank"); // Redirect to signed URL
-
+                window.open(data.download_url, "_blank"); // Open the signed URL in a new tab to trigger download
             } catch (error) {
                 console.error("Error downloading resume:", error);
                 alert("Failed to download resume. Please try again.");
@@ -471,6 +468,7 @@
         };
 
         resume_btn.addEventListener('click', getResume);
+
     </script>
     <!-- Lenis -->
     <script>
