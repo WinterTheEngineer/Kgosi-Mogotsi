@@ -62,8 +62,3 @@ def contact(request):
             messages.error(request, "There was an error with your form. Please try again.")
     
     return redirect('index')
-
-
-def download_resume(request):
-    pass
-
