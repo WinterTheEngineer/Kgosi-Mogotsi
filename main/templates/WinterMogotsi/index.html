@@ -450,24 +450,13 @@
 
         let resume_btn = document.getElementById("download_resume");
 
-        const getResume = async () => {
-            try {
-                resume_btn.innerHTML = "Downloading...";
-
-                const response = await fetch("{% url 'download_resume' %}");
-                if (!response.ok) throw new Error("Failed to fetch resume");
-
-                const data = await response.json();
-                window.open(data.download_url, "_blank"); // Open the signed URL in a new tab to trigger download
-            } catch (error) {
-                console.error("Error downloading resume:", error);
-                alert("Failed to download resume. Please try again.");
-            } finally {
+        resume_btn.addEventListener('click', () => {
+            resume_btn.innerHTML = "Downloading...";
+            
+            setTimeout(() => {
                 resume_btn.innerHTML = "Download Resume";
-            }
-        };
-
-        resume_btn.addEventListener('click', getResume);
+            }, 5000)
+        });
 
     </script>
     <!-- Lenis -->
