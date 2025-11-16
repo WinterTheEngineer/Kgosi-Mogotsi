@@ -164,6 +164,7 @@ nav ul a:hover::after,
 .header-img {
     height: 85%;
     overflow: hidden;
+    visibility: hidden;
     position: relative;
     border-radius: .5rem;
 }
