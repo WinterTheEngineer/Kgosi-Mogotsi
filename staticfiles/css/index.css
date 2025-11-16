@@ -164,9 +164,28 @@ nav ul a:hover::after,
 .header-img {
     height: 85%;
     overflow: hidden;
-    visibility: hidden;
+    display: none;
     position: relative;
     border-radius: .5rem;
+}
+
+.header-txt {
+    height: 85%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.header-txt span {
+    color: #8a80ff;
+}
+
+.header-txt h2 {
+    width: 60%;
+    opacity: .5;
+    color: #FFF9EB;
 }
 
 .header-img .overlay {
