@@ -347,6 +347,7 @@ nav ul a:hover::after,
     display: flex;
     padding: 20px 0;
     flex-direction: column;
+    white-space: wrap;
     /* border-right: 1px solid #ddd; */
 }
 

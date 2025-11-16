@@ -5,11 +5,6 @@
 }
 
 @media screen and (min-width: 240px) and (orientation: portrait) {
-    #logo-bg img {
-        top: 100%;
-        width: 100vw;
-        height: auto;
-    }
 
     #cursor {
         display: none;
@@ -29,6 +24,14 @@
         background: transparent;
     }
     
+    #logo-bg img {
+        top: 50%;
+        left: 50%;
+        right: unset;
+        width: 50vh;
+        height: 50vh;
+    }
+    
     .nav-toggle ion-icon {
         font-size: 2rem;
         color: var(--cream);
@@ -44,6 +47,15 @@
     
     .header-img .overlay .attributes{
         font-size: .75rem;
+    }
+
+    .header-txt {
+        height: 80%;
+    }
+    
+    .header-txt h2 {
+        width: 90%;
+        font-size: 1.2rem;
     }
 
     .header-text {
